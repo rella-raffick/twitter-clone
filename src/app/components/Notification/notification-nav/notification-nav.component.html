@@ -1,0 +1,27 @@
+<div>
+    <div class="margin">
+       <div class="flex">
+        <h1 class="headerText col-10">Notifications</h1>
+        <i class="fa fa-cog fa-2x icon col-2" aria-hidden="true"></i>
+        </div>
+        <div style="margin-top: 20px;">
+        <ul class="nav nav-pills nav-fill">
+          
+            <li class="nav-item color" [ngClass]="{classStatus}">
+              <a class="nav-link" aria-current="page" (click) = "allstate()">All</a>
+            </li>
+            <li class="nav-item color" [ngClass]="{classMention}">
+              <a class="nav-link"  (click) = "mentionstate()">Mentions</a>
+            </li>
+          </ul>
+        </div>
+    </div>   
+
+    <div *ngIf=" active === 'all' "  > 
+      <app-notification-all></app-notification-all>
+    </div>
+    <div *ngIf=" active === 'mention' ">
+      <app-notification-mention></app-notification-mention>
+    </div>
+
+</div>
