@@ -1,0 +1,65 @@
+.profilelogo {
+    width: 50px;
+    height: 50px;
+}
+
+.newtweet {
+    margin: auto;
+    width: 45%;
+    min-height: 100px;
+}
+
+.textinput {
+    display: flex;
+    align-items: center;
+}
+
+.textinput input[type=text] {
+    display: inline;
+    border: none;
+    background-color: none;
+    outline: 0;
+    font-size: 20px;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+}
+
+.info {
+    font-size: medium;
+    font-weight: 500;
+    color: #00acee;
+    padding-left: 60px;
+    padding-bottom: 20px;
+}
+
+.submit {
+    display: inline;
+    margin-left: 50px;
+}
+
+.submit .icon{
+    font-size: 20px;
+    font-weight: 500;
+    color: #00acee;
+    padding: 10px;
+}
+
+.tweet {
+    float: right;
+    background-color: #00acee;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+  
+@media screen and (max-width: 1005px) {
+    .newtweet { width: 75%;}
+}
+
+@media screen and (max-width: 500px) {
+    .newtweet { width: 100%;}
+}
