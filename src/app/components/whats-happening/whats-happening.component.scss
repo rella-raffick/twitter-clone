@@ -5,7 +5,9 @@
     background-color: #f3f3f3;
     border: none;
 }
-
+.searchfixed{
+    position: fixed;
+}
 .search-bar:focus::placeholder{
     color: #1A8CD8;
 }

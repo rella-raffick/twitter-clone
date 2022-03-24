@@ -1,0 +1,38 @@
+.topnav{
+    width:inherit;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    
+}
+.home{
+    width: 46%;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 8px;
+    align-items: center;
+    
+}
+.home:hover{
+    cursor: pointer;
+}
+
+.topnavicon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:40px;
+    height:40px;
+    padding:8px;
+
+}
+.topnavicon:hover{
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
