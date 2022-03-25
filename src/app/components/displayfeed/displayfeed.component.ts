@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
-import { DoCheck } from '@angular/core';
-import { Tweet } from 'src/app/interfaces/tweet';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({

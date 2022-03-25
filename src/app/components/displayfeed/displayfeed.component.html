@@ -20,7 +20,8 @@
             <div class="message">{{user.tweet[0].tweetcontent}}</div>
         </div>
         <div *ngIf="user.tweet[0].media.length!=0" class="media-container">
-            <img class="tweet-media" src="{{user.tweet[0].media[0]}}">
+            <img class="tweet-media" src="{{user.tweet[0].media[0]}}" *ngIf="user.tweet[0].format[0]==='image' && user.tweet[0].media[0]">
+            <video class="tweet-media" src="{{user.tweet[0].media[0]}}" *ngIf="user.tweet[0].format[0]==='video' && user.tweet[0].media[0]" controls></video>
         </div>
         <div class="tweet-bottom">
             <div class="bottom-icon">
@@ -41,5 +42,3 @@
         </div>
     </div>
 </div>
-
-
