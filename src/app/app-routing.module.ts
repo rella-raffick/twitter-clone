@@ -5,13 +5,10 @@ import { NotificationComponent } from './components/Notification/notification/no
 
 const routes: Routes = [
   { path: '', redirectTo: 'message', pathMatch: 'full' },
-  { path: 'message', component: CompleteComponent }
-
-const routes: Routes = [
-  {path: 'notification', component:NotificationComponent},
-  {path: 'notification/mentions', component:NotificationComponent}
-];
-
+  { path: 'message', component: CompleteComponent },
+  { path: 'notification', component: NotificationComponent },
+  { path: 'notification/mentions', component: NotificationComponent }
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
