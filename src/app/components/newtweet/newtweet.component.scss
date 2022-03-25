@@ -4,8 +4,8 @@
 }
 .home{
     padding-top:1%;
-    margin:auto;
-    width: 45%;
+  
+    width: 100%;
     text-align:left;
     display:flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 .newtweet {
     margin: auto;
-    width: 45%;
+    width: 100%;
     min-height: 100px;
     border-bottom-style: solid;
     border-bottom-width:1px;
@@ -97,19 +97,19 @@
     border-radius: 30px;
 }
   
-@media screen and (max-width: 1005px) {
-    .newtweet { width: 75%;}
-    div.edit { display: none;}
-    div.editicon { display: inline-block;}
-    .home{
-        width:75%;
-    }
-    .displaytweet{width:75%;}
-}
+// @media screen and (max-width: 1005px) {
+//     .newtweet { width: 75%;}
+//     div.edit { display: none;}
+//     div.editicon { display: inline-block;}
+//     .home{
+//         width:75%;
+//     }
+//     .displaytweet{width:75%;}
+// }
 
-@media screen and (max-width: 500px) {
-    .newtweet { width: 100%;}
-}
+// @media screen and (max-width: 500px) {
+//     .newtweet { width: 100%;}
+// }
 
 .image-upload>input {
     display: none;

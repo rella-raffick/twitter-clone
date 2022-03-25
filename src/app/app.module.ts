@@ -7,23 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { MiddleFeedComponent } from './components/middle-feed/middle-feed.component';
 import { WhatsHappeningComponent } from './components/whats-happening/whats-happening.component';
+import { NewtweetComponent } from './components/newtweet/newtweet.component';
+import { DisplayfeedComponent } from './components/displayfeed/displayfeed.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavComponent,
     MiddleFeedComponent,
-    WhatsHappeningComponent
-import { NewtweetComponent } from './components/newtweet/newtweet.component';
-import { DisplayfeedComponent } from './components/displayfeed/displayfeed.component';
-import { HttpClientModule } from '@angular/common/http';
-@NgModule({
-  declarations: [
-    AppComponent,
+    WhatsHappeningComponent,
     NewtweetComponent,
-    DisplayfeedComponent
+    DisplayfeedComponent,
   ],
-  imports: [
+    imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
