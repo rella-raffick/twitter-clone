@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Profile } from '../data/profile';
-import { UserService } from '../service/user.service';
+import { Profile } from 'src/app/interfaces/profile';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-newtweet',
