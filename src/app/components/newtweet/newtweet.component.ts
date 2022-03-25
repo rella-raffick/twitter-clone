@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
+import { Tweet } from 'src/app/interfaces/tweet';
 import { UserService } from 'src/app/services/user.service';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-newtweet',
   templateUrl: './newtweet.component.html',
@@ -9,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NewtweetComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,8 @@ export class NewtweetComponent implements OnInit {
     this.isClicked=true;
   }
 
+  newtweet: Tweet;
+  tweettext = '';
   urls: any[] = [];
   format: any[] = [];
   filetype = "image/*, video/*";
@@ -60,5 +63,20 @@ export class NewtweetComponent implements OnInit {
     this.format.splice(index,1);
     this.urls.splice(index,1);
     this.mediaBtn = false;
+  }
+  
+  addTweet() {
+    this.newtweet = {} as Tweet;
+    let date: Date = new Date();
+    this.newtweet.tweetid = 2;
+    this.newtweet.tweetcontent = this.tweettext;
+    this.newtweet.time = date.toString();
+    this.newtweet.retweet = 0;
+    this.newtweet.reply = 0;
+    this.newtweet.media = this.urls;
+    this.newtweet.likes = 0;
+    this.newtweet.date = date.toString();
+    
+    this.userService.addNewTweet(this.newtweet);
   }
 }

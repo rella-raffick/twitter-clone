@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import Users from 'src/assets/profile.json';
 import { Profile } from 'src/app/interfaces/profile';
+import { DoCheck } from '@angular/core';
+import { Tweet } from 'src/app/interfaces/tweet';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-displayfeed',
@@ -14,9 +16,13 @@ export class DisplayfeedComponent implements OnInit {
   arrayReply:boolean[]=[];
   arrayRetweet:boolean[]=[];
   arrayLikes:boolean[]=[];
-  constructor() { }
-  users: Profile[] = Users;
+  constructor(private userService: UserService) { }
+  
+
+  users: Profile[] = this.userService.getUsers();
+
   ngOnInit(): void {
+    this.users = this.userService.getUsers();
     for(let i=0;i<this.users.length;i++){
       this.arrayReply.push(false);
       this.arrayRetweet.push(false);

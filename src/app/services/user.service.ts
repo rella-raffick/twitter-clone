@@ -6,6 +6,9 @@ import Users from 'src/assets/profile.json';
   providedIn: 'root'
 })
 export class UserService {
+  addNewTweet(newtweet: any) {
+    this.users[0].tweet.unshift(newtweet);
+  }
 
   constructor() { }
 
