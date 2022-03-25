@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  .heading {
+    margin-top: 10px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .icons {
+    display: flex;
+    font-size: 20px;
+    .icon-setting {
+      margin-right: 15px;
+    }
+  }
+}
+
+.modal-content {
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  padding: 3px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  .modal-body {
+    padding-bottom: 0px;
+    margin-top: 0;
+    .search {
+      display: flex;
+      i {
+        font-size: 15px;
+      }
+      input {
+        margin-left: 20px;
+        width: 100%;
+        outline: none;
+        background: transparent;
+        border: none;
+        font-size: 15px;
+      }
+      i input:focus {
+        color: skyblue;
+      }
+    }
+    .search:focus-within i {
+      color: rgb(29, 155, 240);
+    }
+  }
+
+  .modal-header {
+    border: 0px;
+    padding: 0rem 0.7rem;
+    .model-heading {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      h2 {
+        margin-top: 15px;
+        margin-left: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .btn-close {
+      padding: 0;
+      margin: 0;
+    }
+
+    .next {
+      outline: none;
+      border: none;
+      padding: 6px;
+      background-color: rgb(15, 20, 25);
+      color: white;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      width: 70px;
+    }
+  }
+
+  .modal-footer {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: none;
+    justify-content: flex-start;
+    .create-group {
+      display: flex;
+      font-size: 15px;
+      .group-content {
+        color: rgb(29, 155, 240);
+        margin-top: 18px;
+        font-weight: 500;
+      }
+      .group-icon {
+        margin-right: 20px;
+        padding: 15px;
+        border-radius: 50%;
+        border: 1px solid lightgray;
+        i {
+          color: rgb(29, 155, 240);
+        }
+      }
+    }
+  }
+}
+
+hr {
+  opacity: 10%;
+}
+
+@media only screen and (max-width: 500px) {
+  .icon-message {
+    display: none;
+  }
+  .icon-setting {
+    margin-right: 0px;
+  }
+}
