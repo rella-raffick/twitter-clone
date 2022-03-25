@@ -79,6 +79,7 @@ export class NewtweetComponent implements OnInit {
     this.newtweet.format = this.format;
     console.log(this.newtweet.media[0]);
     this.userService.addNewTweet(this.newtweet);
+    this.tweettext = '';
     this.urls = [];
     this.format = [];
     this.mediaBtn = false;
