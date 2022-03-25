@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import Users from '../data/profile.json';
-import { Profile } from '../data/profile';
+import Users from 'src/assets/profile.json';
+import { Profile } from 'src/app/interfaces/profile';
 
 @Component({
   selector: 'app-displayfeed',

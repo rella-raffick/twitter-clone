@@ -43,6 +43,23 @@
     padding: 10px;
 }
 
+.imageinput {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    margin-left: 60px;
+    border-radius: 20px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.imageinput img, video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit:cover;
+}
+
 .info {
     font-size: medium;
     font-weight: 500;
@@ -64,6 +81,11 @@
     padding: 10px;
 }
 
+.submit .icon:hover {
+    border-radius: 60px;
+    background-color: rgba(0, 173, 241, 0.1);
+    padding: 0.5em 0.6em;
+}
 .tweet {
     float: right;
     background-color: #00acee;
@@ -77,6 +99,8 @@
   
 @media screen and (max-width: 1005px) {
     .newtweet { width: 75%;}
+    div.edit { display: none;}
+    div.editicon { display: inline-block;}
     .home{
         width:75%;
     }
@@ -85,6 +109,62 @@
 
 @media screen and (max-width: 500px) {
     .newtweet { width: 100%;}
+}
+
+.image-upload>input {
+    display: none;
+}
+
+.image-upload {
+    display: inline;
+}
+
+.img_wrp {
+    display: inline-block;
+    position: relative;
+}
+
+.close {
+    font-size: 15px;
+    color: white;
+    display: inline-block;
+    border-radius: 60px;
+    background-color: rgba(12, 7, 7, 0.6);
+    box-shadow: 0 0 2px #888;
+    padding: 0.5em 0.6em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.edit {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: rgba(12, 7, 7, 0.6);
+    box-shadow: 0 0 2px #888;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.editicon {
+    font-size: 15px;
+    color: white;
+    display: none;
+    border-radius: 60px;
+    background-color: rgba(12, 7, 7, 0.6);
+    box-shadow: 0 0 2px #888;
+    padding: 0.5em 0.6em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;   
     .home{
         width:100%;
     }
