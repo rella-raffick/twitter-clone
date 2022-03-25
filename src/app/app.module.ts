@@ -9,6 +9,10 @@ import { MsgnavbarComponent } from './components/message/msgnavbar/msgnavbar.com
 import { MsgsearchbarComponent } from './components/message/msgsearchbar/msgsearchbar.component';
 import { ChatsComponent } from './components/message/chats/chats.component';
 
+import { NotificationComponent } from './components/Notification/notification/notification.component'
+import { NotificationNavComponent } from './components/Notification/notification-nav/notification-nav.component';
+import { NotificationAllComponent } from './components/Notification/notification-all/notification-all.component';
+import { NotificationMentionComponent } from './components/Notification/notification-mention/notification-mention.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { ChatsComponent } from './components/message/chats/chats.component';
     MsgnavbarComponent,
     MsgsearchbarComponent,
     ChatsComponent,
+    NotificationComponent,
+    NotificationNavComponent,
+    NotificationAllComponent,
+    NotificationMentionComponent
   ],
   imports: [
     BrowserModule,

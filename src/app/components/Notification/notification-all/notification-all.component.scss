@@ -1,0 +1,24 @@
+$hoverColor : #ededed;
+$twitterColor : #00acee;
+
+
+.fontsize {
+    font-size: 18px;
+}
+
+.margin {
+    padding: 15px;
+    // border: 1px solid lightblue;
+}
+
+.fa-user , .fa-twitter {
+    color: $twitterColor;
+  }
+
+.row:hover{
+    background-color:$hoverColor;
+ }
+
+ .text {
+     color: gray;
+ }
