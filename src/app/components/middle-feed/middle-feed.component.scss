@@ -2,7 +2,32 @@
     margin: 0;
     width: inherit;
 }
-
+.topnav{
+    height:65px;
+    width:inherit;
+    background-color: rgba(255, 255, 255, 0.637);
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+}
+.lefttopnav{
+    width: inherit;
+    padding: 12px;
+    display: flex;
+    margin-top: 6px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.righttopnav{
+    width: inherit;
+    display: flex;
+    padding: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
 .tweetcircle:hover{
     border-radius: 50%;
     background-color: #0d89d6;
@@ -21,34 +46,10 @@
 	bottom: 60px;
 }
 
-.topnav{
-    height:70px;
-    width:inherit;
-    background-color: rgba(255,255,255,0.95);
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    align-items: center;
-}
 .tweeticon{
  fill:white; 
 }
-.lefttopnav{
-    width: inherit;
-    padding: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-.righttopnav{
-    width: inherit;
-    display: flex;
-    padding: 12px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
+
 img{
     border-radius: 50%;
 }
@@ -58,7 +59,7 @@ img:hover{
 .topnavicon{
     width:40px;
     height:40px;
-    padding: 12px;
+    padding: 11px;
 }
 .topnavicon:hover{
     border-radius: 50%;
@@ -89,7 +90,6 @@ img:hover{
 }
 .tweets{
     display: flex;
-    padding-top: 60px;
     justify-content: center;
 
 }
