@@ -1,9 +1,10 @@
 .middlecontainer{
     margin: 0;
+    width: inherit;
 }
 .topnav{
     height:70px;
-    width:100%;
+    width:inherit;
     background-color: rgba(255,255,255,0.95);
     display: flex;
     position: fixed;
@@ -11,7 +12,7 @@
     align-items: center;
 }
 .lefttopnav{
-    width:480px;
+    width: inherit;
     padding: 12px;
     display: flex;
     flex-direction: row;
@@ -19,11 +20,12 @@
     justify-content: flex-start;
 }
 .righttopnav{
+    width: inherit;
     display: flex;
     padding: 12px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 img{
     border-radius: 50%;
@@ -44,7 +46,6 @@ img:hover{
 .topnavtitle{
     padding: 12px;
     padding-top: 15px;
-    margin-left: 14px;
 }
 .topnavtitle:hover{
     cursor: pointer;
