@@ -76,7 +76,6 @@ export class NewtweetComponent implements OnInit {
     this.newtweet.media = this.urls;
     this.newtweet.likes = 0;
     this.newtweet.date = date.toString();
-    
     this.userService.addNewTweet(this.newtweet);
   }
 }
