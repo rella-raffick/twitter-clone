@@ -3,12 +3,11 @@ $twitterColor : #00acee;
 
 
 .fontsize {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .margin {
     padding: 15px;
-    // border: 1px solid lightblue;
 }
 
 .fa-user , .fa-twitter {
@@ -21,4 +20,12 @@ $twitterColor : #00acee;
 
  .text {
      color: gray;
+ }
+
+ @media screen and (max-width: 500px){
+     .space{
+        margin-left: 10px;
+        // margin-right: 0px;
+        // padding: 0px;
+     }
  }

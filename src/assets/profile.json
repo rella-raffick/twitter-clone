@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "profilelogo": "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
+      "username": "Lily",
+      "profilename": "lily",
+      "profiledetails": "String",
+      "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
+      "followers": 100,
+      "following": 100,
+      "tweet": [
+        {
+          "tweetid": 1,
+          "tweetcontent": "Former President Donald Trump has withdrawn his endorsement of Mo Brooks for the US Senate seat in Alabama after Brooks declined to affirm Trump's false belief that the 2020 election result can be overturned",
+          "media": ["https://pbs.twimg.com/card_img/1506609330950635521/UoS-clpH?format=jpg&name=900x900"],
+          "date": "23/3/2022",
+          "time": "6:00",
+          "reply": 10,
+          "retweet": 10,
+          "likes": 10
+        }
+      ],
+      "messages": "String"
+    }
+  ]
