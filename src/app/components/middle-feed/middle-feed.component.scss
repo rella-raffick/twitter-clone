@@ -2,6 +2,25 @@
     margin: 0;
     width: inherit;
 }
+
+.tweetcircle:hover{
+    border-radius: 50%;
+    background-color: #0d89d6;
+    cursor: pointer;
+}
+.tweetcircle{
+    margin-left: 6px;
+    margin-top: 12px;
+    width:55px;
+    height:55px;
+    padding:16px;
+    background-color: #1da1f2;
+    border-radius: 50%;
+    position: fixed;
+	right: 20px;
+	bottom: 60px;
+}
+
 .topnav{
     height:70px;
     width:inherit;
@@ -10,6 +29,9 @@
     position: fixed;
     flex-direction: row;
     align-items: center;
+}
+.tweeticon{
+ fill:white; 
 }
 .lefttopnav{
     width: inherit;
