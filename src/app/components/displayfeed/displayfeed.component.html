@@ -20,8 +20,8 @@
             <div class="tweet-content">
                 <div class="message">{{tweet.tweetcontent}}</div>
             </div>   
-            <div *ngFor="let media of tweet.media; let index=index;"> 
-                <div class="media-container">
+            <div class="media-container">
+                <div *ngFor="let media of tweet.media; let index=index;" class="img_wrp"> 
                     <img class="tweet-media" src="{{media}}" *ngIf="tweet.format[index]==='image' && media">
                     <video class="tweet-media" src="{{media}}" *ngIf="tweet.format[index]==='video' && media" controls></video>
                 </div>

@@ -70,15 +70,28 @@
 }
 .media-container{
     width:100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
 }
+
+.img_wrp {
+    display: inline-block;
+    position: relative;
+}
+
 .tweet-media{
-    width:95%;
+    width: 100%;
+    height: 100%;
     margin-right:5%;
     margin-top: 2%;
     margin-bottom: 3%;
     border-radius: 10px;
     margin-left: 1%;
     cursor: pointer;
+    object-fit:cover;
 }
 .tweet-top-left{
     width:80%;
