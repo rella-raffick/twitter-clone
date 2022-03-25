@@ -69,29 +69,24 @@
     margin-right:2%;
 }
 .media-container{
-    width:100%;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
+    border-radius: 20px;
     gap: 10px;
     padding: 10px;
+    margin-right: 2%;
 }
-
+.media-container .tweet-media{
+    width:100%;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 20px;
+    object-fit:cover;
+}
 .img_wrp {
     display: inline-block;
     position: relative;
-}
-
-.tweet-media{
-    width: 100%;
-    height: 100%;
-    margin-right:5%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    border-radius: 10px;
-    margin-left: 1%;
-    cursor: pointer;
-    object-fit:cover;
 }
 .tweet-top-left{
     width:80%;
