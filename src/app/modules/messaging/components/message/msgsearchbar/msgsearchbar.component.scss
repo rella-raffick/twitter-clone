@@ -44,3 +44,10 @@ i:hover {
 :-moz-placeholder {
   text-align: center;
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+  }
+}
