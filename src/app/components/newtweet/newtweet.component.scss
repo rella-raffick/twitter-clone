@@ -75,8 +75,8 @@
 }
 
 .submit .icon{
-    font-size: 20px;
-    font-weight: 500;
+    width: 40px;
+    height: 40px;
     color: #00acee;
     padding: 10px;
 }
@@ -86,6 +86,7 @@
     background-color: rgba(0, 173, 241, 0.1);
     padding: 0.5em 0.6em;
 }
+
 .tweet {
     float: right;
     background-color: #00acee;
@@ -96,20 +97,26 @@
     font-weight: 700;
     border-radius: 30px;
 }
-  
-// @media screen and (max-width: 1005px) {
-//     .newtweet { width: 75%;}
-//     div.edit { display: none;}
-//     div.editicon { display: inline-block;}
-//     .home{
-//         width:75%;
-//     }
-//     .displaytweet{width:75%;}
-// }
 
-// @media screen and (max-width: 500px) {
-//     .newtweet { width: 100%;}
-// }
+.tweet:disabled {
+    float: right;
+    background-color: #00abee83;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+  
+@media screen and (max-width: 1005px) {
+    div.edit { display: none;}
+    div.editicon { display: inline-block;}
+}
+
+@media screen and (max-width: 705px) {
+    .graph, .calender { display: none;}
+}
 
 .image-upload>input {
     display: none;

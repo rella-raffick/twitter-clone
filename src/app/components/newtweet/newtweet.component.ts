@@ -83,5 +83,14 @@ export class NewtweetComponent implements OnInit {
     this.urls = [];
     this.format = [];
     this.mediaBtn = false;
+    this.click = true;
+  }
+
+  click : boolean = true;
+  onButtonClick(){
+    this.click = !this.click;
+  }
+  onKey(event: KeyboardEvent) { 
+    this.click = (event.target as HTMLInputElement).value === '' ? true:false;
   }
 }
