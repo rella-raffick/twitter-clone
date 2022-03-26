@@ -6,6 +6,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MessagingRoutingModule } from './messaging-routing.module';
+import { ChatboxComponent } from './components/message/chatbox/chatbox.component';
+import { NewChatboxComponent } from './components/message/new-chatbox/new-chatbox.component';
+import { ChatboxNavComponent } from './components/message/chatbox-nav/chatbox-nav.component';
+import { ChatDetailsComponent } from './components/message/chat-details/chat-details.component';
+import { ChatboxTextComponent } from './components/message/chatbox-text/chatbox-text.component';
+import { ChatboxInputComponent } from './components/message/chatbox-input/chatbox-input.component';
 
 
 @NgModule({
@@ -13,7 +19,13 @@ import { MessagingRoutingModule } from './messaging-routing.module';
     CompleteComponent,
     ChatsComponent,
     MsgnavbarComponent,
-    MsgsearchbarComponent
+    MsgsearchbarComponent,
+    ChatboxComponent,
+    NewChatboxComponent,
+    ChatboxNavComponent,
+    ChatDetailsComponent,
+    ChatboxTextComponent,
+    ChatboxInputComponent
   ],
   imports: [
     CommonModule,

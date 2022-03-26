@@ -1,0 +1,16 @@
+.container {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  .input {
+    margin-top: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+}
