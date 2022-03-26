@@ -1,5 +1,6 @@
 <div>
-  <div class="margin">
+
+  <div class="margin sticky-top" style="background-color: white;">
     <div class="flex">
       <h1 class="headerText col-10">Notifications</h1>
       <i class="fa fa-cog fa-2x icon col-2" aria-hidden="true"></i>
@@ -7,11 +8,11 @@
     <div style="margin-top: 20px;">
       <ul class="nav nav-pills nav-fill">
 
-        <li class="nav-item color" [ngClass]="{classStatus}">
-          <a class="nav-link" aria-current="page" (click)="allstate()">All</a>
+        <li class="nav-item color" >
+          <a class="nav-link" aria-current="page" (click)="allstate()" ><span [ngClass]="{classStatus}">All</span></a>
         </li>
-        <li class="nav-item color" [ngClass]="{classMention}">
-          <a class="nav-link" (click)="mentionstate()">Mentions</a>
+        <li class="nav-item color" >
+          <a class="nav-link" (click)="mentionstate()"><span [ngClass]="{classMention}">Mentions</span></a>
         </li>
       </ul>
     </div>

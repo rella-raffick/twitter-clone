@@ -14,18 +14,14 @@ $twitterColor : #00acee;
     color: $twitterColor;
   }
 
+  .fa-heart {
+      color: #f7206b;
+  }
+
 .row:hover{
     background-color:$hoverColor;
  }
 
  .text {
      color: gray;
- }
-
- @media screen and (max-width: 500px){
-     .space{
-        margin-left: 10px;
-        // margin-right: 0px;
-        // padding: 0px;
-     }
  }
