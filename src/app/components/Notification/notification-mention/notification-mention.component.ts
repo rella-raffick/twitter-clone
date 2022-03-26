@@ -7,6 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationMentionComponent implements OnInit {
 
+  array:any[] = [
+                  {
+                  "reply": 11,
+                  "retweet": 19,
+                  "likes": 101,
+                  "replystatus" : false,
+                  "retweetstatus" : false,
+                  "likesstatus" : false,
+                  "retweetvalue" : "Retweet"
+
+                },
+ 
+                  {"reply": 1,
+                  "retweet": 15,
+                  "likes": 96,
+                  "replystatus" : false,
+                  "retweetstatus" : false,
+                  "likesstatus" : false,
+                  "retweetvalue" : "Retweet"
+                }
+                ];
   arrayReply:boolean = false;
   arrayRetweet:boolean=false;
   arrayLikes:boolean=false;
@@ -17,26 +38,28 @@ export class NotificationMentionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  increaseReplyCount(){
-      this.arrayReply = !this.arrayReply;
+  increaseReplyCount(i : number){
+      this.array[i].replystatus = !this.array[i].replystatus;
   }
-  increaseRetweetCount(){
-      this.arrayRetweet = !this.arrayRetweet;
-      if(this.retweet === "Retweet"){
-      this.retweet = "undo Retweet";
+  increaseRetweetCount(i : number){
+     this.array[i].retweet =  this.array[i].retweet + 1;
+      if(this.array[i].retweetstatus === false)
+      {
+      this.array[i].retweetvalue = "undo Retweet";
       }
       else{
-        this.retweet ="Retweet";
+        this.array[i].retweetvalue ="Retweet";
       }
+      this.array[i].retweetstatus = !this.array[i].retweetstatus;
   }
-  increaseLikesCount(){
-    if(this.arrayLikes === true){
-        this.like = this.like - 1;
+  increaseLikesCount(i :number){
+    if(this.array[i].likesstatus === true){
+        this.array[i].likes = this.array[i].likes - 1;
     }  
     else{
-      this.like = this.like + 1;
+      this.array[i].likes = this.array[i].likes + 1;
     }
-    this.arrayLikes = !this.arrayLikes;
+    this.array[i].likesstatus = !this.array[i].likesstatus;
       
       
   }
