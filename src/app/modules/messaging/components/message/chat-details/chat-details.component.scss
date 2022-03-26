@@ -1,0 +1,37 @@
+hr {
+  color: rgb(219, 219, 219);
+}
+.container {
+  text-align: center;
+  .row {
+    .col-md-4:nth-child(2) {
+      p {
+        font-weight: 500;
+        span {
+          color: grey;
+        }
+        &:nth-child(3) {
+          color: grey;
+        }
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  &:hover {
+    background-color: rgb(247, 247, 247);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    .row {
+      .col-md-4:nth-child(2) {
+        width: 600px;
+      }
+    }
+  }
+}
