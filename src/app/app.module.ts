@@ -16,6 +16,9 @@ import { NotificationComponent } from './components/Notification/notification/no
 import { NotificationNavComponent } from './components/Notification/notification-nav/notification-nav.component';
 import { NotificationMentionComponent } from './components/Notification/notification-mention/notification-mention.component';
 import { NotificationAllComponent } from './components/Notification/notification-all/notification-all.component';
+import { ProfileComponent } from './components/profiles/profile/profile.component';
+import { ProfileNavComponent } from './components/profiles/profile-nav/profile-nav.component';
+import { ProfileMainComponent } from './components/profiles/profile-main/profile-main.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { NotificationAllComponent } from './components/Notification/notification
     NotificationComponent,
     NotificationNavComponent,
     NotificationMentionComponent,
-    NotificationAllComponent
+    NotificationAllComponent,
+    ProfileComponent,
+    ProfileNavComponent,
+    ProfileMainComponent
 
   ],
     imports: [
