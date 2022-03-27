@@ -189,6 +189,7 @@ cursor: pointer;
 outline: 10px solid rgb(212, 211, 211);
 }
 
+<<<<<<< HEAD
 $hoverColor : #ededed;
 $twitterColor : #00acee;
 
@@ -291,4 +292,37 @@ $twitterColor : #00acee;
 }
 .changelikesbutton{
     content:url("https://img.icons8.com/fluency/48/000000/filled-like.png");
+=======
+#accountpic{
+    width:35px;
+    height: 35px;
+}
+.item-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#bluetick{
+    width:20px;
+    height:20px;
+    align-self:center;
+}
+.profiledetail{
+    align-items:flex-start;
+}
+.dropdown-css{
+    width: 180px;
+}
+#name{
+    margin: 3%;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+#username{
+    margin: 3%;
+    font-size: 13px;
+    color:#888888;
+    text-align: left;
+>>>>>>> e3d5d71e5b8b03fe7cca9cc26866bd8e931cb8de
 }
