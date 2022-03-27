@@ -22,9 +22,9 @@
     width:40%;
 }
 .navnames{
-    width:60%;
+    width:55%;
 }
-.iconnames{
+.ii{
     height:52px;
     margin-bottom: 0.3px;
     width: 115px;
@@ -32,29 +32,35 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.iconnames{
+    height:52px;
+    padding: 2px;
+    margin-bottom: 0.3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     
 }
 
 .iconnames:hover{
-    border-radius: 30px;
-    background-color: rgb(238, 238, 238);
     cursor: pointer;
 }
 .newtweetname{
     margin-top: 15px;
 }
-.profilename{
-    margin-top:105px;
-}
+
 .newtweetbutton{
     position: absolute;
-    bottom:18%;
-    left: 15%;
+    bottom:21%;
+    left: 7%;
 }
+
 .tweetbutton{
-    background-color: #00acee;
+    background-color: #1b9dee;
     padding: 10px 25px;
-    width: 140px;
+    width: 170px;
     color: white;
     font-size: 15px;
     font-weight: 700;
@@ -96,7 +102,7 @@
     border-radius: 50%;
 }
 .navpadding{
-    padding:12px;
+    padding:14px;
 }
 .navpadding:hover{
     border-radius: 50%;
@@ -113,18 +119,46 @@
     width:55px;
 }
 .h5{
-    font-size: 17px;
+    font-size: 15px;
     padding-top: 10px;
-    font-weight:500;
+    font-weight:400;
     text-align:center; 
   vertical-align: middle;
-  display: table-cell;  
+  display: table-cell;     
+}
+.bolding{
+    font-weight: 600;
+}
+.nameprofile{
+    font-size: 14px;
     
 }
+.username{
+    position: absolute;
+    bottom:0.4%;
+    left: 40%;
+}
+.dots{
+    height:24px;
+    width: 24px;
+    position: absolute;
+    bottom:3.3%;
+    left: 90%;
+}
+.usernames{
+    font-size: 12px;
+    color: #888888;
+}
+.profilename{
+    margin-top:100px;
+}
+
 .bluedot{
     position: absolute;
     width:6px;
     height:6px;
+    top:20%;
+    left: 58%;
     background-color: #00acee;
     border-radius: 50%;
     padding: 0;
@@ -147,8 +181,8 @@
     width:53px;
     height:53px;
     padding: 6px;
-    margin-left: 9px;
-    margin-top: 100px;
+    margin-left: 18px;
+    margin-top: 112px;
 }
 .sidenavprofile:hover{
 cursor: pointer;
