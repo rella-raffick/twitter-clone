@@ -8,7 +8,7 @@
                 <app-chats (click)="chatBoxNavigate()"></app-chats>
             </div>
         </div>
-        <div class="container co-xl-3 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none" [class.d-none]="!paramId">
+        <div class="container co-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 d-lg-block d-none" [class.d-none]="!paramId">
             <router-outlet (activate)="getActivatedId($event)"></router-outlet>
         </div>
         <div class="bottomnavcontainer">
