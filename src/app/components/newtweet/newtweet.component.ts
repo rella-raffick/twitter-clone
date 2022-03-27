@@ -49,6 +49,8 @@ export class NewtweetComponent implements OnInit {
       }
       reader.onload = (event) => {
         this.urls.push((<FileReader>event.target).result);
+        if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+        else this.click = true; 
       }
     }
   }
@@ -87,9 +89,6 @@ export class NewtweetComponent implements OnInit {
   }
 
   click : boolean = true;
-  onButtonClick(){
-    this.click = !this.click;
-  }
   onKey(event: KeyboardEvent) { 
     this.click = (event.target as HTMLInputElement).value === '' ? true:false;
   }
