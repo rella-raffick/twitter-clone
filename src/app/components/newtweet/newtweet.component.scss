@@ -26,8 +26,16 @@
     border-bottom-width:1px;
     border-bottom-color: #dedede;
     padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 2%;
 }
-
+.modal{
+    top: 1%;
+    right:0;
+    bottom:0;
+    left:-13%;
+    overflow:hidden;
+}
 .textinput {
     display: flex;
     align-items: center;

@@ -16,13 +16,11 @@ export class NewtweetComponent implements OnInit {
   }
 
   users: Profile[] = this.userService.getUsers();  
-
   mediaBtn=false;
   isClicked=false;
   OnClick(){
     this.isClicked=true;
   }
-
   newtweet: Tweet;
   tweettext = '';
   urls: any[] = [];
@@ -94,4 +92,5 @@ export class NewtweetComponent implements OnInit {
   onKey(event: KeyboardEvent) { 
     this.click = (event.target as HTMLInputElement).value === '' ? true:false;
   }
+
 }

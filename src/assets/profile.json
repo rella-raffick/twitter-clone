@@ -40,9 +40,9 @@
           "format": [],
           "date": "20/12/2021",
           "time": "7:30",
-          "reply": 100,
-          "retweet": 130,
-          "likes": 200
+          "reply": 11,
+          "retweet": 13,
+          "likes": 20
         }
       ],
       "messages": "String"
@@ -65,8 +65,8 @@
           "date": "16/12/2021",
           "time": "7:00",
           "reply": 8,
-          "retweet": 1300,
-          "likes": 200
+          "retweet": 13,
+          "likes": 20
         }
       ],
       "messages": "String"
@@ -88,7 +88,7 @@
           "format": ["image"],
           "date": "20/12/2021",
           "time": "8:00",
-          "reply": 0,
+          "reply": 4,
           "retweet": 1,
           "likes": 5
         }
