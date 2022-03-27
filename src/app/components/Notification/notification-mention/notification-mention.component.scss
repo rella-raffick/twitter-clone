@@ -101,3 +101,16 @@ $twitterColor : #00acee;
 .changelikesbutton{
     content:url("https://img.icons8.com/fluency/48/000000/filled-like.png");
 }
+
+.icon{
+    width: 40px;
+    height: 40px;
+    color: #00acee;
+    padding: 10px;
+}
+
+.icon:hover {
+    border-radius: 60px;
+    background-color: rgba(0, 173, 241, 0.1);
+    padding: 0.5em 0.6em;
+}
