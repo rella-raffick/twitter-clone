@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
+import { Tweet } from 'src/app/interfaces/tweet';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -64,5 +65,71 @@ export class DisplayfeedComponent implements OnInit {
       this.likesBool=false;
       this.arrayLikes[id]=false;
     }
+  }
+
+  click : boolean = true;
+  onKey(event: KeyboardEvent) { 
+    this.click = (event.target as HTMLInputElement).value === '' ? true:false;
+  }
+  onButtonClick() {
+    this.click = !this.click;
+  }
+
+  mediaBtn=false;
+  isClicked=false;
+  OnClick(){
+    this.isClicked=true;
+  }
+
+  newtweet: Tweet;
+  tweettext = '';
+  urls: any[] = [];
+  format: any[] = [];
+  filetype = "image/*, video/*";
+
+  onSelectFile(event: any) {
+    const file = event.target.files && event.target.files[0];
+    if (file) {
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      if(file.type.indexOf('image')> -1){
+        this.format.push('image');
+        this.filetype = "image/*";
+      } else if(file.type.indexOf('video')> -1){
+        this.format.push('video');
+        this.mediaBtn = true;
+        this.filetype = "video/*";
+      }
+      if(this.format.length == 2) {
+        this.mediaBtn = true;
+      }
+      reader.onload = (event) => {
+        this.urls.push((<FileReader>event.target).result);
+        if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+        else this.click = true; 
+      }
+    }
+  }
+
+  selectFiletype() {
+    if(this.urls.length == 0) {
+      this.filetype = "image/*, video/*";
+    }
+  }
+
+  removeMedia(index: number) {
+    this.format.splice(index,1);
+    this.urls.splice(index,1);
+    this.mediaBtn = false;
+    if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+    else this.click = true; 
+  }
+
+  addTweet() {
+    this.tweettext = '';
+    this.urls = [];
+    this.format = [];
+    this.mediaBtn = false;
+    this.click = true;
   }
 }

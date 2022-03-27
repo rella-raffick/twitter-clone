@@ -30,7 +30,6 @@ import { NotificationAllComponent } from './components/Notification/notification
     NotificationNavComponent,
     NotificationMentionComponent,
     NotificationAllComponent
-
   ],
     imports: [
     BrowserModule,
