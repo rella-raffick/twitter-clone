@@ -1,7 +1,9 @@
 .container {
-  min-height: 680px;
+  margin-top: 6px;
+  min-height: 540px;
+  min-width: 340px;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   .input {
     margin-top: auto;
   }
