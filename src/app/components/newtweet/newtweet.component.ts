@@ -65,6 +65,8 @@ export class NewtweetComponent implements OnInit {
     this.format.splice(index,1);
     this.urls.splice(index,1);
     this.mediaBtn = false;
+    if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+    else this.click = true; 
   }
   
   addTweet() {
