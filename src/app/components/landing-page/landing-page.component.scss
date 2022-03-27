@@ -26,6 +26,12 @@ html, body {
     margin-left: -12px;
 }
 
+
+.zero-pad{
+    padding: 0;
+
+}
+
 //col-5
 //Twitter Icon Div
 .twitter-icon{
@@ -36,12 +42,23 @@ html, body {
 .icon-div{
     padding:1.6rem;
 }
+.icon-div-sm{
+    padding:1.6rem;
+    padding-bottom: 1rem;
+}
 
 //Title-Subtitle
 //Title
 .title{
     padding:1.6rem;
     padding-top: 3.5rem;
+    
+}
+
+.title-sm{
+    padding:1.6rem;
+    padding-bottom: 1rem;
+    padding-top: 1.7rem;
     
 }
 
@@ -52,9 +69,20 @@ html, body {
     font-size: 4rem;
 }
 
+.title-font-sm{
+    font-family: Chirp;
+    line-height: 4rem;
+    font-weight: 900;
+    font-size: 2.8rem;
+}
+
 //Subtitle
 .sub-title{
     padding:1.6rem;
+}
+.sub-title-sm{
+    padding:1.6rem;
+    padding-top: .5rem;
 }
 
 .sub-title-font{
@@ -62,6 +90,12 @@ html, body {
     line-height: 3rem;
     font-weight: 900;
     font-size: 2.5rem;
+}
+
+.sub-title-font-sm{
+    font-family: Chirp;
+    font-weight: 900;
+    font-size: 1.7rem;
 }
 
 .apple-google{
@@ -131,6 +165,11 @@ html, body {
 .already-div{
     padding:1.6rem;
     padding-top: 3rem;
+}
+
+.already-div-sm{
+    padding:1.6rem;
+    padding-top: 1.8rem;
 }
 
 .already-font{
