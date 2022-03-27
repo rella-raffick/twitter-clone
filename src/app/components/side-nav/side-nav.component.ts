@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Profile } from 'src/app/interfaces/profile';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
 
-  constructor() { }
-  
+  constructor(private userService: UserService) { }
+  users: Profile[] = this.userService.getUsers();
   ngOnInit(): void {
   }
 
