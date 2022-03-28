@@ -28,12 +28,13 @@
                         <p class="or"> or </p>
                     </div>
                     <div class="theform p-2 pt-0">
-                        <form>
-                            <input type="text" class="form-control pt-3 pb-3" placeholder="Phone, email, or username">
+                        <form #theForm="ngForm">
+                            <input type="text" class="form-control pt-3 pb-3 ip" [(ngModel)]="userModel.username" name="username" id="username" placeholder="Phone, email, or username" #username="ngModel">
                         </form>
                     </div>
                     <div class="p-2 pt-3">
-                        <button type="button" class="btn btn-next">Next</button>
+                        <p></p>
+                        <button type="button"  class="btn btn-next">Next</button>
                     </div>
                     <div class="p-2">
                         <button type="button" class="btn btn-fp">Forgot Password?</button>
@@ -80,8 +81,9 @@
             <p class="or"> or </p>
         </div>
         <div class="theform p-2 pt-0 ps-4 pe-4">
-            <form>
-                <input type="text" class="form-control pt-3 pb-3" placeholder="Phone, email, or username">
+            <form #theForm="ngForm">
+                <input type="text" class="form-control pt-3 pb-3 ip" [(ngModel)]="userModel.username" name="username" id="username"
+                    placeholder="Phone, email, or username" #username="ngModel">
             </form>
         </div>
         <div class="p-3 pt-3">

@@ -122,7 +122,7 @@
 }
 
 .close-icon-sm{
-    transform: translateX(-900%);
+    transform: translateX(-1100%);
     width: 14px;
     height: 14px;
 }
@@ -165,4 +165,15 @@
 
 a{
     color: #1D9BF0;
+}
+
+.ip:focus::placeholder {
+  color: #1D9BF0;
+  font-size: 13px;
+  transform: translateY(-16px);
+}
+
+.ip:focus{
+    border: #1D9BF0 solid 2px;
+    box-shadow: none;
 }
