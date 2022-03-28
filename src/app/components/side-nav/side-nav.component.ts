@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
 import { Tweet } from 'src/app/interfaces/tweet';
@@ -9,15 +10,29 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SideNavComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
   users: Profile[] = this.userService.getUsers();
   ngOnInit(): void {
   }
-   
-  mediaBtn=false;
-  isClicked=false;
-  OnClick(){
-    this.isClicked=true;
+
+  navigateHome() {
+    this.router.navigate(['/home'])
+  }
+
+  navigateNotification() {
+    this.router.navigate(['/notification'])
+  }
+  navigateMessage() {
+    this.router.navigate(['/messaging/message'])
+  }
+  navigateProfile() {
+    this.router.navigate(['/profile'])
+  }
+
+  mediaBtn = false;
+  isClicked = false;
+  OnClick() {
+    this.isClicked = true;
   }
   newtweet: Tweet;
   tweettext = '';
@@ -25,46 +40,46 @@ export class SideNavComponent implements OnInit {
   format: any[] = [];
   filetype = "image/*, video/*";
 
-	msg = "";
+  msg = "";
 
   onSelectFile(event: any) {
     const file = event.target.files && event.target.files[0];
     if (file) {
       var reader = new FileReader();
       reader.readAsDataURL(file);
-      if(file.type.indexOf('image')> -1){
+      if (file.type.indexOf('image') > -1) {
         this.format.push('image');
         this.filetype = "image/*";
-      } else if(file.type.indexOf('video')> -1){
+      } else if (file.type.indexOf('video') > -1) {
         this.format.push('video');
         this.mediaBtn = true;
         this.filetype = "video/*";
       }
-      if(this.format.length == 2) {
+      if (this.format.length == 2) {
         this.mediaBtn = true;
       }
       reader.onload = (event) => {
         this.urls.push((<FileReader>event.target).result);
-        if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
-        else this.click = true; 
+        if (this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+        else this.click = true;
       }
     }
   }
 
   selectFiletype() {
-    if(this.urls.length == 0) {
+    if (this.urls.length == 0) {
       this.filetype = "image/*, video/*";
     }
   }
 
   removeMedia(index: number) {
-    this.format.splice(index,1);
-    this.urls.splice(index,1);
+    this.format.splice(index, 1);
+    this.urls.splice(index, 1);
     this.mediaBtn = false;
-    if(this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
-    else this.click = true; 
+    if (this.urls.length != 0 || this.tweettext.length != 0) this.click = false;
+    else this.click = true;
   }
-  
+
   addTweet() {
     this.newtweet = {} as Tweet;
     let date: Date = new Date();
@@ -86,8 +101,8 @@ export class SideNavComponent implements OnInit {
     this.click = true;
   }
 
-  click : boolean = true;
-  onKey(event: KeyboardEvent) { 
-    this.click = (event.target as HTMLInputElement).value === '' ? true:false;
+  click: boolean = true;
+  onKey(event: KeyboardEvent) {
+    this.click = (event.target as HTMLInputElement).value === '' ? true : false;
   }
 }

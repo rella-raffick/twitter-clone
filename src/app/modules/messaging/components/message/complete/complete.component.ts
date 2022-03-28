@@ -29,4 +29,18 @@ export class CompleteComponent implements OnInit {
     this.navigate.navigate(['/messaging/message/1'])
   }
 
+  navigateHome() {
+    this.navigate.navigate(['/home'])
+  }
+
+  navigateNotification() {
+    this.navigate.navigate(['/notification'])
+  }
+  navigateMessage() {
+    this.navigate.navigate(['/messaging/message'])
+  }
+  navigateProfile() {
+    this.navigate.navigate(['/profile'])
+  }
+
 }

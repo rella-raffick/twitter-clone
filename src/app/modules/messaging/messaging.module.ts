@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/shared/shared.module';
 import { SideNavComponent } from './../../components/side-nav/side-nav.component';
 import { MsgsearchbarComponent } from './components/message/msgsearchbar/msgsearchbar.component';
 import { MsgnavbarComponent } from './components/message/msgnavbar/msgnavbar.component';
@@ -30,7 +31,8 @@ import { ChatboxInputComponent } from './components/message/chatbox-input/chatbo
   ],
   imports: [
     CommonModule,
-    MessagingRoutingModule
+    MessagingRoutingModule,
+    SharedModule
   ]
 })
 export class MessagingModule { }

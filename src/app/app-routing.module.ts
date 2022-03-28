@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotificationComponent } from './components/Notification/notification/notification.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'notification', component: NotificationComponent },
   { path: 'notification/mentions', component: NotificationComponent },
@@ -17,9 +17,9 @@ const routes: Routes = [
     path: 'messaging', loadChildren: () => import('./modules/messaging/messaging.module')
       .then(m => m.MessagingModule)
   },
-  { path: '', component:LandingPageComponent},
-  {path:'username',component:UsernameComponent},
-  {path:'password',component:PasswordComponent}
+  { path: 'landing', component: LandingPageComponent },
+  { path: 'username', component: UsernameComponent },
+  { path: 'password', component: PasswordComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-notification',
@@ -11,16 +11,24 @@ export class NotificationComponent implements OnInit {
   value:string | null | undefined;
   module:string | null | undefined;
   
-  constructor(private route: ActivatedRoute ) { 
+  constructor(private route: ActivatedRoute, private router: Router ) { 
   }
 
   ngOnInit(): void {
-    
-    // this.value = this.route.snapshot.paramMap.get('id');
-    // this.route.params.subscribe(value =>{
-    //   this.module = this.value;
-    //   console.log("module value"+ value);
-    // })
+  }
+
+  navigateHome() {
+    this.router.navigate(['/home'])
+  }
+
+  navigateNotification() {
+    this.router.navigate(['/notification'])
+  }
+  navigateMessage() {
+    this.router.navigate(['/messaging/message'])
+  }
+  navigateProfile() {
+    this.router.navigate(['/profile'])
   }
 
 }

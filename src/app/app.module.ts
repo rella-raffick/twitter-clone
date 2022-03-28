@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,7 +28,6 @@ import { ProfileLikesComponent } from './components/profiles/profile-likes/profi
 @NgModule({
   declarations: [
     AppComponent,
-    SideNavComponent,
     MiddleFeedComponent,
     WhatsHappeningComponent,
     NewtweetComponent,
@@ -53,8 +53,8 @@ import { ProfileLikesComponent } from './components/profiles/profile-likes/profi
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
