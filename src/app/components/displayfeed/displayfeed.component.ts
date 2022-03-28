@@ -27,6 +27,7 @@ export class DisplayfeedComponent implements OnInit {
       this.arrayRetweet.push(false);
       this.arrayLikes.push(false);
     }
+    console.log(this.users);
   }
   increaseReplyCount(id: number) {
     if (this.replyBool == false) {
@@ -124,7 +125,28 @@ export class DisplayfeedComponent implements OnInit {
     else this.click = true;
   }
 
+  clear() {
+    this.tweettext = '';
+    this.urls = [];
+    this.format = [];
+    this.mediaBtn = false;
+    this.click = true;
+  }
+
   addTweet() {
+    this.newtweet = {} as Tweet;
+    let date: Date = new Date();
+    this.newtweet.tweetid = 2;
+    this.newtweet.tweetcontent = this.tweettext;
+    this.newtweet.time = date.toString();
+    this.newtweet.retweet = 0;
+    this.newtweet.reply = 0;
+    this.newtweet.media = this.urls;
+    this.newtweet.likes = 0;
+    this.newtweet.date = date.toString();
+    this.newtweet.format = this.format;
+    console.log(this.newtweet.media[0]);
+    this.userService.addNewTweet(this.newtweet);
     this.tweettext = '';
     this.urls = [];
     this.format = [];
