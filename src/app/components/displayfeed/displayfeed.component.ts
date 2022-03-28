@@ -27,7 +27,6 @@ export class DisplayfeedComponent implements OnInit {
       this.arrayRetweet.push(false);
       this.arrayLikes.push(false);
     }
-    console.log(this.users);
   }
   increaseReplyCount(id: number) {
     if (this.replyBool == false) {
