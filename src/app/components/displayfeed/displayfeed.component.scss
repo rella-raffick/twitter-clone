@@ -311,6 +311,16 @@ $twitterColor : #00acee;
     }
 }
 
+.tweet-top-right:hover {
+    color: #00acee;
+    .menu-icon{ 
+        border-radius: 60px; 
+        //padding: 0.1em 0.2em; 
+        background-color: rgba(0, 173, 241, 0.1);
+    }
+}
+
+
 .retweet:hover {
     color: #06d806;
     .tweet-bottom-icon { 
