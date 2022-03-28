@@ -43,17 +43,20 @@
 
 
     <div class="links mt-3">
-      <a class="nav-link" aria-current="page" (click)="tweet()"><span [ngClass]="{classTweet}">Tweets</span></a>
-
-      <div class="reply" (click)="reply()">
-        <a class="nav-link"><span [ngClass]="{classReply}">Tweets</span></a>
-        <a class="nav-link"><span [ngClass]="{classReply}">&</span></a>
-        <a class="nav-link"><span [ngClass]="{classReply}">Reply</span></a>
+      <div [ngClass]="{classTweet}">
+      <a class="nav-link" aria-current="page" (click)="tweet()"><span>Tweets</span></a>
       </div>
-      
-      <a class="nav-link" (click)="media()"><span [ngClass]="{classMedia}">Media</span></a>
-
-      <a class="nav-link" (click)="likes()"><span [ngClass]="{classLikes}">Likes</span></a>
+      <div class="reply" (click)="reply()" [ngClass]="{classReply}">
+        <a class="nav-link"><span >Tweets</span></a>
+        <a class="nav-link"><span >&</span></a>
+        <a class="nav-link"><span>Reply</span></a>
+      </div>
+      <div  [ngClass]="{classMedia}">
+      <a class="nav-link" (click)="media()"><span>Media</span></a>
+    </div>
+    <div [ngClass]="{classLikes}">
+      <a class="nav-link" (click)="likes()"><span >Likes</span></a>
+    </div>
     </div>
 
 

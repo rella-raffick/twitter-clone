@@ -40,21 +40,39 @@ button:hover {
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-  color: black;
+  a span{
+    color: black;
+  } 
+}
+.classTweet:hover{
+  background-color: $hoverColor;
 }
 .classMedia {
   border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-  color: black;
+  a span{
+    color: black;
+  }
+}
+
+.classMedia:hover{
+  background-color: $hoverColor;
 }
 .classLikes {
   border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-  color: black;
+  a span{
+    color: black;
+  }
+  
+}
+
+.classLikes:hover{
+  background-color: $hoverColor;
 }
 
 .classReply {
@@ -62,7 +80,13 @@ button:hover {
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-  color: black;
+  a span{
+    color: black;
+  }
+}
+
+.classReply:hover{
+  background-color: $hoverColor;
 }
 
 .links {
@@ -78,6 +102,7 @@ button:hover {
   .reply {
     display: flex;
     a {
+      margin-bottom: 15px;
       padding: 0%;
       padding-right: 5px;
     }
