@@ -3,12 +3,11 @@
         <div class="back">
             <i (click)="backNavigate()" class="fa fa-arrow-left" aria-hidden="true"></i>
         </div>
-        <img src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png"
-            alt="">
+        <img src={{this.specificUser[0].profilelogo}} alt="">
         <div class="contents">
             <div class="names">
-                <p>Lilly</p>
-                <p>@Lilly</p>
+                <p>{{this.specificUser[0].username}}</p>
+                <p>@{{this.specificUser[0].username}}</p>
             </div>
             <div class="menu">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>

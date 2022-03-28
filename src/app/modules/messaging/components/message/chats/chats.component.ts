@@ -9,7 +9,7 @@ export class ChatsComponent implements OnInit {
 
   constructor() { }
 
-  @Input() item : any;
+  @Input() item: any;
 
   ngOnInit(): void {
   }
