@@ -1,3 +1,4 @@
+import { SideNavComponent } from './../../components/side-nav/side-nav.component';
 import { MsgsearchbarComponent } from './components/message/msgsearchbar/msgsearchbar.component';
 import { MsgnavbarComponent } from './components/message/msgnavbar/msgnavbar.component';
 import { ChatsComponent } from './components/message/chats/chats.component';
