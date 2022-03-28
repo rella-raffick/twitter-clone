@@ -12,9 +12,7 @@
                     <div class="timespan">1h</div>
                 </div>
                 <div class="tweet-top-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots menu-icon" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                    </svg>            
+                    <i class=" fa fa-light fa-ellipsis menu-icon"></i>           
                 </div>
             </div>
             <div class="tweet-content">
@@ -77,10 +75,10 @@
                             <div class="model-heading">
                                 <div class="row margin" style="position:relative;">
                                     <div class="col-2" >
-                                        <img src = "{{user.profilelogo}}" alt ="pic" width = 50px height="50px">
+                                        <img src = "{{users[index].profilelogo}}" alt ="pic" width = 50px height="50px">
                                     </div>
                                     <div class="col-10">
-                                        <p class="fontsize"><b>{{user.profilename}} </b> <span class="text">@{{user.username}} . 10h</span> </p><br>
+                                        <p class="fontsize"><b>{{users[index].profilename}}</b> <span class="text">@{{users[index].username}} . 10h</span> </p><br>
                                         <p style="margin-top: -25px; font-size: 18px;" class="text">Sample Text displayed here.</p>
                                         <p style=" font-size: 18px;"> @BCCI<br>
                                         @IPL_2022<br>
@@ -90,7 +88,7 @@
                                 <div class="vline" style="position:absolute;"></div>
                                 <div class="row margin" style="position:relative;">
                                     <div class="col-lg-2" >
-                                        <img src = "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" alt ="pic" width = 50px height="50px">
+                                        <img src = "{{user.profilelogo}}" alt ="pic" width = 50px height="50px">
                                     </div>
                                     <div class="col-lg-10">
                                         <div class="textinput">  

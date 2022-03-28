@@ -152,7 +152,6 @@ $twitterColor : #00acee;
 .bottomicons i{
     padding-right: 30px;
     color: $twitterColor;
-
 }
 
 .tweet {
@@ -312,6 +311,16 @@ $twitterColor : #00acee;
     }
 }
 
+.tweet-top-right:hover {
+    color: #00acee;
+    .menu-icon{ 
+        border-radius: 60px; 
+        //padding: 0.1em 0.2em; 
+        background-color: rgba(0, 173, 241, 0.1);
+    }
+}
+
+
 .retweet:hover {
     color: #06d806;
     .tweet-bottom-icon { 
@@ -358,10 +367,31 @@ $twitterColor : #00acee;
 @media screen and (max-width: 1005px) {
     div.edit { display: none;}
     div.editicon { display: inline-block;}
+    .profilelogo {
+        width: 45px;
+        height: 45px;
+        border-radius:50%;
+        
+    }
 }
 
 @media screen and (max-width: 705px) {
     .graph, .calender { display: none;}
+    .profilelogo {
+        width: 40px;
+        height: 40px;
+        border-radius:50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .profilelogo {
+        width: 35px;
+        height: 35px;
+        border-radius:50%;
+    }
+    .message{
+        font-size: 13px;
+    }
 }
 
 .number {
