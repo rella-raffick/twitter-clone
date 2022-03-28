@@ -11,7 +11,7 @@ export class NotificationMentionComponent implements OnInit {
                   {
                   "reply": 11,
                   "retweet": 19,
-                  "likes": 101,
+                  "likes": 75,
                   "replystatus" : false,
                   "retweetstatus" : false,
                   "likesstatus" : false,

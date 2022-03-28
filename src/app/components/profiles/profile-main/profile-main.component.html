@@ -2,19 +2,22 @@
     <div class="rectangle">
         
     </div>
-    <div class="profilepic" style=" margin-top: -50px;">
-        <img src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" class="img-circle" alt="profile pic" width="125px" height="125px">
-        
-    </div>
+      
+    <div class="profilepic row" style=" margin-top: -50px;">
+        <div class="col-4">
+        <img  src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" class="img-circle" alt="profile pic" width="125px" height="125px">
+        </div>
+        <div class="col-8" style="text-align: end;">
+        <button  type="button" class="btn btn-light col-2">Set up profile</button> 
+        </div>
    
 </div>
 
-
-<div class="container mt-5">
+<div class="container mt-5" >
     <div class="row">
-        <div class="col-md-6">
-            <b>Lilly </b>
-            <p>@Lilly</p>
+        <div class="col-md-6" style="margin-top: -20px;">
+            <b class="name">Lilly </b>
+            <p>@Lilly_01_</p>
             <p>
                 <svg style=" width: 25px; height: 25px;" viewBox="0 0 24 24" aria-hidden="true"
                     class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr">
@@ -35,6 +38,37 @@
             </p>
             <p><b>500  </b> <span>Following</span> <b>&nbsp; 758 </b><span>Followers</span></p>
         </div>
-        <div class="col-md-4"></div>
     </div>
+
+    <div style="margin-top: 20px;">
+        <ul class="nav nav-pills nav-fill">
+  
+          <li class="nav-item color" >
+            <a class="nav-link" aria-current="page" (click)="tweet()" ><span [ngClass]="{classTweet}">Tweets</span></a>
+          </li>
+          <li class="nav-item color" >
+            <a class="nav-link" (click)="reply()"><span [ngClass]="{classReply}">Tweets & Reply</span></a>
+          </li>
+          <li class="nav-item color" >
+            <a class="nav-link" (click)="media()"><span [ngClass]="{classMedia}">Media</span></a>
+          </li>
+          <li class="nav-item color" >
+            <a class="nav-link" (click)="likes()"><span [ngClass]="{classLikes}">Likes</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf=" active === 'tweet' ">
+        <app-notification-mention></app-notification-mention>
+      </div>
+      <div *ngIf=" active === 'reply' ">
+        <app-notification-all></app-notification-all>
+      </div>
+      <div *ngIf=" active === 'media' ">
+        <app-profile-media></app-profile-media>
+      </div>
+      <div *ngIf=" active === 'likes' ">
+        <app-profile-likes></app-profile-likes>
+      </div>
+      
 </div>

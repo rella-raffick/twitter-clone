@@ -45,7 +45,9 @@ $twitterColor : #00acee;
 }
 
 .margin {
-    padding: 15px;
+    padding: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     // border: 1px solid lightblue;
 }
 
@@ -63,8 +65,8 @@ $twitterColor : #00acee;
 
  .textlike b{
      color: gray;
-     font-size: 15px;
-     margin: 8px;
+     font-size: 12px;
+     margin-left: 6px;
  }
  .flex{
      display:flex ;

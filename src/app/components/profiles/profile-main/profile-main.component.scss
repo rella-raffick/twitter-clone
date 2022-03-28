@@ -1,13 +1,85 @@
+$hoverColor : #ededed;
+$twitterColor : #00acee;
+
 .rectangle {
     width: 100%;
-    height : 180px;
-    // background-color: #dcdce0;
-    // background-image: "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80";
+    height : 160px;
     background-image: url("https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80");
 }
 
 .profilepic{
-    // position: absolute; 
     margin-top: -80px;
     margin-left: 15px;
+}
+
+.name {
+    font-size: x-large;
+}
+
+.flex{
+    display: flex;
+}
+
+button{
+    height: 35px;
+    width : 130px;
+    margin-top: 70px;
+    border-radius: 20px;
+    border: 1px solid #ededed;
+    font-size: medium;
+    font-weight: 450;
+    background-color: white;
+}
+
+button:hover{
+    background-color: #ededed;
+}
+
+.classTweet {
+    border-bottom-color:$twitterColor;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-radius: 3px;
+    color: black;
+
+}
+.classMedia {
+    border-bottom-color:$twitterColor;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-radius: 3px;
+    color: black;
+}
+.classLikes {
+    border-bottom-color:$twitterColor;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-radius: 3px;
+    color: black;
+}
+
+.classReply {
+    border-bottom-color:$twitterColor;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-radius: 3px;
+    color: black;
+}
+
+li {
+    font-size: medium;
+}
+
+li a{
+    color: gray;
+}
+
+
+
+.color{
+    padding: 5px;
+}
+
+.color:hover{
+    background-color:$hoverColor;
 }
