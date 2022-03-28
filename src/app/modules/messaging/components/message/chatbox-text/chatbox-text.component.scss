@@ -5,9 +5,17 @@
   img {
     height: 50px;
     width: 50px;
+    border-radius: 50%;
   }
   .receiver {
     display: flex;
+
+    .message {
+      button {
+        width: 100%;
+      }
+    }
+
     &:hover {
       .drop {
         display: block;

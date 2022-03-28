@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { LoginModel } from './../../../LoginModel';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsernameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   theList: any[]=[];
 
   ngOnInit(): void {
   }
 
-  addUsername(username:string){
-    this.theList.push({username:username});
+  goBack(){
+    this.location.back();
   }
 
 

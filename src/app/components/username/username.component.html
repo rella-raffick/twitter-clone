@@ -4,7 +4,7 @@
         <div class="card spacer text-center">
             
                 <div class="card-header">
-                    <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648382612/close_cs7loc.png" class="img-fluid close-icon">
+                <a type="button" (click)="goBack()"class="btn-close close-icon"></a>
                        <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648205885/twitter_ykbgdx.png"
                             class="img-fluid twitter-icon" srcset="">
                   
@@ -34,7 +34,7 @@
                     </div>
                     <div class="p-2 pt-3">
                         <p></p>
-                        <button type="button"  class="btn btn-next">Next</button>
+                        <a type="button" routerLink="/password"  class="btn btn-next">Next</a>
                     </div>
                     <div class="p-2">
                         <button type="button" class="btn btn-fp">Forgot Password?</button>
@@ -55,7 +55,7 @@
 <div class="container-fluid  d-md-none d-sm-block d-block" style="background-color: white;">
     <div class="d-flex justify-content-center">
         <div class="p-3">
-            <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648382612/close_cs7loc.png" class="img-fluid close-icon-sm">
+        <a type="button" (click)="goBack()" class="btn-close close-icon-sm"></a>
             <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648205885/twitter_ykbgdx.png"
                 class="img-fluid twitter-icon-sm" srcset="">
         </div>
@@ -73,7 +73,7 @@
             </button>
         </div>
         <div class="p-2 pt-3">
-            <button type="button" class="btn btn-apple-sm"><span><img
+            <button type="button" (click)="goBack()" class="btn btn-apple-sm"><span><img
                         src="https://res.cloudinary.com/dfep0loer/image/upload/v1648210515/apple_drckhf.png"
                         class="img-fluid btn-img" srcset=""></span> Sign up with Apple</button>
         </div>
@@ -87,7 +87,7 @@
             </form>
         </div>
         <div class="p-3 pt-3">
-            <button type="button" class="btn btn-next-sm">Next</button>
+            <button type="button" routerLink="/password" class="btn btn-next-sm">Next</button>
         </div>
         <div class="p-3">
             <button type="button" class="btn btn-fp-sm">Forgot Password?</button>

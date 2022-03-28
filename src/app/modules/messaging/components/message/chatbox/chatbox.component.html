@@ -1,8 +1,8 @@
 <div class="container">
     <app-chatbox-nav [specificUser]="specific"></app-chatbox-nav>
     <div class="chat">
-        <app-chat-details></app-chat-details>
-        <app-chatbox-text></app-chatbox-text>
+        <app-chat-details [specificUser]="specific"></app-chat-details>
+        <app-chatbox-text [specificUser]="specific"></app-chatbox-text>
     </div>
     <app-chatbox-input></app-chatbox-input>
 </div>

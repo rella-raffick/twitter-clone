@@ -30,7 +30,6 @@ export class DisplayfeedComponent implements OnInit {
       this.arrayRetweet.push(false);
       this.arrayLikes.push(false);
     }
-    console.log(this.users);
   }
 
   viewMediaFunction(src:string,format:string){

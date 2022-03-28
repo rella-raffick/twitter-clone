@@ -12,6 +12,8 @@ export class ChatboxNavComponent implements OnInit {
 
   @Input() specificUser: any;
 
+  specific: any;
+
   ngOnInit(): void {
   }
 
