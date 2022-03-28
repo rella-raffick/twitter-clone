@@ -1,0 +1,32 @@
+.container {
+  background-color: white;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  .row {
+    .col-md-12 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .back {
+        i {
+          font-size: 20px;
+        }
+        i:hover {
+          cursor: pointer;
+        }
+      }
+      .names {
+        margin-left: 30px;
+        letter-spacing: 2px;
+        p:first-child {
+          font-weight: 600;
+          font-size: 18px;
+          margin: 0;
+        }
+        p:nth-child(2) {
+          margin-top: 5px;
+          color: grey;
+        }
+      }
+    }
+  }
+}

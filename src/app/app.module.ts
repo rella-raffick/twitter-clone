@@ -18,7 +18,11 @@ import { NotificationAllComponent } from './components/Notification/notification
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { UsernameComponent } from './components/username/username.component';
 import { PasswordComponent } from './components/password/password.component';
-
+import { ProfileComponent } from './components/profiles/profile/profile.component';
+import { ProfileNavComponent } from './components/profiles/profile-nav/profile-nav.component';
+import { ProfileMainComponent } from './components/profiles/profile-main/profile-main.component';
+import { ProfileMediaComponent } from './components/profiles/profile-media/profile-media.component';
+import { ProfileLikesComponent } from './components/profiles/profile-likes/profile-likes.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,12 @@ import { PasswordComponent } from './components/password/password.component';
     LandingPageComponent,
     UsernameComponent,
     PasswordComponent,
+    ProfileComponent,
+    ProfileNavComponent,
+    ProfileMainComponent,
+    ProfileMediaComponent,
+    ProfileLikesComponent
+
   ],
     imports: [
     BrowserModule,
