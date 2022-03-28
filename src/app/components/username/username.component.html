@@ -1,0 +1,104 @@
+<div class="container-fluid d-sm-none d-none d-md-block">
+    <div class="d-flex justify-content-center align-items-center login-container ">
+        <div class="">
+        <div class="card spacer text-center">
+            
+                <div class="card-header">
+                    <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648382612/close_cs7loc.png" class="img-fluid close-icon">
+                       <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648205885/twitter_ykbgdx.png"
+                            class="img-fluid twitter-icon" srcset="">
+                  
+                </div>
+                <div class="card-body">
+                    <div class="title">
+                        <h1 class="title-font">Sign in to Twitter</h1>
+                    </div>
+                    <div  class="p-2">
+                        <button type="button" class="btn btn-google">
+                            <span><img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648210313/google_sufvx8.png"
+                                    class="img-fluid btn-img" srcset=""></span> Sign up with Google
+                        </button>
+                    </div>
+                    <div class="p-2">
+                        <button type="button" class="btn btn-apple"><span><img
+                                    src="https://res.cloudinary.com/dfep0loer/image/upload/v1648210515/apple_drckhf.png"
+                                    class="img-fluid btn-img" srcset=""></span> Sign up with Apple</button>
+                    </div>
+                    <div class="p-1">
+                        <p class="or"> or </p>
+                    </div>
+                    <div class="theform p-2 pt-0">
+                        <form #theForm="ngForm">
+                            <input type="text" class="form-control pt-3 pb-3 ip" [(ngModel)]="userModel.username" name="username" id="username" placeholder="Phone, email, or username" #username="ngModel">
+                        </form>
+                    </div>
+                    <div class="p-2 pt-3">
+                        <p></p>
+                        <button type="button"  class="btn btn-next">Next</button>
+                    </div>
+                    <div class="p-2">
+                        <button type="button" class="btn btn-fp">Forgot Password?</button>
+                    </div>
+
+                    <div class="p-2 pt-4">
+                        <h3 class="chrip">Don't have an account? <a href="">Signup</a> </h3>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid  d-md-none d-sm-block d-block" style="background-color: white;">
+    <div class="d-flex justify-content-center">
+        <div class="p-3">
+            <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648382612/close_cs7loc.png" class="img-fluid close-icon-sm">
+            <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648205885/twitter_ykbgdx.png"
+                class="img-fluid twitter-icon-sm" srcset="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="title-sm">
+            <h1 class="title-font-sm">Sign in to Twitter</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="p-2">
+            <button type="button" class="btn btn-google-sm">
+                <span><img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648210313/google_sufvx8.png"
+                        class="img-fluid btn-img" srcset=""></span> Sign up with Google
+            </button>
+        </div>
+        <div class="p-2 pt-3">
+            <button type="button" class="btn btn-apple-sm"><span><img
+                        src="https://res.cloudinary.com/dfep0loer/image/upload/v1648210515/apple_drckhf.png"
+                        class="img-fluid btn-img" srcset=""></span> Sign up with Apple</button>
+        </div>
+        <div class="p-1 ps-4 pe-4">
+            <p class="or"> or </p>
+        </div>
+        <div class="theform p-2 pt-0 ps-4 pe-4">
+            <form #theForm="ngForm">
+                <input type="text" class="form-control pt-3 pb-3 ip" [(ngModel)]="userModel.username" name="username" id="username"
+                    placeholder="Phone, email, or username" #username="ngModel">
+            </form>
+        </div>
+        <div class="p-3 pt-3">
+            <button type="button" class="btn btn-next-sm">Next</button>
+        </div>
+        <div class="p-3">
+            <button type="button" class="btn btn-fp-sm">Forgot Password?</button>
+        </div>
+        
+    </div>
+
+    <div class="row pe-3 ps-3">
+        <div class="p-2 pt-4">
+            <h3 class="chrip">Don't have an account? <a href="">Signup</a> </h3>
+        </div>
+    </div>
+    
+</div>

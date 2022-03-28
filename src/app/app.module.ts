@@ -1,4 +1,3 @@
-
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +15,10 @@ import { NotificationComponent } from './components/Notification/notification/no
 import { NotificationNavComponent } from './components/Notification/notification-nav/notification-nav.component';
 import { NotificationMentionComponent } from './components/Notification/notification-mention/notification-mention.component';
 import { NotificationAllComponent } from './components/Notification/notification-all/notification-all.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { UsernameComponent } from './components/username/username.component';
+import { PasswordComponent } from './components/password/password.component';
+
 
 @NgModule({
   declarations: [
@@ -29,14 +32,19 @@ import { NotificationAllComponent } from './components/Notification/notification
     NotificationComponent,
     NotificationNavComponent,
     NotificationMentionComponent,
-    NotificationAllComponent
+    NotificationAllComponent,
+    LandingPageComponent,
+    UsernameComponent,
+    PasswordComponent,
   ],
     imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

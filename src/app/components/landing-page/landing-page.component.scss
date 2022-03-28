@@ -1,0 +1,190 @@
+//Font Faces
+@font-face {
+    font-family: Chirp;
+    src: url('https://res.cloudinary.com/dfep0loer/raw/upload/v1648210076/chirp-bold-web_puxmod.woff');
+}
+@font-face {
+    font-family: Apple;
+    src: url('https://res.cloudinary.com/dfep0loer/raw/upload/v1648211001/WarowniaBlk_v30r3x.otf');
+}
+@font-face {
+    font-family: Google;
+    src: url('https://res.cloudinary.com/dfep0loer/raw/upload/v1648209669/product-sans-regular_thl5iu.ttf');
+}
+
+
+//General
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+//col-7
+.img-twitter{
+    height: 757px;
+    margin-left: -12px;
+}
+
+
+.zero-pad{
+    padding: 0;
+
+}
+
+//col-5
+//Twitter Icon Div
+.twitter-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.icon-div{
+    padding:1.6rem;
+}
+.icon-div-sm{
+    padding:1.6rem;
+    padding-bottom: 1rem;
+}
+
+//Title-Subtitle
+//Title
+.title{
+    padding:1.6rem;
+    padding-top: 3.5rem;
+    
+}
+
+.title-sm{
+    padding:1.6rem;
+    padding-bottom: 1rem;
+    padding-top: 1.7rem;
+    
+}
+
+.title-font{
+    font-family: Chirp;
+    line-height: 3rem;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.title-font-sm{
+    font-family: Chirp;
+    line-height: 4rem;
+    font-weight: 900;
+    font-size: 2.8rem;
+}
+
+//Subtitle
+.sub-title{
+    padding:1.6rem;
+}
+.sub-title-sm{
+    padding:1.6rem;
+    padding-top: .5rem;
+}
+
+.sub-title-font{
+    font-family: Chirp;
+    line-height: 3rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.sub-title-font-sm{
+    font-family: Chirp;
+    font-weight: 900;
+    font-size: 1.7rem;
+}
+
+.apple-google{
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.apple,.google{
+    padding: .5rem;
+}
+
+.blue-btn{
+    padding: .5rem;
+    padding-top: 0rem;
+}
+
+.btn{
+    border-radius: 20px;
+    border: rgb(194, 194, 194) 1px solid;
+}
+
+.btn-google{
+    font-family: Google;
+    padding: .3rem 3.3rem .3rem 3.3rem;
+}
+
+.btn-apple{
+    font-family: Apple;
+    padding: .3rem 3.4rem .3rem 3.4rem;
+}
+
+.btn-apple:hover,.btn-google:hover{
+    background-color: #E6E6E6;
+}
+
+.btn-img{
+    width: 18px;
+    height: 18px;
+    margin-bottom: 4.5px;
+    margin-right: 5px;
+}
+
+.or{
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+}
+
+.btn-blue{
+    font-family: Chirp;
+    border: none;
+    padding: .3rem 1.85rem .3rem 1.85rem;
+    background-color: #03a9f4;
+    color: white;
+}
+
+.btn-blue:hover{
+    background-color: #017eb8;
+}
+
+.tc{
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    line-height: 12px;
+}
+
+.already-div{
+    padding:1.6rem;
+    padding-top: 3rem;
+}
+
+.already-div-sm{
+    padding:1.6rem;
+    padding-top: 1.8rem;
+}
+
+.already-font{
+    font-family: Chirp;
+}
+
+.btn-sign{
+    font-family: Chirp;
+    border: none;
+    padding: .3rem 7rem .3rem 7rem;
+    background-color: white;
+    border: #03a9f4 solid 1px;
+    color: #03a9f4;
+}
+
+.btn-sign:hover{
+     background-color: #b3e4fa;
+}
