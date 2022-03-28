@@ -6,6 +6,12 @@ $twitterColor : #00acee;
     display: flex;
 }
 
+ul {
+    margin-left: -3%;
+    margin-right: -3%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .headerText {
     font-size: x-large;
     font-weight: 600;
@@ -17,7 +23,7 @@ $twitterColor : #00acee;
 }
 
 li {
-    font-size: x-large;
+    font-size: large;
 }
 
 li a{
@@ -26,7 +32,7 @@ li a{
 
 .margin {
     padding: 25px;
-    // border: 1px solid lightblue;
+    width: 100%;
 }
 
 li .nav-item a:hover{
@@ -55,4 +61,3 @@ background-color: gray;
     border-bottom-width: 5px;
     border-radius: 3px;
 }
-

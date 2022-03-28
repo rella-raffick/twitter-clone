@@ -45,7 +45,7 @@ export class NotificationMentionComponent implements OnInit {
      this.array[i].retweet =  this.array[i].retweet + 1;
       if(this.array[i].retweetstatus === false)
       {
-      this.array[i].retweetvalue = "undo Retweet";
+      this.array[i].retweetvalue = "Undo Retweet";
       }
       else{
         this.array[i].retweetvalue ="Retweet";
