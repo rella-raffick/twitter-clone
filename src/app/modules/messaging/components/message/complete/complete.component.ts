@@ -1,3 +1,5 @@
+import { Profile } from 'src/app/interfaces/profile';
+import { UserService } from 'src/app/services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompleteComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private navigate: Router) { }
+  constructor(private route: ActivatedRoute, private navigate: Router, private user: UserService) { }
 
   chats: number[] = [1, 2]
+
+  users: any[] = []
 
   paramId: string = '';
 
   ngOnInit(): void {
+    this.users = this.user.getUsers()
   }
 
   getActivatedId(id: any) {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class ChatboxNavComponent implements OnInit {
 
   constructor(private route: Router) { }
+
+  @Input() specificUser: any;
 
   ngOnInit(): void {
   }

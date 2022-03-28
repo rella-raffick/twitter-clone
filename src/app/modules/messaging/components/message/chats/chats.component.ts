@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chats',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ChatsComponent implements OnInit {
 
   constructor() { }
+
+  @Input() item : any;
 
   ngOnInit(): void {
   }

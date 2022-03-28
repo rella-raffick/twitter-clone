@@ -2,8 +2,8 @@
     {
       "id": 1,
       "profilelogo": "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
-      "username": "lily",
-      "profilename": "Lily",
+      "username": "lilly",
+      "profilename": "Lilly",
       "profiledetails": "String",
       "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
       "followers": 100,
@@ -21,7 +21,7 @@
           "likes": 10
         }
       ],
-      "messages": "String"
+      "messages": "Hi, Good Morning"
     },
     {
       "id": 2,
@@ -45,7 +45,7 @@
           "likes": 20
         }
       ],
-      "messages": "String"
+      "messages": "We were on a Break"
     },
     {
       "id": 3,
@@ -69,12 +69,12 @@
           "likes": 20
         }
       ],
-      "messages": "String"
+      "messages": "Too Many Jokes"
     },
     {
       "id": 4,
       "profilelogo": "https://w7.pngwing.com/pngs/861/137/png-transparent-sheldon-cooper-sticker-telegram-borat-sagdiyev-others-hand-arm-nest-box-thumbnail.png",
-      "username": "dr_sheldon_copper",
+      "username": "dr_sheldon",
       "profilename": "Sheldon Cooper",
       "profiledetails": "Dr. Sheldon Lee Cooper, B.Sc., M.Sc., M.A., Ph.D., Sc.D., Theoretical physicist.",
       "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
@@ -93,6 +93,6 @@
           "likes": 5
         }
       ],
-      "messages": "String"
+      "messages": "Well, that's no reason to cry"
     } 
   ]

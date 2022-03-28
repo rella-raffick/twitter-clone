@@ -1,11 +1,10 @@
 <div class="container mt-3">
-    <div class="chats">
-        <img src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png"
-            alt="">
+    <div *ngIf="this.item" class="chats">
+        <img src={{this.item.profilelogo}} alt="">
         <div class="contents">
             <div>
-                <p>Lilly <span>@Lilly</span></p>
-                <p>Hi, Good Morning</p>
+                <p>{{this.item.profilename}} <span>@{{this.item.username}}</span></p>
+                <p>{{this.item.messages}}</p>
             </div>
             <div class="timings">
                 <p>3h</p>

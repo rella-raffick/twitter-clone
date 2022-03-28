@@ -2,9 +2,12 @@
   width: 100%;
 }
 
-.chats:hover {
-  background-color: rgb(243, 243, 243);
+.chats {
+  &:hover {
+    background-color: rgb(243, 243, 243);
+  }
 }
+
 
 a {
   text-decoration: none;
