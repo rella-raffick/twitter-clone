@@ -5,7 +5,7 @@
     <div class="col-xl-4 col-xxl-4 col-lg-5 col-md-5 col-sm-10 col-12 messagebox d-md-block" [class.d-none]="paramId">
         <app-msgnavbar></app-msgnavbar>
         <app-msgsearchbar></app-msgsearchbar>
-        <div *ngFor="let j of chats; let i as index" [routerLinkActive]="'active'">
+        <div class="chats" *ngFor="let j of chats; let i as index" [routerLinkActive]="'active'">
             <a [routerLink]="['/messaging/message/',i]">
                 <app-chats></app-chats>
             </a>

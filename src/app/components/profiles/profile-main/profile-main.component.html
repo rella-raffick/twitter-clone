@@ -1,74 +1,74 @@
 <div>
-    <div class="rectangle">
-        
-    </div>
-      
-    <div class="profilepic row" style=" margin-top: -50px;">
-        <div class="col-4">
-        <img  src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" class="img-circle" alt="profile pic" width="125px" height="125px">
-        </div>
-        <div class="col-8" style="text-align: end;">
-        <button  type="button" class="btn btn-light col-2">Set up profile</button> 
-        </div>
-   
-</div>
+  <div class="rectangle">
 
-<div class="container mt-5" >
+  </div>
+
+  <div class="profilepic row" style=" margin-top: -50px;">
+    <div class="col-4">
+      <img src="https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png"
+        class="img-circle" alt="profile pic" width="125px" height="125px">
+    </div>
+    <div class="col-8" style="text-align: end;">
+      <button type="button" class="btn btn-light col-2">Set up profile</button>
+    </div>
+
+  </div>
+
+  <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6" style="margin-top: -20px;">
-            <b class="name">Lilly </b>
-            <p>@Lilly_01_</p>
-            <p>
-                <svg style=" width: 25px; height: 25px;" viewBox="0 0 24 24" aria-hidden="true"
-                    class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr">
-                    <g>
-                        <path
-                            d="M19.708 2H4.292C3.028 2 2 3.028 2 4.292v15.416C2 20.972 3.028 22 4.292 22h15.416C20.972 22 22 20.972 22 19.708V4.292C22 3.028 20.972 2 19.708 2zm.792 17.708c0 .437-.355.792-.792.792H4.292c-.437 0-.792-.355-.792-.792V6.418c0-.437.354-.79.79-.792h15.42c.436 0 .79.355.79.79V19.71z">
-                        </path>
-                        <circle cx="7.032" cy="8.75" r="1.285"></circle>
-                        <circle cx="7.032" cy="13.156" r="1.285"></circle>
-                        <circle cx="16.968" cy="8.75" r="1.285"></circle>
-                        <circle cx="16.968" cy="13.156" r="1.285"></circle>
-                        <circle cx="12" cy="8.75" r="1.285"></circle>
-                        <circle cx="12" cy="13.156" r="1.285"></circle>
-                        <circle cx="7.032" cy="17.486" r="1.285"></circle>
-                        <circle cx="12" cy="17.486" r="1.285"></circle>
-                    </g>
-                </svg> Joined February 2021
-            </p>
-            <p><b>500  </b> <span>Following</span> <b>&nbsp; 758 </b><span>Followers</span></p>
-        </div>
+      <div class="col-md-12" style="margin-top: -20px;">
+        <b class="name">Lilly </b>
+        <p>@Lilly_01_</p>
+        <p>
+          <svg style=" width: 25px; height: 25px;" viewBox="0 0 24 24" aria-hidden="true"
+            class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr">
+            <g>
+              <path
+                d="M19.708 2H4.292C3.028 2 2 3.028 2 4.292v15.416C2 20.972 3.028 22 4.292 22h15.416C20.972 22 22 20.972 22 19.708V4.292C22 3.028 20.972 2 19.708 2zm.792 17.708c0 .437-.355.792-.792.792H4.292c-.437 0-.792-.355-.792-.792V6.418c0-.437.354-.79.79-.792h15.42c.436 0 .79.355.79.79V19.71z">
+              </path>
+              <circle cx="7.032" cy="8.75" r="1.285"></circle>
+              <circle cx="7.032" cy="13.156" r="1.285"></circle>
+              <circle cx="16.968" cy="8.75" r="1.285"></circle>
+              <circle cx="16.968" cy="13.156" r="1.285"></circle>
+              <circle cx="12" cy="8.75" r="1.285"></circle>
+              <circle cx="12" cy="13.156" r="1.285"></circle>
+              <circle cx="7.032" cy="17.486" r="1.285"></circle>
+              <circle cx="12" cy="17.486" r="1.285"></circle>
+            </g>
+          </svg> Joined February 2021
+        </p>
+        <p><b>500 </b> <span>Following</span> <b>&nbsp; 758 </b><span>Followers</span></p>
+      </div>
     </div>
 
-    <div style="margin-top: 20px;">
-        <ul class="nav nav-pills nav-fill">
-  
-          <li class="nav-item color" >
-            <a class="nav-link" aria-current="page" (click)="tweet()" ><span [ngClass]="{classTweet}">Tweets</span></a>
-          </li>
-          <li class="nav-item color" >
-            <a class="nav-link" (click)="reply()"><span [ngClass]="{classReply}">Tweets & Reply</span></a>
-          </li>
-          <li class="nav-item color" >
-            <a class="nav-link" (click)="media()"><span [ngClass]="{classMedia}">Media</span></a>
-          </li>
-          <li class="nav-item color" >
-            <a class="nav-link" (click)="likes()"><span [ngClass]="{classLikes}">Likes</span></a>
-          </li>
-        </ul>
-      </div>
 
-      <div *ngIf=" active === 'tweet' ">
-        <app-notification-mention></app-notification-mention>
-      </div>
-      <div *ngIf=" active === 'reply' ">
-        <app-notification-all></app-notification-all>
-      </div>
-      <div *ngIf=" active === 'media' ">
-        <app-profile-media></app-profile-media>
-      </div>
-      <div *ngIf=" active === 'likes' ">
-        <app-profile-likes></app-profile-likes>
+    <div class="links mt-3">
+      <a class="nav-link" aria-current="page" (click)="tweet()"><span [ngClass]="{classTweet}">Tweets</span></a>
+
+      <div class="reply" (click)="reply()">
+        <a class="nav-link"><span [ngClass]="{classReply}">Tweets</span></a>
+        <a class="nav-link"><span [ngClass]="{classReply}">&</span></a>
+        <a class="nav-link"><span [ngClass]="{classReply}">Reply</span></a>
       </div>
       
-</div>
+      <a class="nav-link" (click)="media()"><span [ngClass]="{classMedia}">Media</span></a>
+
+      <a class="nav-link" (click)="likes()"><span [ngClass]="{classLikes}">Likes</span></a>
+    </div>
+
+
+    <div *ngIf=" active === 'tweet' ">
+      <app-notification-mention></app-notification-mention>
+    </div>
+    <div *ngIf=" active === 'reply' ">
+      <app-notification-all></app-notification-all>
+    </div>
+    <div *ngIf=" active === 'media' ">
+      <app-profile-media></app-profile-media>
+    </div>
+    <div *ngIf=" active === 'likes' ">
+      <app-profile-likes></app-profile-likes>
+    </div>
+
+
+  </div>
