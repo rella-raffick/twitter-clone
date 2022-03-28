@@ -1,6 +1,15 @@
 .bottomnavcontainer{
     width: 100%;
 }
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    border-right: 3px solid #1da1f2;
+}
+
 .bottomnavbar{
     margin: 0;
     width:100%;
