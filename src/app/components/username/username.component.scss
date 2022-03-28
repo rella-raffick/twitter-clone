@@ -21,14 +21,9 @@
 	width: 100%;
 }
 
-.login-form {
-	margin: auto;
-	width: 460px;
-	background-color: #000000;
-	padding: 20px;
-	max-width: 100%;
-	border-radius: .5rem;
-}
+
+
+
 
 .card-header{
     background-color: white;
@@ -38,6 +33,10 @@
 .twitter-icon{
     width: 36px;
     height: 36px;
+}
+.twitter-icon-sm{
+    width: 28px;
+    height: 28px;
 }
 
 .btn{
@@ -49,10 +48,19 @@
     font-family: Google;
     padding: .3rem 3.3rem .3rem 3.3rem;
 }
+.btn-google-sm{
+    font-family: Google;
+    padding: .3rem 5.3rem .3rem 5.3rem;
+}
 
 .btn-apple{
     font-family: Apple;
     padding: .3rem 3.4rem .3rem 3.4rem;
+}
+
+.btn-apple-sm{
+    font-family: Apple;
+    padding: .3rem 5.4rem .3rem 5.4rem;
 }
 
 .btn-apple:hover,.btn-google:hover,.btn-fp:hover{
@@ -72,12 +80,24 @@
     font-family: Chirp;
     padding: .3rem 7.1rem .3rem 7.1rem;
 }
+.btn-next-sm{
+    background-color: #000000;
+    color: white;
+    font-family: Chirp;
+    padding: .3rem 9.1rem .3rem 9.1rem;
+}
 
 .btn-fp{
     background-color: #fff;
     color: #000000;
     font-family: Chirp;
     padding: .3rem 4rem .3rem 4rem;
+}
+.btn-fp-sm{
+    background-color: #fff;
+    color: #000000;
+    font-family: Chirp;
+    padding: .3rem 6rem .3rem 6rem;
 }
 
 .btn-next:hover{
@@ -101,15 +121,38 @@
     height: 20px;
 }
 
+.close-icon-sm{
+    transform: translateX(-900%);
+    width: 14px;
+    height: 14px;
+}
+
 .title-font{
     font-family: Chirp;
     line-height: 3rem;
     font-weight: 900;
     font-size: 2rem;
 }
+.title-font-sm{
+    font-family: Chirp;
+    line-height: 3rem;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.title-sm{
+    padding-top: .6rem;
+    padding-left: 2.4rem;
+}
 
 .spacer{
     padding:0rem 8rem 3rem 8rem;
+}
+
+
+
+.spacer-sm{
+    padding:0rem 4rem 1rem 4rem;
 }
 
 .card{
@@ -118,4 +161,8 @@
 
 .chirp{
     font-family: Chirp;
+}
+
+a{
+    color: #1D9BF0;
 }
