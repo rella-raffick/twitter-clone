@@ -20,8 +20,8 @@
             </div>   
             <div class="media-container">
                 <div class="img_wrp" *ngFor="let media of tweet.media; let index=index;">
-                    <img class="tweet-media" src="{{media}}" *ngIf="tweet.format[index]==='image' && media">
-                    <video class="tweet-media" src="{{media}}" *ngIf="tweet.format[index]==='video' && media" controls></video>
+                    <img class="tweet-media" (click)="viewMediaFunction(media,tweet.format[index])" type="button" data-bs-toggle="modal" data-bs-target="#viewMedia"  src="{{media}}" *ngIf="tweet.format[index]==='image' && media">
+                    <video class="tweet-media" (click)="viewMediaFunction(media,tweet.format[index])" type="button" data-bs-toggle="modal" data-bs-target="#viewMedia" src="{{media}}" *ngIf="tweet.format[index]==='video' && media" controls></video>
                 </div>
             </div>
             <div class="tweet-bottom">
@@ -225,6 +225,15 @@
                 </svg>
                 <button class="tweet" (click)="addTweet()" data-bs-dismiss="modal" [disabled]="click">Tweet</button>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="viewMedia" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="align-items:center;"> 
+        <div class="modal-content" style="width:800px;height:500px;">
+            <img src="{{mediasrc}}" style="width:100%;height:100%" *ngIf="mediaFormat=='image'">
+            <video class="tweet-media" src="{{mediasrc}}" *ngIf="mediaFormat==='video'" style="width:100%;height:100%" controls></video>
+            <i class="fa fa-times close1" aria-hidden="true" data-bs-dismiss="modal"></i>
         </div>
     </div>
 </div>

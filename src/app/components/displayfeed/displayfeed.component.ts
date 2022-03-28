@@ -15,6 +15,9 @@ export class DisplayfeedComponent implements OnInit {
   arrayReply: boolean[] = [];
   arrayRetweet: boolean[] = [];
   arrayLikes: boolean[] = [];
+
+  mediasrc:string;
+  mediaFormat:string
   constructor(private userService: UserService) { }
 
 
@@ -29,6 +32,12 @@ export class DisplayfeedComponent implements OnInit {
     }
     console.log(this.users);
   }
+
+  viewMediaFunction(src:string,format:string){
+    this.mediasrc=src;
+    this.mediaFormat=format;
+  }
+
   increaseReplyCount(id: number) {
     if (this.replyBool == false) {
       this.users[id].tweet[0].reply += 1
