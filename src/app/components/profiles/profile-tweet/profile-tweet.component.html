@@ -11,11 +11,7 @@
               <img class="tweet-media" (click)="viewMediaFunction(media,i.format[index])" type="button" data-bs-toggle="modal" data-bs-target="#viewMedia"  src="{{media}}" *ngIf="i.format[index]==='image' && media">
               <video class="tweet-media" (click)="viewMediaFunction(media,i.format[index])" type="button" data-bs-toggle="modal" data-bs-target="#viewMedia" src="{{media}}" *ngIf="i.format[index]==='video' && media" controls></video>
           </div>
-      </div>
-
-        <p style="color: #00acee; font-size: 18px;"> @friends<br>
-         @phoebe_crapbag<br>
-         @usa</p>         
+      </div>       
 
          <div class="tweet-bottom">
           <div class="bottom-icon msg">
