@@ -1,8 +1,8 @@
 <div class="container mt-3 cont">
-    <div class="explore-nav">
+    <div class="explore-nav sticky-top bg-light">
         <img [routerLink]="['/profile']" src="https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg"
             alt="">
-        <div class="search sticky-top">
+        <div class="search ">
             <form>
                 <div class="input-group">
                     <span class="input-group-text search-icon"> <i class="fa-solid fa-magnifying-glass"></i></span>
@@ -15,7 +15,7 @@
             <i class="fa fa-cog" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="sections mb-4 mt-4">
+    <div class="sections mb-4 mt-4 ">
         <div [ngClass]="{classForyou}">
             <a class="nav-link" aria-current="page" (click)="forYou()"><span>For
                     you</span></a>
