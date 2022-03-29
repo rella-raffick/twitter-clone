@@ -11,8 +11,44 @@
                     <div class="span" style="margin:1%;"></div>
                     <div class="timespan">1h</div>
                 </div>
-                <div class="tweet-top-right">
-                    <i class=" fa fa-light fa-ellipsis menu-icon"></i>           
+                <div class="tweet-top-right dropdown">
+                    <i class=" fa fa-light fa-ellipsis menu-icon" type="button" data-bs-toggle="dropdown" id="viewMenuOptions"></i>           
+                    <ul class="dropdown-menu dropdown-css" aria-labelledby="viewMenuOptions">
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-face-frown"></i>
+                            Not interested in this Tweet
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-user-xmark"></i>
+                            Unfollow @{{user.username}}
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-file-circle-plus"></i>
+                            Add/Remove @{{user.username}} from Lists
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-volume-xmark"></i>
+                            Mute @{{user.username}}
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-user-large-slash"></i>
+                            Block @{{user.username}}
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-code"></i>
+                            Embed Tweet
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-flag"></i>
+                            Report Tweet
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="tweet-content">

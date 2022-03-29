@@ -83,7 +83,7 @@
                 <img class="sidenavprofile dropdown-toggle" type="button" id="dropdownaccount" data-bs-toggle="dropdown"
                     height="32px" width="32px" src="{{users[0].profilelogo}}">
                 <ul class="dropdown-menu dropdown-css" aria-labelledby="dropdownaccount">
-                    <li class="dropdown-header item-header">
+                    <li class="dropdown-header item-header" >
                         <img id="accountpic" src="{{users[0].profilelogo}}">
                         <div class="profiledetail">
                             <p id="name">{{users[0].profilename}}</p>
@@ -140,12 +140,31 @@
         <div class="username d-none d-xl-block d-xxl-block">
             <p class="usernames">@{{users[0].username}}</p>
         </div>
-        <div class="dots d-none d-xl-block d-xxl-block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots"
+        <div class="dots d-none d-xl-block d-xxl-block dropup">
+            <svg xmlns="http://www.w3.org/2000/svg" type="button" data-bs-toggle="dropdown" id="dropdownaccount" width="16" height="16" fill="currentColor" class="bi bi-three-dots dropdown-toggle"
                 viewBox="0 0 16 16">
                 <path
                     d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
             </svg>
+            <ul class="dropdown-menu dropdown-css" aria-labelledby="dropdownaccount">
+                <li class="dropdown-header item-header">
+                    <img id="accountpic" src="{{users[0].profilelogo}}" style="border-radius:50%;">
+                    <div class="profiledetail">
+                        <p id="name">{{users[0].profilename}}</p>
+                        <p id="username">@{{users[0].username}}</p>
+                    </div>
+                    <img id="bluetick"
+                        src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMwZDg5ZDYiPjxwYXRoIGQ9Ik0xMzguNzAwMjMsNDcuNjMzMTFjMC42NzIwNywwLjY3MTgyIDEuMDQ5NjYsMS41ODMxNSAxLjA0OTY2LDIuNTMzNDJjMCwwLjk1MDI3IC0wLjM3NzU5LDEuODYxNiAtMS4wNDk2NiwyLjUzMzQybC03MS42NjY2Nyw3MS42NjY2N2MtMC42NzE4MywwLjY3MjA1IC0xLjU4MzE1LDEuMDQ5NjMgLTIuNTMzNDIsMS4wNDk2M2MtMC45NTAyNiwwIC0xLjg2MTU5LC0wLjM3NzU3IC0yLjUzMzQyLC0xLjA0OTYzbC0yOC42NjY2NywtMjguNjY2NjdjLTEuMzU3OTgsLTEuNDA2MDIgLTEuMzM4NTYsLTMuNjQwOTcgMC4wNDM2NSwtNS4wMjMxOGMxLjM4MjIxLC0xLjM4MjIxIDMuNjE3MTYsLTEuNDAxNjMgNS4wMjMxOCwtMC4wNDM2NWwyNi4xMzMxMSwyNi4xMzMzOWw2OS4xMzMxMSwtNjkuMTMzMThjMC42NzE4LC0wLjY3MjE5IDEuNTgzMTcsLTEuMDQ5ODcgMi41MzM1MiwtMS4wNDk5MWMwLjk1MDM0LC0wLjAwMDA0IDEuODYxNzUsMC4zNzc1NiAyLjUzMzYsMS4wNDk2OXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==">
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item" style="font-size: 13px; text-align: center;">
+                    Add an existing account
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item" style="font-size: 13px;text-align: center;">
+                    Log out @{{users[0].username}}
+                </li>
+            </ul>
         </div>
     </div>
 </div>
