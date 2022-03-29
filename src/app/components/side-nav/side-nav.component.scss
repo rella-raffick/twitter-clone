@@ -148,9 +148,11 @@
 .usernames{
     font-size: 12px;
     color: #888888;
+    margin-left:-20px;
 }
 .profilename{
     margin-top:100px;
+    margin-left:-20px;
 }
 
 .bluedot{
@@ -181,7 +183,7 @@
     width:53px;
     height:53px;
     padding: 6px;
-    margin-left: 18px;
+    margin-left: 4%;
     margin-top: 112px;
 }
 .sidenavprofile:hover{
@@ -192,6 +194,7 @@ outline: 10px solid rgb(212, 211, 211);
 #accountpic{
     width:35px;
     height: 35px;
+    border-radius: 50%;
 }
 .item-header{
     display: flex;
@@ -211,13 +214,13 @@ outline: 10px solid rgb(212, 211, 211);
 }
 #name{
     margin: 3%;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     text-align: left;
 }
 #username{
     margin: 3%;
-    font-size: 13px;
+    font-size: 12px;
     color:#888888;
     text-align: left;
 }
@@ -243,5 +246,5 @@ outline: 10px solid rgb(212, 211, 211);
     height: 4%;
 }
 .bi {
-    float: right;
+    float: center;
 }
