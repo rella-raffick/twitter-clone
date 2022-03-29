@@ -10,10 +10,10 @@ export class NotificationMentionComponent implements OnInit {
 
   array:any[] = [
                   {
-                  "profilelogo": "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
-                  "username": "lilly_01",
-                  "profilename": "Lilly", 
-                  "tweet" : "Former President Donald Trump has withdrawn his endorsement of Mo Brooks for the US Senate seat in Alabama",
+                  "profilelogo": "https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg",
+                  "username": "phoebe_crapbag",
+                  "profilename": "Phoebe Buffay", 
+                  "tweet" : "If You Want To Receive Emails About My Upcoming Shows, Then Please Give Me Money So I Can Buy A Computer.",
                   "reply": 11,
                   "retweet": 19, 
                   "likes": 75,
@@ -26,9 +26,9 @@ export class NotificationMentionComponent implements OnInit {
                 },
  
                   {
-                    "profilelogo": "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
-                    "username": "lilly_01",
-                    "profilename": "Lilly", 
+                    "profilelogo": "https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg",
+                    "username": "phoebe_crapbag",
+                    "profilename": "Phoebe Buffay", 
                     "reply": 1,
                   "retweet": 15,
                   "likes": 96,
