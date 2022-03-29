@@ -72,7 +72,7 @@ export class NewtweetComponent implements OnInit {
     let date: Date = new Date();
     this.newtweet.tweetid = this.users[0].tweet.length + 1;
     this.newtweet.tweetcontent = this.tweettext;
-    this.newtweet.time = date.toString();
+    this.newtweet.time = "Just now";
     this.newtweet.retweet = 0;
     this.newtweet.reply = 0;
     this.newtweet.media = this.urls;
