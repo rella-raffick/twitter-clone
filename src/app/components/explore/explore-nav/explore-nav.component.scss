@@ -1,9 +1,18 @@
-$twitterColor : #00acee;
+$twitterColor: #00acee;
 
 .container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    display: none;
+  }
+
   .explore-nav {
     display: flex;
     align-items: center;
@@ -72,48 +81,49 @@ $twitterColor : #00acee;
   background-color: #f3f3f3;
 }
 
-
 .classForyou {
-  border-bottom-color:$twitterColor;
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-
 }
 
 .classCovid {
-  border-bottom-color:$twitterColor;
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-
 }
 
-.classTrending{
-  border-bottom-color:$twitterColor;
+.classTrending {
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-
 }
 .classNews {
-  border-bottom-color:$twitterColor;
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-
 }
 .classSports {
-  border-bottom-color:$twitterColor;
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
-
 }
 .classEntertainment {
-  border-bottom-color:$twitterColor;
+  border-bottom-color: $twitterColor;
   border-bottom-style: solid;
   border-bottom-width: 5px;
   border-radius: 3px;
+}
 
+@media only screen and (max-width: 575px) {
+  .container {
+    img {
+      display: block;
+    }
+  }
 }

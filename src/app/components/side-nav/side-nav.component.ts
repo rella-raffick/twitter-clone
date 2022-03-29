@@ -28,6 +28,9 @@ export class SideNavComponent implements OnInit {
   navigateProfile() {
     this.router.navigate(['/profile'])
   }
+  navigateExplore() {
+    this.router.navigate(['/explore'])
+  }
 
   mediaBtn = false;
   isClicked = false;
