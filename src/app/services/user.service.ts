@@ -12,7 +12,6 @@ export class UserService {
     for (let i = 0; i < this.users.length; i++) {
       this.arrayLikes.push([]);
       for(let j = 0; j < this.users[i].tweet.length; j++) {
-        //console.log(i+" "+j+" "+this.users[0].likedtweet.indexOf((i+1).toString()+" "+(j+1).toString()));
         if(this.users[0].likedtweet.indexOf((i+1).toString()+" "+(j+1).toString())<0) {
           this.arrayLikes[i].push(false);
         }
@@ -29,7 +28,6 @@ export class UserService {
     for (let i = 0; i < this.users.length; i++) {
       this.arrayRetweet.push([]);
       for(let j = 0; j < this.users[i].tweet.length; j++) {
-        //console.log(i+" "+j+" "+this.users[0].likedtweet.indexOf((i+1).toString()+" "+(j+1).toString()));
         if(this.users[0].retweetedtweet.indexOf((i+1).toString()+" "+(j+1).toString())<0) {
           this.arrayRetweet[i].push(false);
         }
@@ -38,22 +36,37 @@ export class UserService {
         }
       }
     }
+    console.log(this.arrayRetweet);
     return this.arrayRetweet;
   }
+
   getProfileLikes() {
     this.profileLikes = [];
     this.arrayLikes = this.getTweetLikes();
     for(let i=0; i<this.arrayLikes.length; i++) {
       for(let j=0; j<this.arrayLikes[i].length; j++) {
         if(this.arrayLikes[i][j]==true) 
-          this.profileLikes.push(this.users[i].tweet[j]);
+          this.profileLikes.push([this.users[i],this.users[i].tweet[j]]);
       }
     }
     console.log(this.profileLikes);
   }
 
+  getProfileRetweet(): any[] {
+    this.profileRetweet = [];
+    this.arrayRetweet = this.getTweetRetweet();
+    for(let i=0; i<this.arrayRetweet.length; i++) {
+      for(let j=0; j<this.arrayRetweet[i].length; j++) {
+        if(this.arrayRetweet[i][j]==true) 
+          this.profileRetweet.push([this.users[i],this.users[i].tweet[j]]);
+      }
+    }
+    return this.profileRetweet;
+  }
+
   addNewTweet(newtweet: any) {
     this.arrayLikes[0].unshift(false);
+    this.arrayRetweet[0].unshift(false);
     this.users[0].tweet.unshift(newtweet);
   }
   replyTweet() {
@@ -65,6 +78,8 @@ export class UserService {
   arrayLikes: any[] = [];
   arrayRetweet: any[] =[];
   profileLikes: any[] = [];
+  profileRetweet: any[] = [];
+  allRetweet: any[] = [];
 
   getUsers() {
     return this.users;

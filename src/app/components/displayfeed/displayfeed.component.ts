@@ -24,9 +24,13 @@ export class DisplayfeedComponent implements OnInit {
   tweetLikes: any[] = this.userService.getTweetLikes();
   tweetRetweet: any[] = this.userService.getTweetRetweet();
 
+  retweetMessage: any[] = this.userService.getProfileRetweet();
+
   ngOnInit(): void {
     this.users = this.userService.getUsers();
     this.tweetLikes = this.userService.getTweetLikes();
+    this.tweetRetweet = this.userService.getTweetRetweet();
+    this.retweetMessage = this.userService.getProfileRetweet();
   }
 
   viewMediaFunction(src:string,format:string){
@@ -51,12 +55,14 @@ export class DisplayfeedComponent implements OnInit {
     if (this.tweetRetweet[ind1][ind2] == false) {
       this.users[ind1].tweet[ind2].retweet += 1;
       this.retweetedTweet.push((ind1+1).toString()+" "+(ind2+1).toString());
-      this.tweetLikes[ind1][ind2] = true;
+      this.tweetRetweet[ind1][ind2] = true;
     }
     else {
-      this.users[ind1].tweet[ind2].likes -= 1;
-      this.tweetLikes[ind1][ind2] = false;
+      this.users[ind1].tweet[ind2].retweet -= 1;
+      this.retweetedTweet.splice(this.users[0].retweetedtweet.indexOf((ind1+1).toString()+" "+(ind2+1).toString()),1);
+      this.tweetRetweet[ind1][ind2] = false;
     }
+    console.log(this.tweetRetweet);
   }
   increaseLikesCount(ind1: number, ind2: number) {
     if (this.tweetLikes[ind1][ind2] == false) {
@@ -139,6 +145,27 @@ export class DisplayfeedComponent implements OnInit {
   }
 
   addTweet() {
+    this.newtweet = {} as Tweet;
+    let date: Date = new Date();
+    this.newtweet.tweetid = this.users[0].tweet.length+1;
+    this.newtweet.tweetcontent = this.tweettext;
+    this.newtweet.time = date.toString();
+    this.newtweet.retweet = 0;
+    this.newtweet.reply = 0;
+    this.newtweet.media = this.urls;
+    this.newtweet.likes = 0;
+    this.newtweet.date = date.toString();
+    this.newtweet.format = this.format;
+    console.log(this.newtweet.media[0]);
+    this.userService.addNewTweet(this.newtweet);
+    this.tweettext = '';
+    this.urls = [];
+    this.format = [];
+    this.mediaBtn = false;
+    this.click = true;
+  }
+
+  replyTweet() {
     this.newtweet = {} as Tweet;
     let date: Date = new Date();
     this.newtweet.tweetid = 2;
