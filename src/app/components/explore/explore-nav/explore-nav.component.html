@@ -15,22 +15,44 @@
     </div>
     <div class="sections mt-4">
         <div>
-            <a class="nav-link" aria-current="page"><span>For you</span></a>
+            <a class="nav-link" aria-current="page" (click)="forYou()"><span [ngClass]="{classForyou}">For you</span></a>
         </div>
         <div>
-            <a class="nav-link"><span>covid-19</span></a>
+            <a class="nav-link" (click)="covid()"><span [ngClass]="{classCovid}">covid-19</span></a>
         </div>
         <div>
-            <a class="nav-link"><span>Trending</span></a>
+            <a class="nav-link" (click)="trending()"><span [ngClass]="{classTrending}">Trending</span></a>
         </div>
         <div>
-            <a class="nav-link"><span>News</span></a>
+            <a class="nav-link" (click)="news()"><span [ngClass]="{classNews}">News</span></a>
         </div>
         <div>
-            <a class="nav-link"><span>Sports</span></a>
+            <a class="nav-link" (click)="sports()"><span [ngClass]="{classSports}">Sports</span></a>
         </div>
         <div>
-            <a class="nav-link"><span>Entertainment</span></a>
+            <a class="nav-link" (click)="entertainment()"><span [ngClass]="{classEntertainment}">Entertainment</span></a>
         </div>
     </div>
+
+    <div *ngIf=" active === 'foryou' ">
+        <app-notification-all></app-notification-all>
+    </div>
+    <div *ngIf=" active === 'covid' ">
+        <app-notification-mention></app-notification-mention>
+    </div>
+    <div *ngIf=" active === 'trending' ">
+        <app-notification-all></app-notification-all>
+    </div>
+    <div *ngIf=" active === 'news' ">
+        <app-notification-mention></app-notification-mention>
+    </div>
+    <div *ngIf=" active === 'sports' ">
+        <app-notification-all></app-notification-all>
+    </div>
+    <div *ngIf=" active === 'entertainment' ">
+        <app-notification-mention></app-notification-mention>
+    </div>
+
+
+
 </div>
