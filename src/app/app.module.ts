@@ -26,6 +26,7 @@ import { ProfileMediaComponent } from './components/profiles/profile-media/profi
 import { ProfileLikesComponent } from './components/profiles/profile-likes/profile-likes.component';
 import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
 import { ExploreNavComponent } from './components/explore/explore-nav/explore-nav.component';
+import { ProfileTweetComponent } from './components/profiles/profile-tweet/profile-tweet.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ExploreNavComponent } from './components/explore/explore-nav/explore-na
     ProfileMediaComponent,
     ProfileLikesComponent,
     ExploreAllComponent,
-    ExploreNavComponent
+    ExploreNavComponent,
+    ProfileTweetComponent
 
   ],
     imports: [
