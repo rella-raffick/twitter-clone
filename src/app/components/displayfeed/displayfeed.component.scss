@@ -287,11 +287,23 @@ $twitterColor : #00acee;
     cursor:pointer;
 }
 
+.tweet-bottom-icon-sm{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    cursor:pointer;
+}
+
 .msg:hover {
     color: #00acee;
     .tweet-bottom-icon { 
         border-radius: 60px; 
         padding: 0.5em 0.6em; 
+        background-color: rgba(0, 173, 241, 0.1);
+    }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.30em; 
         background-color: rgba(0, 173, 241, 0.1);
     }
 }
@@ -313,6 +325,11 @@ $twitterColor : #00acee;
         padding: 0.5em 0.6em; 
         background-color: rgba(18, 235, 65, 0.1);
     }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.30em; 
+        background-color: rgba(18, 235, 65, 0.1);
+    }
 }
 
 .like:hover {
@@ -322,6 +339,11 @@ $twitterColor : #00acee;
         padding: 0.5em 0.6em; 
         background-color: rgba(235, 18, 170, 0.1);
     }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.3em; 
+        background-color: rgba(235, 18, 170, 0.1);
+    }
 }
 
 .liked {
@@ -329,6 +351,11 @@ $twitterColor : #00acee;
     .tweet-bottom-icon { 
         border-radius: 60px; 
         padding: 0.5em 0.6em; 
+        background-color: rgba(235, 18, 170, 0.1);
+    }
+      .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.3em; 
         background-color: rgba(235, 18, 170, 0.1);
     }
 }

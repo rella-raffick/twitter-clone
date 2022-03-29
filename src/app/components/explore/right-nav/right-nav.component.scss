@@ -1,0 +1,70 @@
+
+
+.wf-items {
+  border: none;
+  background-color: #f3f3f3;
+  padding: 1rem;
+}
+
+.wf-items:hover {
+  background-color: #d8d8d8;
+}
+
+.wh-p {
+  font-weight: 600;
+}
+
+.wh-link {
+  color: #1a8cd8;
+}
+
+.wh-header {
+  border: none;
+  background-color: #f3f3f3;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.profile {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+.wf-spacing {
+  margin: -3px;
+  padding: -3px;
+}
+
+.profile-name {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile-name:hover {
+  text-decoration: underline;
+}
+
+.profile-subname {
+  font-size: 0.8rem;
+}
+
+.tick {
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+}
+
+.follow-btn {
+  border-radius: 20px;
+  margin-top: 11px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+.follow-btn:hover {
+  background-color: rgb(59, 59, 59);
+}

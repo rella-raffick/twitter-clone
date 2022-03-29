@@ -33,6 +33,7 @@ import { ExploreTrendingComponent } from './components/explore/explore-trending/
 import { ExploreNewsComponent } from './components/explore/explore-news/explore-news.component';
 import { ExploreSportsComponent } from './components/explore/explore-sports/explore-sports.component';
 import { ExploreEntertainmentComponent } from './components/explore/explore-entertainment/explore-entertainment.component';
+import { RightNavComponent } from './components/explore/right-nav/right-nav.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ExploreEntertainmentComponent } from './components/explore/explore-ente
     ExploreTrendingComponent,
     ExploreNewsComponent,
     ExploreSportsComponent,
-    ExploreEntertainmentComponent
+    ExploreEntertainmentComponent,
+    RightNavComponent
 
   ],
     imports: [
