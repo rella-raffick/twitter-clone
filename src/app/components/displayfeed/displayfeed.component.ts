@@ -17,10 +17,12 @@ export class DisplayfeedComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   users: Profile[] = this.userService.getUsers();
+  
   likedTweet: any[] = this.users[0].likedtweet;
-  tweetLikes: any[] = this.userService.getTweetLikes();
+  retweetedTweet: any[] = this.users[0].retweetedtweet;
 
-  arrayRetweet: any[] = [];
+  tweetLikes: any[] = this.userService.getTweetLikes();
+  tweetRetweet: any[] = this.userService.getTweetRetweet();
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();
@@ -44,17 +46,17 @@ export class DisplayfeedComponent implements OnInit {
     //   this.arrayReply[id] = false;
     // }
   }
-  increaseRetweetCount(id: number) {
-    // if (this.retweetBool == false) {
-    //   this.users[id].tweet[0].retweet += 1;
-    //   this.retweetBool = true;
-    //   this.arrayRetweet[id] = true;
-    // }
-    // else {
-    //   this.users[id].tweet[0].retweet -= 1;
-    //   this.retweetBool = false;
-    //   this.arrayRetweet[id] = false;
-    // }
+  
+  increaseRetweetCount(ind1: number, ind2: number) {
+    if (this.tweetRetweet[ind1][ind2] == false) {
+      this.users[ind1].tweet[ind2].retweet += 1;
+      this.retweetedTweet.push((ind1+1).toString()+" "+(ind2+1).toString());
+      this.tweetLikes[ind1][ind2] = true;
+    }
+    else {
+      this.users[ind1].tweet[ind2].likes -= 1;
+      this.tweetLikes[ind1][ind2] = false;
+    }
   }
   increaseLikesCount(ind1: number, ind2: number) {
     if (this.tweetLikes[ind1][ind2] == false) {
@@ -64,8 +66,10 @@ export class DisplayfeedComponent implements OnInit {
     }
     else {
       this.users[ind1].tweet[ind2].likes -= 1;
+      this.likedTweet.splice(this.users[0].likedtweet.indexOf((ind1+1).toString()+" "+(ind2+1).toString()),1);
       this.tweetLikes[ind1][ind2] = false;
     }
+    console.log(this.likedTweet);
   }
 
   click: boolean = true;

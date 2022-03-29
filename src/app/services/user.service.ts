@@ -24,6 +24,22 @@ export class UserService {
     return this.arrayLikes;
   }
 
+  getTweetRetweet(): any[] {
+    this.arrayRetweet = [];
+    for (let i = 0; i < this.users.length; i++) {
+      this.arrayRetweet.push([]);
+      for(let j = 0; j < this.users[i].tweet.length; j++) {
+        //console.log(i+" "+j+" "+this.users[0].likedtweet.indexOf((i+1).toString()+" "+(j+1).toString()));
+        if(this.users[0].retweetedtweet.indexOf((i+1).toString()+" "+(j+1).toString())<0) {
+          this.arrayRetweet[i].push(false);
+        }
+        else {
+          this.arrayRetweet[i].push(true);
+        }
+      }
+    }
+    return this.arrayRetweet;
+  }
   getProfileLikes() {
     this.profileLikes = [];
     this.arrayLikes = this.getTweetLikes();

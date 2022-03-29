@@ -39,6 +39,7 @@
     "followers": 130,
     "following": 50,
     "likedtweet": [],
+    "retweetedtweet": [],
     "tweet": [
       {
         "tweetid": 1,
@@ -66,6 +67,7 @@
     "followers": 10,
     "following": 500,
     "likedtweet": [],
+    "retweetedtweet": [],
     "tweet": [
       {
         "tweetid": 1,
@@ -93,6 +95,7 @@
     "followers": 5,
     "following": 10,
     "likedtweet": [],
+    "retweetedtweet": [],
     "tweet": [
       {
         "tweetid": 1,
