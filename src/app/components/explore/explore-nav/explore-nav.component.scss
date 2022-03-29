@@ -1,3 +1,5 @@
+$twitterColor : #00acee;
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -68,4 +70,50 @@
   color: #1a8cd8;
   box-shadow: none;
   background-color: #f3f3f3;
+}
+
+
+.classForyou {
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
+}
+
+.classCovid {
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
+}
+
+.classTrending{
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
+}
+.classNews {
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
+}
+.classSports {
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
+}
+.classEntertainment {
+  border-bottom-color:$twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+
 }
