@@ -188,3 +188,118 @@ html, body {
 .btn-sign:hover{
      background-color: #b3e4fa;
 }
+
+.twittericon{
+    fill:#1da1f2;
+}
+.top{
+    display: flex;
+    padding: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.twitter{
+    width: 24px;
+    height:24px;
+}
+.twitterlogo:hover{
+    border-radius: 50%;
+    background-color: #c3e4f8;
+    cursor: pointer;
+}
+.nameinput{
+    border-radius: 6px;
+    width:100%;
+    padding: 12px;
+    border: 1px solid silver;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+.nameinput:focus,.nameinput:hover{
+      outline: none;
+      border-color:#1da1f2;
+      box-shadow: 0 0 0 1px #37a8ee;
+}
+.nameinput::placeholder{
+    color: rgb(87, 87, 87);
+}
+small{
+    color:#37a8ee;
+    cursor: pointer;
+    margin: 7px;
+}
+.h2{
+    font-size: x-large;
+}
+.dobtitle{
+    font-size: 16px;
+    font-weight: 600;
+    margin:6px;
+    margin-top: 35px;
+    margin-bottom: 0px;
+
+}
+.dobconfirm{
+    margin: 6px;
+    margin-top: 0px;
+    font-size: small;
+    color: rgb(87, 87, 87);
+}
+
+select{
+    padding: 15px;
+    margin:4px;
+    border-radius: 7px;
+}
+select:focus{
+    outline: none;
+    border-color:#1da1f2;
+    box-shadow: 0 0 0 1px #37a8ee;
+}
+.next{
+    width:96%;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: larger;
+    font-weight: 550;
+    border: none;
+    background-color: gray;
+    color:white;
+}
+.next:hover{
+    background-color: black;
+}
+.bluehighlight{
+    color: #1da1f2;
+}
+.agreement{
+    margin-top: 35px;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 65vh;
+    overflow-y: auto;
+}
+.ip:focus::placeholder {
+    color: #1D9BF0;
+    font-size: 13px;
+    transform: translateY(-16px);
+  }
+  .sp {
+    float: right;
+    margin-right: 8px;
+    margin-top: -34px;
+    position: relative;
+    z-index: 2;
+}
+
+select{
+    border: 1px solid silver;
+}
+  .ip:focus{
+      border: #1D9BF0 solid 2px;
+      box-shadow: none;
+  }
