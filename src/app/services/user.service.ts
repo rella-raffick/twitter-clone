@@ -23,6 +23,19 @@ export class UserService {
     }
     return this.arrayLikes;
   }
+
+  getProfileLikes() {
+    this.profileLikes = [];
+    this.arrayLikes = this.getTweetLikes();
+    for(let i=0; i<this.arrayLikes.length; i++) {
+      for(let j=0; j<this.arrayLikes[i].length; j++) {
+        if(this.arrayLikes[i][j]==true) 
+          this.profileLikes.push(this.users[i].tweet[j]);
+      }
+    }
+    console.log(this.profileLikes);
+  }
+
   addNewTweet(newtweet: any) {
     this.arrayLikes[0].unshift(false);
     this.users[0].tweet.unshift(newtweet);
@@ -35,6 +48,7 @@ export class UserService {
   users: Profile[] = Users; 
   arrayLikes: any[] = [];
   arrayRetweet: any[] =[];
+  profileLikes: any[] = [];
 
   getUsers() {
     return this.users;

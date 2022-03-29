@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile-likes',
@@ -34,7 +35,9 @@ arrayRetweet:boolean=false;
 arrayLikes:boolean=false;
 like:number = 21;
 retweet :string ="Retweet";
-constructor() { }
+constructor(private userService: UserService) { 
+  this.userService.getProfileLikes();
+}
 
 ngOnInit(): void {
 }
