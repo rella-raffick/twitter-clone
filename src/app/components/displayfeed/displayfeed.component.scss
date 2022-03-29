@@ -164,10 +164,11 @@ $twitterColor : #00acee;
 }
 
 .vline{
-    border-left: 2px solid gray;
-    height: 105px;
-    margin-top: -90px;
-    margin-left: 40px;
+    border:solid #000;
+    border-width:0 1px 0 1px;
+    margin:0 14px;
+    padding:0 10px;
+    height: 100%;
 }
 .fontsize {
     font-size: 18px;
