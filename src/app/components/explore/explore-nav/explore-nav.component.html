@@ -15,26 +15,25 @@
             <i class="fa fa-cog" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="sections mb-2 mt-4">
-        <div>
-            <a class="nav-link" aria-current="page" (click)="forYou()"><span [ngClass]="{classForyou}">For
+    <div class="sections mb-4 mt-4">
+        <div [ngClass]="{classForyou}">
+            <a class="nav-link" aria-current="page" (click)="forYou()"><span>For
                     you</span></a>
         </div>
-        <div>
-            <a class="nav-link" (click)="covid()"><span [ngClass]="{classCovid}">Covid-19</span></a>
+        <div [ngClass]="{classCovid}">
+            <a class="nav-link" (click)="covid()"><span>Covid-19</span></a>
         </div>
-        <div>
-            <a class="nav-link" (click)="trending()"><span [ngClass]="{classTrending}">Trending</span></a>
+        <div [ngClass]="{classTrending}">
+            <a class="nav-link" (click)="trending()"><span>Trending</span></a>
         </div>
-        <div>
-            <a class="nav-link" (click)="news()"><span [ngClass]="{classNews}">News</span></a>
+        <div [ngClass]="{classNews}">
+            <a class="nav-link" (click)="news()"><span>News</span></a>
         </div>
-        <div>
-            <a class="nav-link" (click)="sports()"><span [ngClass]="{classSports}">Sports</span></a>
+        <div [ngClass]="{classSports}">
+            <a class="nav-link" (click)="sports()"><span>Sports</span></a>
         </div>
-        <div>
-            <a class="nav-link" (click)="entertainment()"><span
-                    [ngClass]="{classEntertainment}">Entertainment</span></a>
+        <div [ngClass]="{classEntertainment}">
+            <a class="nav-link" (click)="entertainment()"><span>Entertainment</span></a>
         </div>
     </div>
 

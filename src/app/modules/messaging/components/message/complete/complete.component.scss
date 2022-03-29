@@ -3,11 +3,11 @@
 }
 
 .chats {
+  margin-bottom: 10px;
   &:hover {
     background-color: rgb(243, 243, 243);
   }
 }
-
 
 a {
   text-decoration: none;
@@ -44,4 +44,10 @@ a {
   margin-right: 15px;
   width: 24px;
   height: 24px;
+}
+
+@media only screen and (max-width: 375px) {
+  .chats {
+    margin-bottom: 20px;
+  }
 }
