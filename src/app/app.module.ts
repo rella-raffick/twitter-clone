@@ -26,6 +26,12 @@ import { ProfileMediaComponent } from './components/profiles/profile-media/profi
 import { ProfileLikesComponent } from './components/profiles/profile-likes/profile-likes.component';
 import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
 import { ExploreNavComponent } from './components/explore/explore-nav/explore-nav.component';
+import { ExploreForyouComponent } from './components/explore/explore-foryou/explore-foryou.component';
+import { ExploreCovidComponent } from './components/explore/explore-covid/explore-covid.component';
+import { ExploreTrendingComponent } from './components/explore/explore-trending/explore-trending.component';
+import { ExploreNewsComponent } from './components/explore/explore-news/explore-news.component';
+import { ExploreSportsComponent } from './components/explore/explore-sports/explore-sports.component';
+import { ExploreEntertainmentComponent } from './components/explore/explore-entertainment/explore-entertainment.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,13 @@ import { ExploreNavComponent } from './components/explore/explore-nav/explore-na
     ProfileMediaComponent,
     ProfileLikesComponent,
     ExploreAllComponent,
-    ExploreNavComponent
+    ExploreNavComponent,
+    ExploreForyouComponent,
+    ExploreCovidComponent,
+    ExploreTrendingComponent,
+    ExploreNewsComponent,
+    ExploreSportsComponent,
+    ExploreEntertainmentComponent
 
   ],
     imports: [

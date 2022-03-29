@@ -1,0 +1,44 @@
+ .nothing{
+    height: 400px;
+}
+
+.cont{
+    border: #999 1px solid;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.carousel-caption{
+    margin-left: -60px;
+}
+
+.wh-items {
+    border: #f3f3f3 2px solid;
+    background-color: #fff;
+    padding: 1.2rem;
+}
+
+.wh-items:hover {
+  background-color: #d8d8d8;
+}
+
+.wh-image {
+  height: 70px;
+  border-radius: 10px;
+}
+
+.wh-p {
+  font-weight: 600;
+  margin-bottom: -2px;
+}
+
+.wh-link {
+  color: #1a8cd8;
+}
+.ps{
+    padding-left: .7rem;
+}

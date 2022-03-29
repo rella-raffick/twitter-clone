@@ -1,4 +1,4 @@
-<div class="container mt-3 ">
+<div class="container mt-3 cont">
     <div class="explore-nav">
         <div class="search sticky-top">
             <form>
@@ -13,12 +13,12 @@
             <i class="fa fa-cog" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="sections mt-4">
+    <div class="sections mb-2 mt-4">
         <div>
             <a class="nav-link" aria-current="page" (click)="forYou()"><span [ngClass]="{classForyou}">For you</span></a>
         </div>
         <div>
-            <a class="nav-link" (click)="covid()"><span [ngClass]="{classCovid}">covid-19</span></a>
+            <a class="nav-link" (click)="covid()"><span [ngClass]="{classCovid}">Covid-19</span></a>
         </div>
         <div>
             <a class="nav-link" (click)="trending()"><span [ngClass]="{classTrending}">Trending</span></a>
@@ -35,22 +35,22 @@
     </div>
 
     <div *ngIf=" active === 'foryou' ">
-        <app-notification-all></app-notification-all>
+        <app-explore-foryou></app-explore-foryou>
     </div>
     <div *ngIf=" active === 'covid' ">
-        <app-notification-mention></app-notification-mention>
+        <app-explore-covid></app-explore-covid>
     </div>
     <div *ngIf=" active === 'trending' ">
-        <app-notification-all></app-notification-all>
+        <app-explore-trending></app-explore-trending>
     </div>
     <div *ngIf=" active === 'news' ">
-        <app-notification-mention></app-notification-mention>
+        <app-explore-news></app-explore-news>
     </div>
     <div *ngIf=" active === 'sports' ">
-        <app-notification-all></app-notification-all>
+        <app-explore-sports></app-explore-sports>
     </div>
     <div *ngIf=" active === 'entertainment' ">
-        <app-notification-mention></app-notification-mention>
+        <app-explore-entertainment></app-explore-entertainment>
     </div>
 
 
