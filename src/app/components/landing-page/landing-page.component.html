@@ -28,7 +28,7 @@
                     <p>or</p>
                     </div>
                 <div class="blue-btn">
-                    <button type="button" class="btn btn-blue"> Sign up with Phone or Email</button>
+                    <button type="button" class="btn btn-blue" data-bs-toggle="modal" href="#exampleModalToggle" role="button"> Sign up with Phone or Email</button>
             </div>
 
             <p class="tc">By signing up, you agree to the Terms of Service and Privacy</p>
@@ -79,7 +79,7 @@
                 <p>or</p>
             </div>
             <div class="blue-btn">
-                <button type="button" class="btn btn-blue"> Sign up with Phone or Email</button>
+                <button type="button" data-bs-toggle="modal" href="#exampleModalToggle" role="button" class="btn btn-blue"> Sign up with Phone or Email</button>
             </div>
         
             <p class="tc">By signing up, you agree to the Terms of Service and Privacy</p>
@@ -102,4 +102,337 @@
         <img src="https://res.cloudinary.com/dfep0loer/image/upload/v1648204265/landing-img_ikbwv0.png" class="img-fluid" srcset="">
     </div>
    </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered ">
+        <div class="modal-content m-3">
+            <div class="top col-12">
+                <div class="col-6 d-flex fles-row justify-content-between">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="twitter"><svg viewBox="0 0 24 24" aria-hidden="true" class="twittericon">
+                            <g>
+                                <path
+                                    d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
+                                </path>
+                            </g>
+                        </svg></div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="modal-body m-3 justify-content-center">
+                <p class="h2">Create your account</p>
+                <div class="theform p-2 pt-0">
+                    <form #theForm="ngForm">
+                        <input type="text" [(ngModel)]="username" class="form-control pt-3 pb-3 ip mb-2" name="username"
+                            id="username" placeholder="Name" required>
+                        <input type="tel" [(ngModel)]="phone" class="form-control mb-2 pt-3 pb-3 ip" name="phone"
+                            id="phone" placeholder="Phone" required>
+                    </form>
+                </div>
+                <small>Use email instead</small>
+                <p class="dobtitle">Date of birth</p>
+                <p class="dobconfirm">This is not be shown publicaly. Confirm your own age, even if this account is for
+                    a business, a pet, or something else.</p>
+                <div class="container-fluid d-flex flex-row justify-content-around p-0 mb-0">
+                    <span class="col-5">
+                        <select name="month" class="col-12" [(ngModel)]="month" required>
+                            <option>Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </span>
+                    <span class="col-3">
+                        <select name="day" class="col-12" [(ngModel)]="date" required>
+                            <option>Day</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </span>
+                    <span class="col-3">
+                        <select name="year" class="col-12" [(ngModel)]="year" required>
+                            <option>Year</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="container-fluid d-flex flex-row justify-content-center mb-3 mt-0">
+                <button class="next"
+                    [disabled]="username==='' || phone==='' || month==='Month' || date==='Day' || year==='Year'"
+                    (click)="userdata(username,phone,month,date,year)" data-bs-target="#exampleModalToggle2"
+                    data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content m-3">
+            <div class="top col-12">
+                <div class="col-7 d-flex fles-row justify-content-start">
+                    <svg data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg>
+                    <div>
+                        <p class="h5 ms-3">Step 2 of 5</p>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="modal-body m-3">
+                <p class="h2 mb-5">Customize your experience</p>
+                <p class="h5 mb-2">Track where Twitter content across the web</p>
+                <div class="d-flex flex-row">
+                    <p class="dobconfirm">Twitter uses this data to personalize your experience. This web browsing
+                        history will never be stored with your name, email, or phone number.</p>
+                    <div class="form-check checkbox-warning-filled">
+                        <input type="checkbox" class="form-check-input filled-in" id="orangeExample" checked>
+                    </div>
+                </div>
+                <div class="agreement">
+                    <p class="mb-5">
+                        By signing up, you agree to our <span class="bluehighlight">Terms, Privacy Policy, </span>and
+                        <span class="bluehighlight">Cookie Use.</span> Twitter may use your contact information,
+                        including your email address and phone number for puposes outlined in our privacy Policy. <span
+                            class="bluehighlight">Learn mor</span>
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid d-flex flex-row justify-content-center  py-2">
+                <button class="next" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">Next</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content m-3">
+            <div class="top col-12">
+                <div class="col-7 d-flex fles-row justify-content-start">
+                    <svg data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg>
+                    <div>
+                        <p class="h5 ms-3">Step 3 of 5</p>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="modal-body m-3">
+                <p class="h2">Create your account</p>
+                <div class="theform p-2 pt-0">
+                    <form #theForm="ngForm">
+                        <input type="text" value="{{udata[0].name}}" class="form-control pt-3 pb-3 ip mb-2"
+                            name="username" id="username" placeholder="Name">
+                        <input type="tel" value="{{udata[0].phone}}" pattern="[0-9]{10}"
+                            class="form-control mb-2 pt-3 pb-3 ip" name="phone" id="phone" placeholder="Phone">
+                        <input type="text" value="{{udata[0].dob}}" class="form-control pt-3 pb-3 ip mb-2" name="dob"
+                            id="dob" placeholder="Birth date">
+                    </form>
+                </div>
+                <div class="agreement">
+                    <p class="mb-5">
+                        By signing up, you agree to the <span class="bluehighlight">Terms of service </span>and<span>
+                            Privacy Policy, </span>including<span class="bluehighlight"> Cookie Use.</span> Twitter may
+                        use your contact information, including your email address and phone number for puposes outlined
+                        in our privacy Policy, like keeping your account secure and personalizing our services,
+                        including ads.<span class="bluehighlight">Learn more.</span>Others will be able to find you by
+                        email or phone number,when provided, unless you choose otherwise here.
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid d-flex flex-row justify-content-center  py-2">
+                <button class="next" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">Sign up</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content m-3">
+            <div class="top col-12">
+                <div class="col-6 d-flex fles-row justify-content-between">
+                    <svg data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal"
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg>
+                    <div class="twitter"><svg viewBox="0 0 24 24" aria-hidden="true" class="twittericon">
+                            <g>
+                                <path
+                                    d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
+                                </path>
+                            </g>
+                        </svg></div>
+                </div>
+                <div class="col-6"></div>
+            </div>
+            <div class="modal-body m-3 justify-content-center">
+                <p class="h2">We sent you a code</p>
+                <p class="dobconfirm">Enter it below to verify 9876543210</p>
+                <div class="theform p-2 pt-0">
+                    <form #theForm="ngForm">
+                        <input type="tel" [(ngModel)]="verificationcode" pattern="[0-9]{6}"
+                            class="form-control mb-2 pt-3 pb-3 ip" name="verificationcode" id="verificationcode"
+                            placeholder="Verification code">
+                    </form>
+                </div>
+                <small>Didn't receive SMS?</small>
+            </div>
+            <div class="modal-footer">
+                <button class="next" [disabled]="verificationcode===''" data-bs-target="#exampleModalToggle5"
+                    data-bs-toggle="modal" data-bs-dismiss="modal">Verify</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content m-3">
+            <div class="top col-12">
+                <div class="col-6 d-flex fles-row justify-content-end">
+                    <div class="twitter"><svg viewBox="0 0 24 24" aria-hidden="true" class="twittericon">
+                            <g>
+                                <path
+                                    d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
+                                </path>
+                            </g>
+                        </svg></div>
+                </div>
+                <div class="col-6"></div>
+            </div>
+            <div class="modal-body m-3 justify-content-center">
+                <p class="h2">You'll need a password</p>
+                <p class="dobconfirm">Make sure it's 8 charachters or more</p>
+                <div class="mb-3">
+                    <input type="password" required [(ngModel)]="password" name="password" id="password"
+                        class="form-control p-3 ip" placeholder="Password">
+                    <span class="fa fa-eye sp"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="next" [disabled]="password===''" routerLink="/home" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">Continue To Home</button>
+            </div>
+        </div>
+    </div>
 </div>
