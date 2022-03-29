@@ -5,8 +5,8 @@
     display:flex;
     flex-direction: row;
     border-bottom-style: solid;
-    border-bottom-width:1px;
-    border-bottom-color: #dedede;
+    border-bottom-width:2px;
+    border-bottom-color: #fafafa;
 }
 .displaytweet:hover{
     background-color: #fafafa;
@@ -474,4 +474,8 @@ $twitterColor : #00acee;
     color: #00acee;
     padding-left: 55px;
     padding-bottom: 20px;
+}
+.dropdown-item{
+    font-size: 12px;
+    height: 10%;
 }
