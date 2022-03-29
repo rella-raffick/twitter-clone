@@ -1,3 +1,5 @@
+import { DoCheck } from '@angular/core';
+import { OnChanges, SimpleChanges } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
 import { Tweet } from 'src/app/interfaces/tweet';
@@ -9,27 +11,20 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./displayfeed.component.scss']
 })
 export class DisplayfeedComponent implements OnInit {
-  replyBool: boolean = false;
-  retweetBool: boolean = false;
-  likesBool: boolean = false;
-  arrayReply: boolean[] = [];
-  arrayRetweet: boolean[] = [];
-  arrayLikes: boolean[] = [];
 
   mediasrc:string;
-  mediaFormat:string
+  mediaFormat:string;
   constructor(private userService: UserService) { }
 
-
   users: Profile[] = this.userService.getUsers();
+  likedTweet: any[] = this.users[0].likedtweet;
+  tweetLikes: any[] = this.userService.getTweetLikes();
+
+  arrayRetweet: any[] = [];
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();
-    for (let i = 0; i < this.users.length; i++) {
-      this.arrayReply.push(false);
-      this.arrayRetweet.push(false);
-      this.arrayLikes.push(false);
-    }
+    this.tweetLikes = this.userService.getTweetLikes();
   }
 
   viewMediaFunction(src:string,format:string){
@@ -38,40 +33,38 @@ export class DisplayfeedComponent implements OnInit {
   }
 
   increaseReplyCount(id: number) {
-    if (this.replyBool == false) {
-      this.users[id].tweet[0].reply += 1
-      this.replyBool = true;
-      this.arrayReply[id] = true;
-    }
-    else {
-      this.users[id].tweet[0].reply -= 1
-      this.replyBool = false;
-      this.arrayReply[id] = false;
-    }
-
+    // if (this.replyBool == false) {
+    //   this.users[id].tweet[0].reply += 1
+    //   this.replyBool = true;
+    //   this.arrayReply[id] = true;
+    // }
+    // else {
+    //   this.users[id].tweet[0].reply -= 1
+    //   this.replyBool = false;
+    //   this.arrayReply[id] = false;
+    // }
   }
   increaseRetweetCount(id: number) {
-    if (this.retweetBool == false) {
-      this.users[id].tweet[0].retweet += 1;
-      this.retweetBool = true;
-      this.arrayRetweet[id] = true;
-    }
-    else {
-      this.users[id].tweet[0].retweet -= 1;
-      this.retweetBool = false;
-      this.arrayRetweet[id] = false;
-    }
+    // if (this.retweetBool == false) {
+    //   this.users[id].tweet[0].retweet += 1;
+    //   this.retweetBool = true;
+    //   this.arrayRetweet[id] = true;
+    // }
+    // else {
+    //   this.users[id].tweet[0].retweet -= 1;
+    //   this.retweetBool = false;
+    //   this.arrayRetweet[id] = false;
+    // }
   }
-  increaseLikesCount(id: number) {
-    if (this.likesBool == false) {
-      this.users[id].tweet[0].likes += 1;
-      this.likesBool = true;
-      this.arrayLikes[id] = true;
+  increaseLikesCount(ind1: number, ind2: number) {
+    if (this.tweetLikes[ind1][ind2] == false) {
+      this.users[ind1].tweet[ind2].likes += 1;
+      this.likedTweet.push((ind1+1).toString()+" "+(ind2+1).toString());
+      this.tweetLikes[ind1][ind2] = true;
     }
     else {
-      this.users[id].tweet[0].likes -= 1;
-      this.likesBool = false;
-      this.arrayLikes[id] = false;
+      this.users[ind1].tweet[ind2].likes -= 1;
+      this.tweetLikes[ind1][ind2] = false;
     }
   }
 

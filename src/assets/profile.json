@@ -8,6 +8,8 @@
     "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
     "followers": 100,
     "following": 100,
+    "likedtweet": ["2 1"],
+    "retweetedtweet": ["4 1"],
     "tweet": [
       {
         "tweetid": 1,
@@ -36,6 +38,7 @@
     "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
     "followers": 130,
     "following": 50,
+    "likedtweet": [],
     "tweet": [
       {
         "tweetid": 1,
@@ -62,6 +65,7 @@
     "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
     "followers": 10,
     "following": 500,
+    "likedtweet": [],
     "tweet": [
       {
         "tweetid": 1,
@@ -88,6 +92,7 @@
     "profilecoverimage": "https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80",
     "followers": 5,
     "following": 10,
+    "likedtweet": [],
     "tweet": [
       {
         "tweetid": 1,

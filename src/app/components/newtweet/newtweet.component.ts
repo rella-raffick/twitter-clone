@@ -70,7 +70,7 @@ export class NewtweetComponent implements OnInit {
   addTweet() {
     this.newtweet = {} as Tweet;
     let date: Date = new Date();
-    this.newtweet.tweetid = 2;
+    this.newtweet.tweetid = this.users[0].tweet.length + 1;
     this.newtweet.tweetcontent = this.tweettext;
     this.newtweet.time = date.toString();
     this.newtweet.retweet = 0;
@@ -81,6 +81,7 @@ export class NewtweetComponent implements OnInit {
     this.newtweet.format = this.format;
     console.log(this.newtweet.media[0]);
     this.userService.addNewTweet(this.newtweet);
+    console.log(this.newtweet);
     this.tweettext = '';
     this.urls = [];
     this.format = [];

@@ -10,5 +10,6 @@ export interface Profile {
     followers: number,
     following: number,
     tweet: Tweet[],
+    likedtweet: any[],
     messages: string
 }
