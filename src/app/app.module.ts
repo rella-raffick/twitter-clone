@@ -24,6 +24,8 @@ import { ProfileNavComponent } from './components/profiles/profile-nav/profile-n
 import { ProfileMainComponent } from './components/profiles/profile-main/profile-main.component';
 import { ProfileMediaComponent } from './components/profiles/profile-media/profile-media.component';
 import { ProfileLikesComponent } from './components/profiles/profile-likes/profile-likes.component';
+import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
+import { ExploreNavComponent } from './components/explore/explore-nav/explore-nav.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ProfileLikesComponent } from './components/profiles/profile-likes/profi
     ProfileNavComponent,
     ProfileMainComponent,
     ProfileMediaComponent,
-    ProfileLikesComponent
+    ProfileLikesComponent,
+    ExploreAllComponent,
+    ExploreNavComponent
 
   ],
     imports: [
