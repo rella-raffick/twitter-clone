@@ -48,6 +48,8 @@ export class UserService {
       for(let j=0; j<this.arrayLikes[i].length; j++) {
         if(this.arrayLikes[i][j]==true){
           this.profileLikes.push({
+            uid: i,
+            tid: j,
             profilelogo : this.users[i].profilelogo,
             username : this.users[i].username,
             profilename: this.users[i].profilename,
@@ -60,7 +62,6 @@ export class UserService {
             retweet: this.users[i].tweet[j].retweet,
             likes: this.users[i].tweet[j].likes,
             messages: this.users[i].messages
-
           })
           
         }
@@ -78,6 +79,8 @@ export class UserService {
       for(let j=0; j<this.arrayRetweet[i].length; j++) {
         if(this.arrayRetweet[i][j]==true) {
           this.profileRetweet.push({
+            uid: i,
+            tid: j,
             profilelogo : this.users[i].profilelogo,
             username : this.users[i].username,
             profilename: this.users[i].profilename,
