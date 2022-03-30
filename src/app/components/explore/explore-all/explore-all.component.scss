@@ -1,3 +1,40 @@
 .cont{
     border: #999 1px solid;
 }
+.bottomnavcontainer{
+    width: 100%;
+}
+.tweetcircle:hover{
+    border-radius: 50%;
+    background-color: #0d89d6;
+    cursor: pointer;
+}
+.tweetcircle{
+    margin-left: 6px;
+    margin-top: 12px;
+    width:55px;
+    height:55px;
+    padding:16px;
+    background-color: #1da1f2;
+    border-radius: 50%;
+    position: fixed;
+	right: 20px;
+	bottom: 60px;
+}
+
+.tweeticon{
+ fill:white; 
+}
+
+.nav-icon{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 24px;
+    height: 24px;
+}
+
+.bottomnavbar{
+    margin: 0;
+    width:100%;
+    background-color: white;
+}

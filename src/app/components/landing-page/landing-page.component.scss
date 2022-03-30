@@ -22,7 +22,7 @@ html, body {
 
 //col-7
 .img-twitter{
-    height: 757px;
+    height: 750px;
     margin-left: -12px;
 }
 
@@ -35,8 +35,8 @@ html, body {
 //col-5
 //Twitter Icon Div
 .twitter-icon{
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
 }
 
 .icon-div{
@@ -302,4 +302,7 @@ select{
   .ip:focus{
       border: #1D9BF0 solid 2px;
       box-shadow: none;
+  }
+  .red{
+      color:red;
   }

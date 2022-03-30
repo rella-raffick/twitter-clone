@@ -440,7 +440,7 @@
                 <p class="dobconfirm">Make sure it's 8 charachters or upto 20.</p>
                 <div class="mb-3">
                     <input type="password" required [(ngModel)]="password"
-                        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                         #pswd="ngModel" name="pswd" id="pswd" class="form-control p-3 ip" placeholder="Password">
                     <span class="fa fa-eye sp"></span>
                     <small *ngIf="pswd.invalid && pswd.touched" class="red">Weak password. Atleast 1 Uppercase, 1
