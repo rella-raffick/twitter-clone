@@ -244,3 +244,16 @@ $twitterColor : #00acee;
 .number {
     font-size: small;
 }
+
+.img_wrp {
+    display: inline-block;
+    position: relative;
+}
+
+.media-container .tweet-media{
+    width:100%;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 20px;
+    object-fit:cover;
+}
