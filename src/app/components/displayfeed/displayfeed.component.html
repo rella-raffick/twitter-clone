@@ -292,7 +292,7 @@
                 <button type="button" class="btn-close" (click)="clear()" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="textinput p-4">
                     <img class="profilelogo" src={{users[0].profilelogo}} />
-                    <input type="text" [(ngModel)]="tweettext" placeholder="  What's happening?" (click)="OnClick()"
+                    <input type="text" class="ps-4" [(ngModel)]="tweettext" placeholder="  What's happening?" (click)="OnClick()"
                         (keyup)="onKey($event)" />
                 </div>
 
