@@ -40,3 +40,9 @@ $twitterColor: #00acee;
 img {
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 500px) {
+  .extra-icon {
+    width: 15%;
+  }
+}
