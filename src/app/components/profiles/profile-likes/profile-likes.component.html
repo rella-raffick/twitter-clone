@@ -1,48 +1,116 @@
-<div  style="margin: 20px;">
+<div style="margin: 20px;">
 
-    
-    <div class="row margin" *ngFor="let i of array; let index=index;">
-       <div class="col-lg-2 col-md-2 col-3" style="padding-left: 0px;">
-         <img src = "https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png" alt ="pic" width = 50px height="50px">
-       </div>
-       <div class="col-lg-10 col-md-10 col-9">
-        <p class="fontsize"><b>username </b> <span class="text">@username . 10h</span> </p><br>
-        <p style="margin-top: -25px; font-size: 18px;" class="text">Sample Text displayed here.</p>
-        <p style="color: #00acee; font-size: 18px;"> @BCCI<br>
-         @IPL_2022<br>
-         @TeamInd</p>
 
-         <div class="flex">
-          <div class="col-3">
-  
-              <img data-bs-toggle="modal" data-bs-target="#exampleModal" width = 20px; height = 20px;  [class.changereplybutton]="array[index].replystatus" alt="Reply button" id="tweet-bottom-icon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMy44NDYsMTMuODQ2KSBzY2FsZSgwLjgzOSwwLjgzOSkiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im5vbmUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PGcgZmlsbD0iIzY2NjY2NiIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiM4ODg4ODgiIHN0cm9rZS13aWR0aD0iMzMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik04NS40MjQ2OCwxMy42NDg5Yy0wLjAwNjYyLDAgLTAuMDEzMjMsMCAtMC4wMTk4NSwwYy0wLjAwNjYxLDAgLTAuMDEzMjIsMCAtMC4wMTk4Mywwek0xNjguNTg3NzcsNzguOTE3NjVjMCwzNi4wNjY0NCAtMzcuMjU2NzUsNjUuMjY4NzQgLTgzLjIwMjc3LDY1LjI2ODc0Yy03LjE0MTg3LDAgLTE0LjA4NTM1LC0wLjcxNDE5IC0yMC43MTE0MiwtMi4wMjM1M2MtMTEuNTQ2MDIsNS41NTQ3OSAtMjQuNjc5MTIsMTEuODYzNDQgLTMxLjEwNjgxLDE0LjkxODU3Yy0xMi44OTUwNCw2LjE0OTk0IC05LjUyMjQ5LC03Ljg1NjA2IC05LjUyMjQ5LC03Ljg1NjA2YzAsMCAxLjgyNTE0LC0xMi4xODA4NSAzLjgwOSwtMjMuMTcxNGMtMTUuNzkxNDYsLTExLjg2MzQ0IC0yNS42MzEzNywtMjguNjA3MTUgLTI1LjYzMTM3LC00Ny4xMzYzM2MwLC0zNi4wNjEyNCAzNy4yNDYwMiwtNjUuMjYwMzMgODMuMTgyOTIsLTY1LjI2ODc0YzQ1LjkzNjkxLDAuMDA4NDEgODMuMTgyOTQsMjkuMjQ3MTcgODMuMTgyOTQsNjUuMjY4NzR6Ij48L3BhdGg+PC9nPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTTg1LjM4NTAxLDEzLjY0ODljNDUuOTQ2MDIsMCA4My4yMDI3NywyOS4yNDE5OCA4My4yMDI3Nyw2NS4yNjg3NGMwLDM2LjA2NjQ0IC0zNy4yNTY3NSw2NS4yNjg3NCAtODMuMjAyNzcsNjUuMjY4NzRjLTcuMTQxODcsMCAtMTQuMDg1MzUsLTAuNzE0MTkgLTIwLjcxMTQyLC0yLjAyMzUzYy0xMS41NDYwMiw1LjU1NDc5IC0yNC42NzkxMiwxMS44NjM0NCAtMzEuMTA2ODEsMTQuOTE4NTdjLTEyLjg5NTA0LDYuMTQ5OTQgLTkuNTIyNDksLTcuODU2MDYgLTkuNTIyNDksLTcuODU2MDZjMCwwIDEuODI1MTQsLTEyLjE4MDg1IDMuODA5LC0yMy4xNzE0Yy0xNS43OTE0NiwtMTEuODYzNDQgLTI1LjYzMTM3LC0yOC42MDcxNSAtMjUuNjMxMzcsLTQ3LjEzNjMzYzAsLTM2LjA2NjQ0IDM3LjI1Njc1LC02NS4yNjg3NCA4My4yMDI3NywtNjUuMjY4NzR6Ij48L3BhdGg+PC9nPjxwYXRoIGQ9IiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PC9wYXRoPjwvZz48L2c+PC9zdmc+">
-  
-          </div>
-          <div class="dropdown col-3" >
-            <img style="position: relative;" class ="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" width = 20px; height = 20px;  [class.changeretweetbutton]="array[index].retweetstatus" alt="Retweet button" id="tweet-bottom-icon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiM4ODg4ODgiPjxwYXRoIGQ9Ik0yOC42NjY2NywzNS44MzMzM2wtMjguNjY2NjcsMzUuODMzMzNoMjEuNXY0M2MwLDExLjg1MzY3IDkuNjQ2MzMsMjEuNSAyMS41LDIxLjVoODMuMTMwNTNsLTExLjQ2Mzg2LC0xNC4zMzMzM2gtNzEuNjY2NjdjLTMuOTQ4ODMsMCAtNy4xNjY2NywtMy4yMTA2NyAtNy4xNjY2NywtNy4xNjY2N3YtNDNoMjEuNXpNNDUuODY5NDcsMzUuODMzMzNsMTEuNDYzODcsMTQuMzMzMzNoNzEuNjY2NjdjMy45NDg4MywwIDcuMTY2NjcsMy4yMTA2NyA3LjE2NjY3LDcuMTY2Njd2NDNoLTIxLjVsMjguNjY2NjcsMzUuODMzMzNsMjguNjY2NjcsLTM1LjgzMzMzaC0yMS41di00M2MwLC0xMS44NTM2NyAtOS42NDYzMywtMjEuNSAtMjEuNSwtMjEuNXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==">
-            <ul style="position: absolute" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <div class="row margin" *ngFor="let i of profilelike; let index=index;">
+        <div class="col-lg-2 col-md-2 col-3 profile-logo" style="padding-left: 0px;">
+            <img src={{i.profilelogo}} alt="pic" width=50px height="50px" style="border-radius: 50%;">
+        </div>
+        <div class="col-lg-10 col-md-10 col-9">
+            <p class="fontsize"><b>{{i.profilename}}</b> <span class="text">@{{i.username}}. {{i.time}}</span> </p><br>
+            <p style="margin-top: -25px; font-size: 15px;" class="text">{{i.tweetcontent}}</p>
+
+            <div class="media-container">
+                <div class="img_wrp" *ngFor="let media of i.media; let index=index;">
+                    <img class="tweet-media" (click)="viewMediaFunction(media,i.format[index])" type="button"
+                        data-bs-toggle="modal" data-bs-target="#viewMedia" src="{{media}}"
+                        *ngIf="i.format[index]==='image' && media">
+                    <video class="tweet-media" (click)="viewMediaFunction(media,i.format[index])" type="button"
+                        data-bs-toggle="modal" data-bs-target="#viewMedia" src="{{media}}"
+                        *ngIf="i.format[index]==='video' && media" controls></video>
+                </div>
+            </div>
+
+<!-- 
+            <p style="color: #00acee; font-size: 18px;"> @BCCI<br>
+                @IPL_2022<br>
+                @TeamInd</p> -->
+
+            <div class="tweet-bottom">
+                <div class="bottom-icon msg">
+                    <svg data-bs-toggle="modal" data-bs-target="#exampleModal" id="tweet-bottom-icon"
+                        viewBox="0 0 24 24" aria-hidden="true" class="tweet-bottom-icon" fill="currentColor">
+                        <g>
+                            <path
+                                d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="bottom-icon retweet">
+                    <svg class="dropdown-item" type="button" viewBox="0 0 24 24" aria-hidden="true"
+                        class="tweet-bottom-icon" fill="currentColor">
+                        <g>
+                            <path
+                                d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z">
+                            </path>
+                        </g>
+                    </svg>
+                    <div class="textlike">{{i.retweet}}</div>
+                    <!-- <ul style="position: absolute" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li class="flex"><a class="dropdown-item" (click)="increaseRetweetCount(index)"><i class="fa fa-retweet " aria-hidden="true"></i>{{array[index].retweetvalue}}</a></li>
               <li class="flex"><a class="dropdown-item" href="#"><i class="fa fa-pencil " aria-hidden="true"></i>Quote Tweet</a></li>
-            </ul>
-          </div>
+            </ul> -->
+                </div>
+                <div class="bottom-icon like">
+                    <svg (click)="increaseLikesCount(index)" [class.changelikesbutton]="array[index].likesstatus"
+                        alt="Likes button" id="tweet-bottom-icon" viewBox="0 0 24 24" aria-hidden="true"
+                        class="tweet-bottom-icon" fill="currentColor" *ngIf="!array[index].likesstatus">
+                        <g>
+                            <path
+                                d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.034 11.596 8.55 11.658 1.518-.062 8.55-5.917 8.55-11.658 0-2.267-1.823-4.255-3.903-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.014-.03-1.425-2.965-3.954-2.965z">
+                            </path>
+                        </g>
+                    </svg>
+                    <svg (click)="increaseLikesCount(index)" [class.changelikesbutton]="array[index].likesstatus"
+                        alt="Likes button" id="tweet-bottom-icon" viewBox="0 0 24 24" aria-hidden="true"
+                        class="tweet-bottom-icon liked" fill="currentColor" *ngIf="array[index].likesstatus">
+                        <g>
+                            <path
+                                d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z">
+                            </path>
+                        </g>
+                    </svg>
+                    <div class="textlike">{{i.likes}}</div>
+                </div>
+                <div class="bottom-icon dropup msg">
+                    <svg class="dropdown-toggle tweet-bottom-icon" type="button" data-bs-toggle="dropdown"
+                        id="shareoptions" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                        <g>
+                            <path
+                                d="M17.53 7.47l-5-5c-.293-.293-.768-.293-1.06 0l-5 5c-.294.293-.294.768 0 1.06s.767.294 1.06 0l3.72-3.72V15c0 .414.336.75.75.75s.75-.336.75-.75V4.81l3.72 3.72c.146.147.338.22.53.22s.384-.072.53-.22c.293-.293.293-.767 0-1.06z">
+                            </path>
+                            <path
+                                d="M19.708 21.944H4.292C3.028 21.944 2 20.916 2 19.652V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 .437.355.792.792.792h15.416c.437 0 .792-.355.792-.792V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 1.264-1.028 2.292-2.292 2.292z">
+                            </path>
+                        </g>
+                    </svg>
+                    <ul class="dropdown-menu dropdown-css" aria-labelledby="shareoptions">
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-envelope"></i>
+                            Send via Direct Message
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-bookmark"></i>
+                            Bookmark
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-link"></i>
+                            Copy link to tweet
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-item">
+                            <i class="fa fa-light fa-arrow-up-from-bracket"></i>
+                            Share Tweet via ...
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-
-
-          <div class="col-3">
-              <img width = 20px; height = 20px; (click)="increaseLikesCount(index)" [class.changelikesbutton]="array[index].likesstatus" alt="Likes button" id="tweet-bottom-icon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiM4ODg4ODgiPjxwYXRoIGQ9Ik01My43NSwyNS42MzQ2MmMtMTEuNDIxODcsMCAtMjEuODEwMSwzLjk1MzcyIC0yOS4xNDkwNCwxMS4xNjM0NmMtNy4zMzg5NCw3LjIwOTc0IC0xMS4zNzAxOSwxNy41MjA0NCAtMTEuMzcwMTksMjkuMzU1NzdjMCwyMC4wMjcwNCAxMi4yNzQ2NCwzNC45NjMzNCAyNi4yNTQ4MSw0Ny41NDgwOGMxMy45ODAxNywxMi41ODQ3NCAzMC4yODYwNiwyMy43MjIzNiA0MS4zNDYxNSwzNi43OTgwOGMxLjIxNDU0LDEuNTI0NjQgMy4wMjM0NCwyLjQyOTA5IDQuOTYxNTQsMi40ODA3N2gwLjQxMzQ2YzEuOTM4MSwtMC4wNTE2OCAzLjc0Njk5LC0wLjk1NjEzIDQuOTYxNTQsLTIuNDgwNzdjMTEuMDYwMSwtMTMuMDc1NzIgMjcuMzY1OTksLTI0LjIxMzM0IDQxLjM0NjE1LC0zNi43OTgwOGMxMy45ODAxNywtMTIuNTg0NzQgMjYuMjU0ODEsLTI3LjUyMTAzIDI2LjI1NDgxLC00Ny41NDgwOGMwLC0xMS44MzUzMyAtNC4yMzc5OCwtMjIuMTQ2MDMgLTExLjU3NjkyLC0yOS4zNTU3N2MtNy4zMzg5NCwtNy4yMDk3NCAtMTcuNTIwNDMsLTExLjE2MzQ2IC0yOC45NDIzMSwtMTEuMTYzNDZjLTExLjMxODUxLDAgLTIwLjU5NTU1LDYuMTc2MDggLTI3LjA4MTczLDExLjc4MzY1Yy0zLjE3ODQ5LDIuNzM5MTkgLTMuMzMzNTMsMy40ODg1OCAtNS4xNjgyNyw1LjU4MTczYy0xLjgwODg5LC0yLjA5MzE1IC0xLjk4OTc4LC0yLjg0MjU0IC01LjE2ODI3LC01LjU4MTczYy02LjQ2MDMzLC01LjYwNzU3IC0xNS43NjMyMiwtMTEuNzgzNjUgLTI3LjA4MTczLC0xMS43ODM2NXpNNTMuNzUsMzguODY1MzhjNi4yMjc3NiwwIDEzLjE3OTA5LDQuMTYwNDYgMTguMzk5MDQsOC42ODI2OWM1LjIxOTk2LDQuNTIyMjQgOC40NzU5Niw4Ljg4OTQyIDguNDc1OTYsOC44ODk0MmMxLjI0MDM4LDEuNzMxMzcgMy4yNTYwMSwyLjc2NTAzIDUuMzc1LDIuNzY1MDNjMi4xMTg5OSwwIDQuMTM0NjIsLTEuMDMzNjUgNS4zNzUsLTIuNzY1MDNjMCwwIDMuMjMwMTcsLTQuMzY3MTkgOC40NzU5NiwtOC44ODk0MmM1LjI0NTc5LC00LjUyMjI0IDEyLjE0NTQ0LC04LjY4MjY5IDE4LjM5OTA0LC04LjY4MjY5YzguNTAxOCwwIDE1LjE5NDcxLDIuODk0MjMgMTkuODQ2MTUsNy40NDIzMWM0LjY1MTQ0LDQuNTQ4MDggNy40NDIzMSwxMC45ODI1NyA3LjQ0MjMxLDE5Ljg0NjE1YzAsMTQuNjUyMDQgLTguODYzNTgsMjUuODY3MTkgLTIxLjkxMzQ2LDM3LjYyNWMtMTEuNTUxMDgsMTAuNDE0MDYgLTI1LjY2MDQ2LDIxLjA4NjU0IC0zNy42MjUsMzMuNjk3MTJjLTExLjk5MDM4LC0xMi42NjIyNiAtMjYuMDQ4MDgsLTIzLjI4MzA1IC0zNy42MjUsLTMzLjY5NzEyYy0xMy4wNDk4OCwtMTEuNzU3ODEgLTIxLjkxMzQ2LC0yMi45NzI5NiAtMjEuOTEzNDYsLTM3LjYyNWMwLC04Ljg2MzU4IDIuNzkwODcsLTE1LjI5ODA4IDcuNDQyMzEsLTE5Ljg0NjE1YzQuNjUxNDQsLTQuNTQ4MDggMTEuMzE4NTEsLTcuNDQyMzEgMTkuODQ2MTUsLTcuNDQyMzF6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=">
-              <span class = "textlike"><b>{{array[index].likes}}</b></span>
-          </div>
-          <div class="col-3">
-              <img width = 20px; height = 20px; id="tweet-bottom-icon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiM4ODg4ODgiPjxwYXRoIGQ9Ik04NS45MjMwMiwyMS41Yy0xLjM5ODcyLDAuMDIwNDUgLTIuNzM0MzcsMC41ODUzNCAtMy43MjMzMSwxLjU3NDcxbC0yMS41LDIxLjVjLTEuNDA0MTIsMS4zNDgxNSAtMS45Njk3MSwzLjM1MDA1IC0xLjQ3ODY2LDUuMjMzNjRjMC40OTEwNSwxLjg4MzU5IDEuOTYyMDIsMy4zNTQ1NiAzLjg0NTYxLDMuODQ1NjFjMS44ODM1OSwwLjQ5MTA1IDMuODg1NDksLTAuMDc0NTUgNS4yMzM2NCwtMS40Nzg2NmwxMi4zMjQ3MSwtMTIuMzI0NzF2NzYuNjA3NzVjLTAuMDI3NDEsMS45Mzg0MiAwLjk5MTAyLDMuNzQxNDQgMi42NjUzMiw0LjcxODY1YzEuNjc0MywwLjk3NzIxIDMuNzQ1MDcsMC45NzcyMSA1LjQxOTM3LDBjMS42NzQzLC0wLjk3NzIxIDIuNjkyNzMsLTIuNzgwMjMgMi42NjUzMiwtNC43MTg2NXYtNzYuNjA3NzVsMTIuMzI0NzEsMTIuMzI0NzFjMS4zNDgxNSwxLjQwNDEyIDMuMzUwMDUsMS45Njk3MSA1LjIzMzY0LDEuNDc4NjZjMS44ODM1OSwtMC40OTEwNSAzLjM1NDU2LC0xLjk2MjAyIDMuODQ1NjEsLTMuODQ1NjFjMC40OTEwNSwtMS44ODM1OSAtMC4wNzQ1NSwtMy44ODU0OSAtMS40Nzg2NiwtNS4yMzM2NGwtMjEuNSwtMjEuNWMtMS4wMjY2NiwtMS4wMjcwOCAtMi40MjUyLC0xLjU5NTA4IC0zLjg3NzI4LC0xLjU3NDcxek00MS4yMDgzMyw2MC45MTY2N2MtMTAuODIwODYsMCAtMTkuNzA4MzMsOC44ODc0OCAtMTkuNzA4MzMsMTkuNzA4MzN2NTAuMTY2NjdjMCwxMC44MjA4NiA4Ljg4NzQ4LDE5LjcwODMzIDE5LjcwODMzLDE5LjcwODMzaDg5LjU4MzMzYzEwLjgyMDg2LDAgMTkuNzA4MzMsLTguODg3NDggMTkuNzA4MzMsLTE5LjcwODMzdi01MC4xNjY2N2MwLC0xMC44MjA4NiAtOC44ODc0OCwtMTkuNzA4MzMgLTE5LjcwODMzLC0xOS43MDgzM2gtNy4xNjY2N2MtMS45Mzg0MiwtMC4wMjc0MSAtMy43NDE0NCwwLjk5MTAyIC00LjcxODY1LDIuNjY1MzJjLTAuOTc3MjEsMS42NzQzIC0wLjk3NzIxLDMuNzQ1MDcgMCw1LjQxOTM3YzAuOTc3MjEsMS42NzQzIDIuNzgwMjMsMi42OTI3MyA0LjcxODY1LDIuNjY1MzJoNy4xNjY2N2M1LjAxMDMxLDAgOC45NTgzMywzLjk0ODAyIDguOTU4MzMsOC45NTgzM3Y1MC4xNjY2N2MwLDUuMDEwMzEgLTMuOTQ4MDIsOC45NTgzMyAtOC45NTgzMyw4Ljk1ODMzaC04OS41ODMzM2MtNS4wMTAzMSwwIC04Ljk1ODMzLC0zLjk0ODAyIC04Ljk1ODMzLC04Ljk1ODMzdi01MC4xNjY2N2MwLC01LjAxMDMxIDMuOTQ4MDIsLTguOTU4MzMgOC45NTgzMywtOC45NTgzM2g3LjE2NjY3YzEuOTM4NDIsMC4wMjc0MSAzLjc0MTQ0LC0wLjk5MTAyIDQuNzE4NjUsLTIuNjY1MzJjMC45NzcyMSwtMS42NzQzIDAuOTc3MjEsLTMuNzQ1MDcgMCwtNS40MTkzN2MtMC45NzcyMSwtMS42NzQzIC0yLjc4MDIzLC0yLjY5MjczIC00LjcxODY1LC0yLjY2NTMyeiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+">
-          </div>
         </div>
-          
-        
-       </div> 
+
+
+
 
     </div>
-
-    
-
-    
-</div>

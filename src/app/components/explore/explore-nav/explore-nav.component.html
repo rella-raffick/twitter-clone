@@ -1,0 +1,61 @@
+<div class="container mt-3 cont">
+    <div class="explore-nav sticky-top bg-light">
+        <img [routerLink]="['/profile']" src="https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg"
+            alt="">
+        <div class="search ">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-text search-icon"> <i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control search-bar" placeholder="Search Twitter"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </form>
+        </div>
+        <div class="icon">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="sections mb-4 mt-4 ">
+        <div [ngClass]="{classForyou}">
+            <a class="nav-link" aria-current="page" (click)="forYou()"><span>For
+                    you</span></a>
+        </div>
+        <div [ngClass]="{classCovid}">
+            <a class="nav-link" (click)="covid()"><span>Covid-19</span></a>
+        </div>
+        <div [ngClass]="{classTrending}">
+            <a class="nav-link" (click)="trending()"><span>Trending</span></a>
+        </div>
+        <div [ngClass]="{classNews}">
+            <a class="nav-link" (click)="news()"><span>News</span></a>
+        </div>
+        <div [ngClass]="{classSports}">
+            <a class="nav-link" (click)="sports()"><span>Sports</span></a>
+        </div>
+        <div [ngClass]="{classEntertainment}">
+            <a class="nav-link" (click)="entertainment()"><span>Entertainment</span></a>
+        </div>
+    </div>
+
+    <div *ngIf=" active === 'foryou' ">
+        <app-explore-foryou></app-explore-foryou>
+    </div>
+    <div *ngIf=" active === 'covid' ">
+        <app-explore-covid></app-explore-covid>
+    </div>
+    <div *ngIf=" active === 'trending' ">
+        <app-explore-trending></app-explore-trending>
+    </div>
+    <div *ngIf=" active === 'news' ">
+        <app-explore-news></app-explore-news>
+    </div>
+    <div *ngIf=" active === 'sports' ">
+        <app-explore-sports></app-explore-sports>
+    </div>
+    <div *ngIf=" active === 'entertainment' ">
+        <app-explore-entertainment></app-explore-entertainment>
+    </div>
+
+
+
+</div>

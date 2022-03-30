@@ -1,3 +1,5 @@
+import { DoCheck } from '@angular/core';
+import { OnChanges, SimpleChanges } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
 import { Tweet } from 'src/app/interfaces/tweet';
@@ -9,27 +11,26 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./displayfeed.component.scss']
 })
 export class DisplayfeedComponent implements OnInit {
-  replyBool: boolean = false;
-  retweetBool: boolean = false;
-  likesBool: boolean = false;
-  arrayReply: boolean[] = [];
-  arrayRetweet: boolean[] = [];
-  arrayLikes: boolean[] = [];
 
   mediasrc:string;
-  mediaFormat:string
+  mediaFormat:string;
   constructor(private userService: UserService) { }
 
-
   users: Profile[] = this.userService.getUsers();
+  
+  likedTweet: any[] = this.users[0].likedtweet;
+  retweetedTweet: any[] = this.users[0].retweetedtweet;
+
+  tweetLikes: any[] = this.userService.getTweetLikes();
+  tweetRetweet: any[] = this.userService.getTweetRetweet();
+
+  retweetMessage: any[] = this.userService.getProfileRetweet();
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();
-    for (let i = 0; i < this.users.length; i++) {
-      this.arrayReply.push(false);
-      this.arrayRetweet.push(false);
-      this.arrayLikes.push(false);
-    }
+    this.tweetLikes = this.userService.getTweetLikes();
+    this.tweetRetweet = this.userService.getTweetRetweet();
+    this.retweetMessage = this.userService.getProfileRetweet();
   }
 
   viewMediaFunction(src:string,format:string){
@@ -38,41 +39,43 @@ export class DisplayfeedComponent implements OnInit {
   }
 
   increaseReplyCount(id: number) {
-    if (this.replyBool == false) {
-      this.users[id].tweet[0].reply += 1
-      this.replyBool = true;
-      this.arrayReply[id] = true;
-    }
-    else {
-      this.users[id].tweet[0].reply -= 1
-      this.replyBool = false;
-      this.arrayReply[id] = false;
-    }
-
+    // if (this.replyBool == false) {
+    //   this.users[id].tweet[0].reply += 1
+    //   this.replyBool = true;
+    //   this.arrayReply[id] = true;
+    // }
+    // else {
+    //   this.users[id].tweet[0].reply -= 1
+    //   this.replyBool = false;
+    //   this.arrayReply[id] = false;
+    // }
   }
-  increaseRetweetCount(id: number) {
-    if (this.retweetBool == false) {
-      this.users[id].tweet[0].retweet += 1;
-      this.retweetBool = true;
-      this.arrayRetweet[id] = true;
+  
+  increaseRetweetCount(ind1: number, ind2: number) {
+    if (this.tweetRetweet[ind1][ind2] == false) {
+      this.users[ind1].tweet[ind2].retweet += 1;
+      this.retweetedTweet.push((ind1+1).toString()+" "+(ind2+1).toString());
+      this.tweetRetweet[ind1][ind2] = true;
     }
     else {
-      this.users[id].tweet[0].retweet -= 1;
-      this.retweetBool = false;
-      this.arrayRetweet[id] = false;
+      this.users[ind1].tweet[ind2].retweet -= 1;
+      this.retweetedTweet.splice(this.users[0].retweetedtweet.indexOf((ind1+1).toString()+" "+(ind2+1).toString()),1);
+      this.tweetRetweet[ind1][ind2] = false;
     }
+    console.log(this.tweetRetweet);
   }
-  increaseLikesCount(id: number) {
-    if (this.likesBool == false) {
-      this.users[id].tweet[0].likes += 1;
-      this.likesBool = true;
-      this.arrayLikes[id] = true;
+  increaseLikesCount(ind1: number, ind2: number) {
+    if (this.tweetLikes[ind1][ind2] == false) {
+      this.users[ind1].tweet[ind2].likes += 1;
+      this.likedTweet.push((ind1+1).toString()+" "+(ind2+1).toString());
+      this.tweetLikes[ind1][ind2] = true;
     }
     else {
-      this.users[id].tweet[0].likes -= 1;
-      this.likesBool = false;
-      this.arrayLikes[id] = false;
+      this.users[ind1].tweet[ind2].likes -= 1;
+      this.likedTweet.splice(this.users[0].likedtweet.indexOf((ind1+1).toString()+" "+(ind2+1).toString()),1);
+      this.tweetLikes[ind1][ind2] = false;
     }
+    console.log(this.likedTweet);
   }
 
   click: boolean = true;
@@ -144,9 +147,30 @@ export class DisplayfeedComponent implements OnInit {
   addTweet() {
     this.newtweet = {} as Tweet;
     let date: Date = new Date();
+    this.newtweet.tweetid = this.users[0].tweet.length+1;
+    this.newtweet.tweetcontent = this.tweettext;
+    this.newtweet.time = 'Just now';
+    this.newtweet.retweet = 0;
+    this.newtweet.reply = 0;
+    this.newtweet.media = this.urls;
+    this.newtweet.likes = 0;
+    this.newtweet.date = date.toString();
+    this.newtweet.format = this.format;
+    console.log(this.newtweet.media[0]);
+    this.userService.addNewTweet(this.newtweet);
+    this.tweettext = '';
+    this.urls = [];
+    this.format = [];
+    this.mediaBtn = false;
+    this.click = true;
+  }
+
+  replyTweet() {
+    this.newtweet = {} as Tweet;
+    let date: Date = new Date();
     this.newtweet.tweetid = 2;
     this.newtweet.tweetcontent = this.tweettext;
-    this.newtweet.time = date.toString();
+    this.newtweet.time = 'Just now';
     this.newtweet.retweet = 0;
     this.newtweet.reply = 0;
     this.newtweet.media = this.urls;

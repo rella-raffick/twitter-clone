@@ -1,3 +1,4 @@
+import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
 import { ProfileComponent } from './components/profiles/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { PasswordComponent } from './components/password/password.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   },
   { path: 'landing', component: LandingPageComponent },
   { path: 'username', component: UsernameComponent },
-  { path: 'password', component: PasswordComponent }
+  { path: 'password', component: PasswordComponent },
+  { path: 'explore', component: ExploreAllComponent }
 ];
 
 @NgModule({

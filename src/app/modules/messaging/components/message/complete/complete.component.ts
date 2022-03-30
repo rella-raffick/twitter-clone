@@ -47,5 +47,8 @@ export class CompleteComponent implements OnInit {
   navigateProfile() {
     this.navigate.navigate(['/profile'])
   }
+  navigateExplore() {
+    this.navigate.navigate(['/explore'])
+  }
 
 }

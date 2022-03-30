@@ -24,6 +24,17 @@ import { ProfileNavComponent } from './components/profiles/profile-nav/profile-n
 import { ProfileMainComponent } from './components/profiles/profile-main/profile-main.component';
 import { ProfileMediaComponent } from './components/profiles/profile-media/profile-media.component';
 import { ProfileLikesComponent } from './components/profiles/profile-likes/profile-likes.component';
+import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
+import { ExploreNavComponent } from './components/explore/explore-nav/explore-nav.component';
+import { ProfileTweetComponent } from './components/profiles/profile-tweet/profile-tweet.component';
+import { ExploreForyouComponent } from './components/explore/explore-foryou/explore-foryou.component';
+import { ExploreCovidComponent } from './components/explore/explore-covid/explore-covid.component';
+import { ExploreTrendingComponent } from './components/explore/explore-trending/explore-trending.component';
+import { ExploreNewsComponent } from './components/explore/explore-news/explore-news.component';
+import { ExploreSportsComponent } from './components/explore/explore-sports/explore-sports.component';
+import { ExploreEntertainmentComponent } from './components/explore/explore-entertainment/explore-entertainment.component';
+import { RightNavComponent } from './components/explore/right-nav/right-nav.component';
+import { ProfileRetweetComponent } from './components/profiles/profile-retweet/profile-retweet.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +55,18 @@ import { ProfileLikesComponent } from './components/profiles/profile-likes/profi
     ProfileNavComponent,
     ProfileMainComponent,
     ProfileMediaComponent,
-    ProfileLikesComponent
+    ProfileLikesComponent,
+    ExploreAllComponent,
+    ExploreNavComponent,
+    ProfileTweetComponent,
+    ExploreForyouComponent,
+    ExploreCovidComponent,
+    ExploreTrendingComponent,
+    ExploreNewsComponent,
+    ExploreSportsComponent,
+    ExploreEntertainmentComponent,
+    RightNavComponent,
+    ProfileRetweetComponent
 
   ],
     imports: [

@@ -8,14 +8,16 @@
     width:auto;
     border-left-style: solid;
     border-left-width:1px;
-    border-left-color: #dedede;
+    border-left-color: #fafafa;
     border-right-style: solid;
     border-right-width:1px;
-    border-right-color: #dedede;
+    border-right-color: #fafafa;
 }
 
 .hello{
     width:inherit;
+    border-right-color: #fafafa;
+    border-left-color: #fafafa;
     height:75px;
     position:fixed;
     z-index: 5;
@@ -24,7 +26,7 @@
 }
 
 .lefttopnav{
-    width: 45%;
+    width: 50%;
     padding: 1%;
     padding-left: 2px;
     display: flex;
@@ -34,7 +36,7 @@
     justify-content: flex-start;
 }
 .righttopnav{
-    width: 45%;
+    width: 50%;
     display: flex;
     padding: 1%;
     //padding-right: 10px;

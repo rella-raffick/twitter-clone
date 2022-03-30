@@ -5,8 +5,8 @@
     display:flex;
     flex-direction: row;
     border-bottom-style: solid;
-    border-bottom-width:1px;
-    border-bottom-color: #dedede;
+    border-bottom-width:2px;
+    border-bottom-color: #fafafa;
 }
 .displaytweet:hover{
     background-color: #fafafa;
@@ -15,13 +15,11 @@
     width: 50px;
     height: 50px;
     border-radius:50%;
-    
 }
 .profilepic{
-    margin-top:2%;
     min-width:10%;
     height:100%;
-    margin-left:1%;
+    margin:1%;
 }
 .tweet-show{
     display:flex;
@@ -30,7 +28,7 @@
 }
 .tweet-top{
     width: 100%;
-    margin-top:3%;
+    margin-top:2%;
     display:flex;
     flex-direction: row;
     height:30%;
@@ -38,17 +36,16 @@
 .profilename{
     font-size: 15px;
     font-weight: bold;
-    padding-right:2%;
 }
 .username{
     color:#888888;
     font-size: 15px;
-    padding-right:2%;
+    margin:1%;
 }
 .timespan{
     color:#888888;
     font-size: 15px;
-    padding-left:2%;
+    margin:1%;
 }
 .span{
     background-color: #888888;
@@ -67,7 +64,7 @@
 .message{
     margin-top:2%;
     font-size: 15px;
-    margin-right:2%;
+    margin-right:3%;
 }
 .media-container{
     display: grid;
@@ -76,7 +73,7 @@
     border-radius: 20px;
     gap: 10px;
     margin-top: 2%;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 .media-container .tweet-media{
     width:100%;
@@ -95,6 +92,7 @@
     align-items: center;
     justify-content: left;
     height:100%;
+    padding-left: 5px;
 }
 .tweet-top-right{
     width:10%;
@@ -103,7 +101,6 @@
     justify-content: center;
     height:100%;
     cursor: pointer;
-    //margin-right: 3%;
 }
 
 .bottom-icon{
@@ -164,13 +161,14 @@ $twitterColor : #00acee;
 }
 
 .vline{
-    border-left: 2px solid gray;
-    height: 105px;
-    margin-top: -90px;
-    margin-left: 40px;
+    border:solid #000;
+    border-width:0 1px 0 1px;
+    margin:0 14px;
+    padding:0 10px;
+    height: 100%;
 }
 .fontsize {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .margin {
@@ -183,6 +181,7 @@ $twitterColor : #00acee;
 
  .text {
      color: gray;
+     padding-left: 6px;
  }
 
  .textlike b{
@@ -198,8 +197,8 @@ $twitterColor : #00acee;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 15%;
+    justify-content: space-evenly;
+    gap: 10%;
     margin-top:1%;
     margin-bottom: 2%;
     margin-left:1%;
@@ -290,11 +289,23 @@ $twitterColor : #00acee;
     cursor:pointer;
 }
 
+.tweet-bottom-icon-sm{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    cursor:pointer;
+}
+
 .msg:hover {
     color: #00acee;
     .tweet-bottom-icon { 
         border-radius: 60px; 
         padding: 0.5em 0.6em; 
+        background-color: rgba(0, 173, 241, 0.1);
+    }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.30em; 
         background-color: rgba(0, 173, 241, 0.1);
     }
 }
@@ -316,6 +327,11 @@ $twitterColor : #00acee;
         padding: 0.5em 0.6em; 
         background-color: rgba(18, 235, 65, 0.1);
     }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.30em; 
+        background-color: rgba(18, 235, 65, 0.1);
+    }
 }
 
 .like:hover {
@@ -325,6 +341,11 @@ $twitterColor : #00acee;
         padding: 0.5em 0.6em; 
         background-color: rgba(235, 18, 170, 0.1);
     }
+     .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.3em; 
+        background-color: rgba(235, 18, 170, 0.1);
+    }
 }
 
 .liked {
@@ -332,6 +353,11 @@ $twitterColor : #00acee;
     .tweet-bottom-icon { 
         border-radius: 60px; 
         padding: 0.5em 0.6em; 
+        background-color: rgba(235, 18, 170, 0.1);
+    }
+      .tweet-bottom-icon-sm { 
+        border-radius: 60px; 
+        padding: 0.25em 0.3em; 
         background-color: rgba(235, 18, 170, 0.1);
     }
 }
@@ -359,7 +385,6 @@ $twitterColor : #00acee;
         width: 45px;
         height: 45px;
         border-radius:50%;
-        
     }
 }
 
@@ -380,8 +405,35 @@ $twitterColor : #00acee;
     .message{
         font-size: 13px;
     }
+    .profilename{
+        font-size:13px;
+    }
+    .username{
+        font-size: 13px;
+    }
+    .timespan{
+        font-size: 13px;
+    }
 }
-
+@media screen and (max-width: 440px) {
+    .profilelogo {
+        width: 30px;
+        height: 30px;
+        border-radius:50%;
+    }
+    .message{
+        font-size: 12px;
+    }
+    .profilename{
+        font-size:12px;
+    }
+    .username{
+        display: none;
+    }
+    .timespan{
+        font-size: 12px;
+    }
+}
 .number {
     font-size: small;
 }
@@ -451,4 +503,8 @@ $twitterColor : #00acee;
     color: #00acee;
     padding-left: 55px;
     padding-bottom: 20px;
+}
+.dropdown-item{
+    font-size: 12px;
+    height: 10%;
 }

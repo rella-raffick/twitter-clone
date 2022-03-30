@@ -28,5 +28,9 @@ export class MiddleFeedComponent implements OnInit {
   navigateProfile() {
     this.router.navigate(['/profile'])
   }
+  navigateExplore() {
+    this.router.navigate(['/explore'])
+  }
+
 
 }

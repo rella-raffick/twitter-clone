@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     img {
+      border-radius: 50%;
       display: none;
       height: 2.5rem;
       width: 2.5rem;
@@ -125,7 +126,7 @@ hr {
   opacity: 10%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 575px) {
   .icon-message {
     display: none;
   }

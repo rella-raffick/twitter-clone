@@ -11,14 +11,14 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-   username="";
+ username="";
   phone="";
   month="Month";
   date="Day"; 
   year="Year";
   password="";
   verificationcode="";
- udata:any=[]
+  udata:any=[];
   userdata(a: any,b: any,c:any,d:any,e:any){
     this.udata.push({name:a,phone:b,dob:c+" "+d+", "+e})
   }

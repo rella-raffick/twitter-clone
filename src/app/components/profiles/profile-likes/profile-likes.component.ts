@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { liketweet } from 'src/app/interfaces/liketweet';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile-likes',
@@ -7,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileLikesComponent implements OnInit {
 
+  constructor(private userService: UserService) { 
+    this.profilelike = this.userService.getProfileLikes();
+  }
+  
+  ngOnInit(): void {
+  }
  
   array:any[] = [
     {
@@ -34,10 +42,9 @@ arrayRetweet:boolean=false;
 arrayLikes:boolean=false;
 like:number = 21;
 retweet :string ="Retweet";
-constructor() { }
+profilelike : liketweet[] = [];
 
-ngOnInit(): void {
-}
+
 
 increaseReplyCount(i : number){
 this.array[i].replystatus = !this.array[i].replystatus;
@@ -63,5 +70,11 @@ this.array[i].likes = this.array[i].likes + 1;
 this.array[i].likesstatus = !this.array[i].likesstatus;
 
 
+}
+mediasrc:string;
+mediaFormat:string;
+viewMediaFunction(src:string,format:string){
+  this.mediasrc=src;
+  this.mediaFormat=format;
 }
 }

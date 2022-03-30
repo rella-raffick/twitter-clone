@@ -22,7 +22,7 @@
                     </svg>
                 </div>
                 <div class="navpadding d-xxl-block d-md-none d-lg-block d-xl-block d-none">
-                    <svg viewBox="0 0 24 24" (click)="navigateHome()" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" (click)="navigateExplore()" aria-hidden="true">
                         <g>
                             <path
                                 d="M21 7.337h-3.93l.372-4.272c.036-.412-.27-.775-.682-.812-.417-.03-.776.27-.812.683l-.383 4.4h-6.32l.37-4.27c.037-.413-.27-.776-.68-.813-.42-.03-.777.27-.813.683l-.382 4.4H3.782c-.414 0-.75.337-.75.75s.336.75.75.75H7.61l-.55 6.327H3c-.414 0-.75.336-.75.75s.336.75.75.75h3.93l-.372 4.272c-.036.412.27.775.682.812l.066.003c.385 0 .712-.295.746-.686l.383-4.4h6.32l-.37 4.27c-.036.413.27.776.682.813l.066.003c.385 0 .712-.295.746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z">
@@ -31,7 +31,7 @@
                     </svg>
                 </div>
                 <div class="navpadding d-xxl-none d-md-block d-lg-none d-xl-none d-sm-block d-none">
-                    <svg (click)="navigateHome()" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg (click)="navigateExplore()" viewBox="0 0 24 24" aria-hidden="true">
                         <g>
                             <path
                                 d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
@@ -80,24 +80,28 @@
                     </g>
                 </svg></div>
             <div class="profilenav dropup">
-                <img class="sidenavprofile dropdown-toggle" type="button" id="dropdownaccount" data-bs-toggle="dropdown"
+                <img class="sidenavprofile d-none d-xl-block d-xxl-block  dropdown-toggle" type="button" id="dropdownaccount" data-bs-toggle="dropdown"
+                    height="32px" width="32px" src="{{users[0].profilelogo}}">
+                    <img class="sidenavprofilelg d-block d-xl-none d-xxl-none dropdown-toggle" type="button" id="dropdownaccount" data-bs-toggle="dropdown"
                     height="32px" width="32px" src="{{users[0].profilelogo}}">
                 <ul class="dropdown-menu dropdown-css" aria-labelledby="dropdownaccount">
-                    <li class="dropdown-header item-header">
-                        <img id="accountpic" src="{{users[0].profilelogo}}">
+                    <li class="dropdown-header item-header" >
+                        <div id="dropdown-profile"><img id="accountpic" src="{{users[0].profilelogo}}"></div>
                         <div class="profiledetail">
                             <p id="name">{{users[0].profilename}}</p>
                             <p id="username">@{{users[0].username}}</p>
                         </div>
+                        <div class="tick">
                         <img id="bluetick"
                             src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMwZDg5ZDYiPjxwYXRoIGQ9Ik0xMzguNzAwMjMsNDcuNjMzMTFjMC42NzIwNywwLjY3MTgyIDEuMDQ5NjYsMS41ODMxNSAxLjA0OTY2LDIuNTMzNDJjMCwwLjk1MDI3IC0wLjM3NzU5LDEuODYxNiAtMS4wNDk2NiwyLjUzMzQybC03MS42NjY2Nyw3MS42NjY2N2MtMC42NzE4MywwLjY3MjA1IC0xLjU4MzE1LDEuMDQ5NjMgLTIuNTMzNDIsMS4wNDk2M2MtMC45NTAyNiwwIC0xLjg2MTU5LC0wLjM3NzU3IC0yLjUzMzQyLC0xLjA0OTYzbC0yOC42NjY2NywtMjguNjY2NjdjLTEuMzU3OTgsLTEuNDA2MDIgLTEuMzM4NTYsLTMuNjQwOTcgMC4wNDM2NSwtNS4wMjMxOGMxLjM4MjIxLC0xLjM4MjIxIDMuNjE3MTYsLTEuNDAxNjMgNS4wMjMxOCwtMC4wNDM2NWwyNi4xMzMxMSwyNi4xMzMzOWw2OS4xMzMxMSwtNjkuMTMzMThjMC42NzE4LC0wLjY3MjE5IDEuNTgzMTcsLTEuMDQ5ODcgMi41MzM1MiwtMS4wNDk5MWMwLjk1MDM0LC0wLjAwMDA0IDEuODYxNzUsMC4zNzc1NiAyLjUzMzYsMS4wNDk2OXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==">
+                        </div>
                     </li>
                     <div class="dropdown-divider"></div>
-                    <li class="dropdown-item" style="font-size: 13px; text-align: center;">
+                    <li class="dropdown-item" style="font-size: 13px; text-align: left;">
                         Add an existing account
                     </li>
                     <div class="dropdown-divider"></div>
-                    <li class="dropdown-item" style="font-size: 13px;text-align: center;">
+                    <li class="dropdown-item" style="font-size: 13px;text-align: left;">
                         Log out @{{users[0].username}}
                     </li>
                 </ul>
@@ -109,22 +113,22 @@
                     <p class="h5"></p>
                 </div>
                 <div class="iconnames" (click)="navigateHome()">
-                    <p class="h5 bolding">Home</p>
+                    <p class="h5 hoverbold">Home</p>
                 </div>
-                <div class="iconnames" (click)="navigateHome()">
-                    <p class="h5">Explore</p>
+                <div class="iconnames" (click)="navigateExplore()">
+                    <p class="h5 hoverbold">Explore</p>
                 </div>
                 <div class="iconnames" (click)="navigateNotification()">
-                    <p class="h5">Notifications</p>
+                    <p class="h5 hoverbold">Notifications</p>
                 </div>
                 <div class="iconnames" (click)="navigateProfile()">
-                    <p class="h5">Profile</p>
+                    <p class="h5 hoverbold">Profile</p>
                 </div>
                 <div class="iconnames" (click)="navigateMessage()">
-                    <p class="h5">Message</p>
+                    <p class="h5 hoverbold">Message</p>
                 </div>
                 <div class="iconnames">
-                    <p class="h5">More</p>
+                    <p class="h5 hoverbold">More</p>
                 </div>
             </div>
             <div class="iconnames newtweetname d-block d-xl-none d-xxl-none">
@@ -140,12 +144,32 @@
         <div class="username d-none d-xl-block d-xxl-block">
             <p class="usernames">@{{users[0].username}}</p>
         </div>
-        <div class="dots d-none d-xl-block d-xxl-block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots"
+        <div class="dots d-none d-xl-block d-xxl-block dropup">
+            <svg xmlns="http://www.w3.org/2000/svg" type="button" data-bs-toggle="dropdown" id="dropdownaccount" width="16" height="16" fill="currentColor" class="bi bi-three-dots dropdown-toggle"
                 viewBox="0 0 16 16">
                 <path
                     d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
             </svg>
+            <ul class="dropdown-menu dropdown-css" aria-labelledby="dropdownaccount">
+                <li class="dropdown-header item-header">
+                    <div id="dropdown-profile"><img id="accountpic" src="{{users[0].profilelogo}}"></div>
+                    <div class="profiledetail">
+                        <p id="name">{{users[0].profilename}}</p>
+                        <p id="username">@{{users[0].username}}</p>
+                    </div>
+                    <div class="tick"><img id="bluetick"
+                        src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMwZDg5ZDYiPjxwYXRoIGQ9Ik0xMzguNzAwMjMsNDcuNjMzMTFjMC42NzIwNywwLjY3MTgyIDEuMDQ5NjYsMS41ODMxNSAxLjA0OTY2LDIuNTMzNDJjMCwwLjk1MDI3IC0wLjM3NzU5LDEuODYxNiAtMS4wNDk2NiwyLjUzMzQybC03MS42NjY2Nyw3MS42NjY2N2MtMC42NzE4MywwLjY3MjA1IC0xLjU4MzE1LDEuMDQ5NjMgLTIuNTMzNDIsMS4wNDk2M2MtMC45NTAyNiwwIC0xLjg2MTU5LC0wLjM3NzU3IC0yLjUzMzQyLC0xLjA0OTYzbC0yOC42NjY2NywtMjguNjY2NjdjLTEuMzU3OTgsLTEuNDA2MDIgLTEuMzM4NTYsLTMuNjQwOTcgMC4wNDM2NSwtNS4wMjMxOGMxLjM4MjIxLC0xLjM4MjIxIDMuNjE3MTYsLTEuNDAxNjMgNS4wMjMxOCwtMC4wNDM2NWwyNi4xMzMxMSwyNi4xMzMzOWw2OS4xMzMxMSwtNjkuMTMzMThjMC42NzE4LC0wLjY3MjE5IDEuNTgzMTcsLTEuMDQ5ODcgMi41MzM1MiwtMS4wNDk5MWMwLjk1MDM0LC0wLjAwMDA0IDEuODYxNzUsMC4zNzc1NiAyLjUzMzYsMS4wNDk2OXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==">
+                    </div>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item" style="font-size: 13px; text-align: left;">
+                    Add an existing account
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item"  style="font-size: 13px;text-align: left;">
+                    Log out @{{users[0].username}}
+                </li>
+            </ul>
         </div>
     </div>
 </div>

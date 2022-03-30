@@ -1,11 +1,11 @@
 .sidenav{
     position: fixed;
     display: flex;
-    overflow:auto;
+    overflow: visible;
     flex-direction: column;
     margin-top: 15px;
     background-color: white;
-    z-index: 2;
+    z-index: 10;
     justify-content: flex-start;
     align-items: flex-start;
     height:100%;
@@ -129,6 +129,9 @@
 .bolding{
     font-weight: 600;
 }
+.hoverbold:hover{
+    font-weight: 600;
+}
 .nameprofile{
     font-size: 14px;
     
@@ -143,7 +146,7 @@
     width: 24px;
     position: absolute;
     bottom:3.3%;
-    left: 90%;
+    left: 95%;
 }
 .usernames{
     font-size: 12px;
@@ -151,6 +154,7 @@
 }
 .profilename{
     margin-top:100px;
+
 }
 
 .bluedot{
@@ -177,11 +181,15 @@
 .sidenavprofile{
     border-radius: 50%;
 }
+.sidenavprofilelg{
+    border-radius: 50%;
+    margin-left: 6px;
+}
 .profilenav{
     width:53px;
     height:53px;
     padding: 6px;
-    margin-left: 18px;
+    margin-left: 25%;
     margin-top: 112px;
 }
 .sidenavprofile:hover{
@@ -192,6 +200,7 @@ outline: 10px solid rgb(212, 211, 211);
 #accountpic{
     width:35px;
     height: 35px;
+    border-radius: 50%;
 }
 .item-header{
     display: flex;
@@ -211,13 +220,13 @@ outline: 10px solid rgb(212, 211, 211);
 }
 #name{
     margin: 3%;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     text-align: left;
 }
 #username{
     margin: 3%;
-    font-size: 13px;
+    font-size: 12px;
     color:#888888;
     text-align: left;
 }
@@ -241,4 +250,21 @@ outline: 10px solid rgb(212, 211, 211);
     padding-top:1%;
     width:4%;
     height: 4%;
+}
+.bi {
+    float: center;
+}
+#dropdown-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 4px;
+    justify-content: center;
+}
+.tick{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    justify-content: center;
 }

@@ -30,5 +30,8 @@ export class NotificationComponent implements OnInit {
   navigateProfile() {
     this.router.navigate(['/profile'])
   }
+  navigateExplore() {
+    this.router.navigate(['/explore'])
+  }
 
 }
