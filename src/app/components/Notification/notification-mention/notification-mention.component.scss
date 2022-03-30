@@ -209,11 +209,15 @@ $twitterColor: #00acee;
 }
 
 @media only screen and (max-width: 500px) {
+  .contents {
+    padding-left: 35px;
+  }
+
   .profile-logo {
     width: 30px;
     img {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
     }
   }
   .tweet-bottom {
