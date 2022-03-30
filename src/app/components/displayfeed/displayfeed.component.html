@@ -239,7 +239,7 @@
                                     </div>
                                     <div class="col-10">
                                         <p class="fontsize"><b>{{users[ind1].profilename}}</b> <span class="text">@{{users[ind1].username}} . 10h</span> </p><br>
-                                        <p style="margin-top: -25px; font-size: 18px; color: black;" class="text">{{tweet.tweetcontent}}</p>
+                                        <p style="margin-top: -25px; font-size: 14px; color: black;" class="text">{{tweet.tweetcontent}}</p>
                                     </div>
                                 </div>
                                 <div class="row margin" style="position:relative;">
@@ -247,8 +247,8 @@
                                         <img class="profilelogo" src = "{{users[0].profilelogo}}" alt ="pic" width = 50px height="50px">
                                     </div>
                                     <div class="col-lg-10">
-                                        <div class="textinput">  
-                                            <input type="text" placeholder="Tweet your reply" (click)="OnClick()" (keyup)="onKey($event)" [(ngModel)]="tweettext"/>
+                                        <div class="textinput ">  
+                                            <input type="text" class="txt-size" placeholder="Tweet your reply" (click)="OnClick()" (keyup)="onKey($event)" [(ngModel)]="tweettext"/>
                                         </div>
                                     </div>
                                 </div>
@@ -287,13 +287,11 @@
 <div class="modal fade" id="showSendTweet">
     <div class="modal-dialog">
         <div class="modal-content" style="padding:3%;">
-            <div class="modal-header">
-                <button type="button" class="btn-close" (click)="clear()" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body">
-                <div class="textinput">
+                <button type="button" class="btn-close" (click)="clear()" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="textinput p-4">
                     <img class="profilelogo" src={{users[0].profilelogo}} />
-                    <input type="text" [(ngModel)]="tweettext" placeholder="What's happening?" (click)="OnClick()"
+                    <input type="text" [(ngModel)]="tweettext" placeholder="  What's happening?" (click)="OnClick()"
                         (keyup)="onKey($event)" />
                 </div>
 
