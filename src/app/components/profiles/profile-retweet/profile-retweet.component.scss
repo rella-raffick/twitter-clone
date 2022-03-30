@@ -7,6 +7,13 @@ $twitterColor : #00acee;
     border: none;
 
 }
+
+.profile-logo {
+    img {
+        border-radius: 50%;
+    }
+}
+
 .bottomicons i{
     padding-right: 30px;
     color: $twitterColor;
@@ -41,7 +48,7 @@ $twitterColor : #00acee;
     margin-left: 40px;
 }
 .fontsize {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .margin {
@@ -161,7 +168,6 @@ $twitterColor : #00acee;
 .tweet-bottom{
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15%;
     margin-top:1%;
@@ -257,3 +263,24 @@ $twitterColor : #00acee;
     border-radius: 20px;
     object-fit:cover;
 }
+
+@media only screen and (max-width: 500px) {
+    .profile-logo {
+      width: 30px;
+      img {
+          height: 30px;
+          width: 30px;
+      }
+    }
+    .tweet-bottom {
+        flex-wrap: unset;
+        gap: unset;
+        justify-content: space-evenly;
+        padding-left: 0%;
+        svg {
+            height: 40px;
+            width: 40px;
+            padding-right: 0%;
+        }
+    }
+  }
