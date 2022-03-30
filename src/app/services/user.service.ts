@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../interfaces/profile';
 import Users from 'src/assets/profile.json';
 import { Tweet } from '../interfaces/tweet';
+import { liketweet } from '../interfaces/liketweet';
 
 @Injectable({
   providedIn: 'root'
@@ -45,11 +46,29 @@ export class UserService {
     this.arrayLikes = this.getTweetLikes();
     for(let i=0; i<this.arrayLikes.length; i++) {
       for(let j=0; j<this.arrayLikes[i].length; j++) {
-        if(this.arrayLikes[i][j]==true) 
-          this.profileLikes.push([this.users[i],this.users[i].tweet[j]]);
+        if(this.arrayLikes[i][j]==true){
+          this.profileLikes.push({
+            profilelogo : this.users[i].profilelogo,
+            username : this.users[i].username,
+            profilename: this.users[i].profilename,
+            tweetcontent : this.users[i].tweet[j].tweetcontent,
+            media: this.users[i].tweet[j].media,
+            format: this.users[i].tweet[j].format,
+            date: this.users[i].tweet[j].date,
+            time: this.users[i].tweet[j].time,
+            reply: this.users[i].tweet[j].reply,
+            retweet: this.users[i].tweet[j].retweet,
+            likes: this.users[i].tweet[j].likes,
+            messages: this.users[i].messages
+
+          })
+          
+        }
+          // this.profileLikes.push([this.users[i],this.users[i].tweet[j]]);
       }
     }
-    console.log(this.profileLikes);
+    // console.log(this.profileLikes);
+    return this.profileLikes;
   }
 
   getProfileRetweet(): any[] {
@@ -57,8 +76,23 @@ export class UserService {
     this.arrayRetweet = this.getTweetRetweet();
     for(let i=0; i<this.arrayRetweet.length; i++) {
       for(let j=0; j<this.arrayRetweet[i].length; j++) {
-        if(this.arrayRetweet[i][j]==true) 
-          this.profileRetweet.push([this.users[i],this.users[i].tweet[j]]);
+        if(this.arrayRetweet[i][j]==true) {
+          this.profileRetweet.push({
+            profilelogo : this.users[i].profilelogo,
+            username : this.users[i].username,
+            profilename: this.users[i].profilename,
+            tweetcontent : this.users[i].tweet[j].tweetcontent,
+            media: this.users[i].tweet[j].media,
+            format: this.users[i].tweet[j].format,
+            date: this.users[i].tweet[j].date,
+            time: this.users[i].tweet[j].time,
+            reply: this.users[i].tweet[j].reply,
+            retweet: this.users[i].tweet[j].retweet,
+            likes: this.users[i].tweet[j].likes,
+            messages: this.users[i].messages
+          })
+        }
+          // this.profileRetweet.push([this.users[i],this.users[i].tweet[j]]);
       }
     }
     return this.profileRetweet;
@@ -77,8 +111,8 @@ export class UserService {
   users: Profile[] = Users; 
   arrayLikes: any[] = [];
   arrayRetweet: any[] =[];
-  profileLikes: any[] = [];
-  profileRetweet: any[] = [];
+  profileLikes: liketweet[] = [];
+  profileRetweet: liketweet[] = [];
   allRetweet: any[] = [];
 
   getUsers() {

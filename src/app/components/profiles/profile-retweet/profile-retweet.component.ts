@@ -3,19 +3,19 @@ import { liketweet } from 'src/app/interfaces/liketweet';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-profile-likes',
-  templateUrl: './profile-likes.component.html',
-  styleUrls: ['./profile-likes.component.scss']
+  selector: 'app-profile-retweet',
+  templateUrl: './profile-retweet.component.html',
+  styleUrls: ['./profile-retweet.component.scss']
 })
-export class ProfileLikesComponent implements OnInit {
+export class ProfileRetweetComponent implements OnInit {
 
-  constructor(private userService: UserService) { 
-    this.profilelike = this.userService.getProfileLikes();
+  constructor(private service : UserService) { 
+    this.profileretweet = this.service.getProfileRetweet();
   }
-  
+
   ngOnInit(): void {
   }
- 
+
   array:any[] = [
     {
     "reply": 11,
@@ -42,7 +42,7 @@ arrayRetweet:boolean=false;
 arrayLikes:boolean=false;
 like:number = 21;
 retweet :string ="Retweet";
-profilelike : liketweet[] = [];
+profileretweet : liketweet[] = [];
 
 
 
