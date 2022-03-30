@@ -92,6 +92,7 @@
     align-items: center;
     justify-content: left;
     height:100%;
+    padding-left: 5px;
 }
 .tweet-top-right{
     width:10%;
@@ -195,8 +196,8 @@ $twitterColor : #00acee;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 15%;
+    justify-content: space-evenly;
+    gap: 10%;
     margin-top:1%;
     margin-bottom: 2%;
     margin-left:1%;
