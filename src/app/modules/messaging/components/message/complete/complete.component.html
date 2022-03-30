@@ -8,16 +8,18 @@
     <div
         class="col-xxl-2 col-xl-2 col-lg-1 col-md-1 d-flex justify-content-end col-sm-2 d-xxl-block d-md-block d-lg-block d-xl-block d-sm-block d-none">
     </div>
-    <div class="col-xl-4 col-xxl-4 col-lg-5 col-md-5 col-sm-10 col-12 messagebox d-md-block p-0" [class.d-none]="paramId">
+    <div class="col-xl-4 col-xxl-4 col-lg-5 col-md-5 col-sm-10 col-12 messagebox d-md-block p-0"
+        [class.d-none]="paramId">
         <app-msgnavbar></app-msgnavbar>
         <app-msgsearchbar></app-msgsearchbar>
-        <div class="chats" *ngFor="let j of users; let i=index" [routerLinkActive]="'active'">
+        <div class="chats" *ngFor="let j of users | slice:1; let i = index;" [routerLinkActive]="'active'">
             <a [routerLink]="['/messaging/message/',j.id]">
                 <app-chats class="mb-1" [item]="j"></app-chats>
             </a>
         </div>
     </div>
-    <div class="container co-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 d-lg-block d-none d-md-block" [class.d-none]="!paramId">
+    <div class="container co-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 d-lg-block d-none d-md-block"
+        [class.d-none]="!paramId">
         <router-outlet (activate)="getActivatedId($event)"></router-outlet>
     </div>
     <div class="bottomnavcontainer">
