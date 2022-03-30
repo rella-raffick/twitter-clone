@@ -10,8 +10,8 @@ $twitterColor: #00acee;
   padding-right: 30px;
   color: $twitterColor;
 }
-.profile-logo{
-  min-width:10%;
+.profile-logo {
+  min-width: 10%;
 }
 
 .tweet {
@@ -226,20 +226,21 @@ $twitterColor: #00acee;
 @media only screen and (max-width: 500px) {
   .profile-logo {
     width: 30px;
+    margin-right: 10px;
     img {
-        height: 30px;
-        width: 30px;
+      height: 30px;
+      width: 30px;
     }
   }
   .tweet-bottom {
-      flex-wrap: unset;
-      gap: unset;
-      justify-content: space-evenly;
-      padding-left: 0%;
-      svg {
-          height: 40px;
-          width: 40px;
-          padding-right: 0%;
-      }
+    flex-wrap: unset;
+    gap: unset;
+    justify-content: space-evenly;
+    padding-left: 0%;
+    svg {
+      height: 40px;
+      width: 40px;
+      padding-right: 0%;
+    }
   }
 }
