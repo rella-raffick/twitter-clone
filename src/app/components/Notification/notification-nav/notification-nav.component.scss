@@ -1,63 +1,68 @@
-$hoverColor : #ededed;
-$twitterColor : #00acee;
+$hoverColor: #ededed;
+$twitterColor: #00acee;
 
+.margin {
+  .nav-item {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+}
 
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
 
 ul {
-    margin-left: -3%;
-    margin-right: -3%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  margin-left: -3%;
+  margin-right: -3%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .headerText {
-    font-size: x-large;
-    font-weight: 600;
-    margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
 }
 
 .icon {
-    text-align: center;
+  text-align: center;
 }
 
 li {
-    font-size: large;
+  font-size: large;
 }
 
-li a{
-    color: black;
+li a {
+  color: black;
 }
 
 .margin {
-    padding: 25px;
-    width: 100%;
+  padding: 25px;
+  width: 100%;
 }
 
-li .nav-item a:hover{
-background-color: gray;
+li .nav-item a:hover {
+  background-color: gray;
 }
 
-.color{
-    padding: 15px;
+.color {
+  padding: 15px;
 }
 
-.color:hover{
-    background-color:$hoverColor;
+.color:hover {
+  background-color: $hoverColor;
 }
 
 .classStatus {
-    border-bottom-color:$twitterColor;
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    border-radius: 3px;
-
+  border-bottom-color: $twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 3px;
 }
 
 .classMention {
-    border-bottom-color:$twitterColor;
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    border-radius: 3px;
+  border-bottom-color: $twitterColor;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 3px;
 }

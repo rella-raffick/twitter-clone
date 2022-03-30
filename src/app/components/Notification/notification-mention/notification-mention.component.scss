@@ -208,12 +208,24 @@ $twitterColor: #00acee;
   font-size: small;
 }
 
+.profile-logo {
+  width: 70px;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
+  .contents {
+    padding-left: 35px;
+  }
+
   .profile-logo {
     width: 30px;
     img {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
     }
   }
   .tweet-bottom {

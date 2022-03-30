@@ -1,31 +1,48 @@
-$hoverColor : #ededed;
-$twitterColor : #00acee;
+$hoverColor: #ededed;
+$twitterColor: #00acee;
 
+.extra-icon {
+  width: 10%;
+}
+
+.extra-image {
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
 
 .fontsize {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .margin {
-    padding: 15px;
+  padding: 15px;
 }
 
-.fa-user , .fa-twitter {
-    color: $twitterColor;
+.fa-user,
+.fa-twitter {
+  color: $twitterColor;
+}
+
+.fa-heart {
+  color: #f7206b;
+}
+
+.row:hover {
+  background-color: $hoverColor;
+}
+
+.text {
+  color: gray;
+}
+
+img {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .extra-icon {
+    width: 15%;
   }
-
-  .fa-heart {
-      color: #f7206b;
-  }
-
-.row:hover{
-    background-color:$hoverColor;
- }
-
- .text {
-     color: gray;
- }
-
- img {
-    border-radius: 50%;
- }
+}
