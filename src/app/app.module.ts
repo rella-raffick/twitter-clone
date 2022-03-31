@@ -36,6 +36,7 @@ import { ExploreEntertainmentComponent } from './components/explore/explore-ente
 import { RightNavComponent } from './components/explore/right-nav/right-nav.component';
 import { ProfileRetweetComponent } from './components/profiles/profile-retweet/profile-retweet.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     ExploreEntertainmentComponent,
     RightNavComponent,
     ProfileRetweetComponent,
-    LoadingComponent
+    LoadingComponent,
+    PagenotfoundComponent
 
   ],
     imports: [

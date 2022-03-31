@@ -1,3 +1,4 @@
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
 import { ProfileComponent } from './components/profiles/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'landing', component: LandingPageComponent },
   { path: 'username', component: UsernameComponent },
   { path: 'password', component: PasswordComponent },
-  { path: 'explore', component: ExploreAllComponent }
+  { path: 'explore', component: ExploreAllComponent },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent }
 ];
 
 @NgModule({
