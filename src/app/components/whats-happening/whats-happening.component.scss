@@ -115,11 +115,34 @@
 .follow-btn {
   border-radius: 20px;
   margin-top: 11px;
+  margin-left: 10px;
   font-size: 0.9rem;
-  font-weight: 500;
-  padding-right: 18px;
-  padding-left: 18px;
+  font-weight: 700;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .follow-btn:hover {
   background-color: rgb(59, 59, 59);
+}
+
+.footer{
+  margin-top: 10px;
+  margin-left: 16px;
+  padding-right: 16px;
+  width: 240px;
+}
+
+.grey{
+  font-size: 12px;
+  font-family:monospace;
+  font-weight: 100;
+  letter-spacing:0.0001px;
+  line-height: 20px;
+  color: rgb(116, 116, 116);
+  text-decoration: none;
+}
+.grey a:hover{
+ text-decoration: underline;
 }
