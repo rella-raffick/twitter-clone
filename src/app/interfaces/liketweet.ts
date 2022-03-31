@@ -1,5 +1,7 @@
 
 export interface liketweet {
+    uid: number,
+    tid: number,
     profilelogo: string,
     username: string,
     profilename: string,

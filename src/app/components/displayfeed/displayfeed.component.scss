@@ -1,6 +1,8 @@
 .displaytweet{
     width: 100%;
     min-height: 100px;
+    padding: 0;
+    margin: 0;
     font-size:20px;
     display:flex;
     flex-direction: row;
@@ -19,7 +21,9 @@
 .profilepic{
     min-width:10%;
     height:100%;
-    margin:1%;
+    margin-left:1%;
+    margin-top:1%;
+    margin-bottom:1%;
 }
 .tweet-show{
     display:flex;
@@ -63,7 +67,7 @@
 }
 .message{
     margin-top:2%;
-    font-size: 15px;
+    font-size: 14.5px;
     margin-right:3%;
 }
 .media-container{
@@ -92,7 +96,7 @@
     align-items: center;
     justify-content: left;
     height:100%;
-    padding-left: 5px;
+    // padding-left: 5px;
 }
 .tweet-top-right{
     width:10%;
@@ -426,6 +430,7 @@ $twitterColor : #00acee;
     }
     .profilename{
         font-size:12px;
+        margin-left: 5px;
     }
     .username{
         display: none;

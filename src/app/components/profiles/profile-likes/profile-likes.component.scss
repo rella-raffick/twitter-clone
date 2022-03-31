@@ -245,6 +245,16 @@ $twitterColor: #00acee;
   position: relative;
 }
 
+.media-container{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  border-radius: 20px;
+  gap: 10px;
+  margin-top: 2%;
+  margin-right: 3%;
+}
+
 .media-container .tweet-media {
   width: 100%;
   cursor: pointer;
@@ -256,6 +266,7 @@ $twitterColor: #00acee;
 @media only screen and (max-width: 500px) {
   .profile-logo {
     width: 30px;
+    margin-right: 10px;
     img {
       height: 30px;
       width: 30px;
