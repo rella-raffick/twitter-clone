@@ -1,3 +1,19 @@
-.wh-margin{
-    margin-right: -60px;
+.wh-margin {
+  margin-right: -60px;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  z-index: 9999;
+}
+
+.complete {
+  display: none;
+}
+
+.fade {
+  display: none;
 }

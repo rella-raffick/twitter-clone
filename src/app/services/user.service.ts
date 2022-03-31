@@ -8,6 +8,13 @@ import { liketweet } from '../interfaces/liketweet';
   providedIn: 'root'
 })
 export class UserService {
+
+  isLoading: boolean = true;
+
+  loadingChange() {
+    this.isLoading = false;
+  }
+
   getTweetLikes(): any[] {
     this.arrayLikes = [];
     for (let i = 0; i < this.users.length; i++) {
