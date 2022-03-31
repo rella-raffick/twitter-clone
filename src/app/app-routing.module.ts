@@ -1,3 +1,4 @@
+import { LoadingComponent } from './components/loading/loading.component';
 import { ExploreAllComponent } from './components/explore/explore-all/explore-all.component';
 import { ProfileComponent } from './components/profiles/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +11,7 @@ import { NotificationComponent } from './components/Notification/notification/no
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: 'loading', component: LoadingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'notification', component: NotificationComponent },
   { path: 'notification/mentions', component: NotificationComponent },
