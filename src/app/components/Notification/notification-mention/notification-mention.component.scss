@@ -208,9 +208,35 @@ $twitterColor: #00acee;
 }
 
 .profile-logo {
+  width: 70px;
   img {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contents {
+    padding-left: 35px;
+  }
+
+  .profile-logo {
+    width: 30px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  .tweet-bottom {
+    flex-wrap: unset;
+    gap: unset;
+    justify-content: space-evenly;
+    padding-left: 0%;
+    svg {
+      height: 40px;
+      width: 40px;
+      padding-right: 0%;
+    }
   }
 }
 
