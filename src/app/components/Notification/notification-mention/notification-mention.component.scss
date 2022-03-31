@@ -125,9 +125,8 @@ $twitterColor: #00acee;
 .tweet-bottom {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 15%;
+  gap: 11.7%;
   margin-top: 1%;
   margin-bottom: 2%;
   margin-left: 1%;
@@ -209,34 +208,9 @@ $twitterColor: #00acee;
 }
 
 .profile-logo {
-  width: 70px;
   img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .contents {
-    padding-left: 35px;
-  }
-
-  .profile-logo {
-    width: 30px;
-    img {
-      height: 40px;
-      width: 40px;
-    }
-  }
-  .tweet-bottom {
-    flex-wrap: unset;
-    gap: unset;
-    justify-content: space-evenly;
-    padding-left: 0%;
-    svg {
-      height: 40px;
-      width: 40px;
-      padding-right: 0%;
-    }
-  }
-}

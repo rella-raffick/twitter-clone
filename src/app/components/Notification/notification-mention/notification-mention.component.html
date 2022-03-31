@@ -1,18 +1,18 @@
-<div style="margin: 20px;">
+<div class="ps-2 px-2">
   <div class="row margin" *ngFor="let i of array; let index=index;">
-    <div class="col-lg-2 col-md-2 col-3 profile-logo" style="padding-left: 0px;">
-      <img src="https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg" alt="pic" width=40px
-        height="40px" style="border-radius: 50%;">
+    <div class="col-2 profile-logo d-flex justify-content-center p-0">
+      <img src="https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg" alt="pic" width=35px
+        height="35px" style="border-radius: 50%;">
     </div>
-    <div class="col-lg-10 col-md-10 col-9 contents">
+    <div class="col-10 contents ps-1 pt-0 pb-0 pe-3">
       <p class="fontsize"><b>{{array[index].profilename}} </b> <span class="text">@{{array[index].username}} <span>
             {{array[index].time}}h </span> </span> </p><br>
-      <p style="margin-top: -25px; font-size: 15px;" class="text">{{array[index].tweet}}</p>
-      <p style="color: #00acee; font-size: 15px;"> @friends<br>
+      <p style="margin-top: -25px; font-size: 14.5px;" class="text">{{array[index].tweet}}</p>
+      <p style="color: #00acee; font-size: 14.5px;"> @friends<br>
         @phoebe_crapbag<br>
         @usa</p>
 
-      <div class="tweet-bottom">
+      <div class="tweet-bottom col-12 p-0 m-0">
         <div class="bottom-icon msg">
           <svg data-bs-toggle="modal" data-bs-target="#exampleModal" id="tweet-bottom-icon" viewBox="0 0 24 24"
             aria-hidden="true" class="tweet-bottom-icon" fill="currentColor">
@@ -23,7 +23,7 @@
             </g>
           </svg>
         </div>
-        <div class="bottom-icon retweet" style="flex-wrap: unset;">
+        <div class="bottom-icon retweet d-flex justify-content-between" >
           <svg class="dropdown-item" class="dropdown-toggle" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" viewBox="0 0 24 24" aria-hidden="true" class="tweet-bottom-icon"
             fill="currentColor">
@@ -112,11 +112,11 @@
           <div class="modal-body">
             <div class="model-heading">
               <div class="row margin" style="position:relative;">
-                <div class="col-2">
+                <div class="col-2 p-0">
                   <img src="https://i.pinimg.com/236x/9a/2b/ea/9a2bea6795661d05cb017f026827751e.jpg" alt="pic"
-                    width=50px height="50px" style="border-radius: 50%;">
+                    width=35px height="35px" style="border-radius: 50%;">
                 </div>
-                <div class="col-10">
+                <div class="col-10 pe-2 ps-0 pt-0 pb-0">
                   <p class="fontsize"><b>{{array[index].profilename}}</b> <span class="text">@{{array[index].username}}.
                       {{array[index].time}}h</span> </p><br>
                   <p style="margin-top: -25px; font-size: 15px;" class="text">{{array[index].tweet}}</p>
